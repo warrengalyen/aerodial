@@ -1,0 +1,163 @@
+.seasoner {
+  background-color: #1a1a1a;
+  font-size: 11px;
+}
+.seasoner * {
+  box-sizing: border-box;
+}
+
+.seasonerDefaultContainer {
+  width: 250px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.folderView {
+  overflow: hidden;
+}
+.folderView_title {
+  color: gray;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.folderView_title:hover {
+  color: #999999;
+}
+
+.folderView_container {
+  overflow: hidden;
+  padding: 0 5px;
+}
+.folderView_container.folderView_container-animated {
+  transition: height 0.1s ease-in-out;
+}
+
+.propView {
+  background-color: #333333;
+  height: 35px;
+  position: relative;
+}
+.propView + .propView {
+  border-top: #2b2b2b solid 1px;
+}
+.propView_label {
+  color: #cccccc;
+  height: 35px;
+  left: 0;
+  line-height: 35px;
+  overflow: hidden;
+  padding: 0 10px;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 50%;
+}
+
+.propView_container {
+  bottom: 5px;
+  left: 50%;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.checkboxControl {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.checkboxControl_input {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 100%;
+}
+
+.textControl {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.textControl.textControl-sliderText {
+  left: auto;
+  right: 0;
+  width: 50px;
+}
+.textControl_input {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #404040;
+  border-radius: 2px;
+  border-width: 0;
+  color: #e6e6e6;
+  outline: none;
+  padding: 0 5px;
+}
+.textControl_input:focus {
+  background-color: #4d4d4d;
+}
+.textControl_input:hover {
+  background-color: #595959;
+  color: white;
+}
+
+.sliderControl {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  cursor: pointer;
+}
+.sliderControl.sliderControl-sliderText {
+  right: 55px;
+  width: auto;
+}
+.sliderControl_outer {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #404040;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.sliderControl_outer:hover {
+  background-color: #595959;
+}
+
+.sliderControl_inner {
+  background-color: #e6e6e6;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.sliderControl_inner:hover {
+  background-color: white;
+}
+
+/*# sourceMappingURL=seasoner.css.map */
