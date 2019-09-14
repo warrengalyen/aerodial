@@ -35,6 +35,14 @@ class SliderTextControl extends Control {
         this.addClass('SliderTextControl');
     }
 
+    getSliderControl() {
+        return this.sliderControl_;
+    }
+
+    getTextControl() {
+        return this.textControl_;
+    }
+
     onSubcontrolChange_(sender, value) {
         this.getEmitter().notifyObservers(
             Control.EVENT_CHANGE,

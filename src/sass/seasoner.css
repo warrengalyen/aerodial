@@ -24,6 +24,7 @@
   overflow: hidden;
   padding-left: 10px;
   text-overflow: ellipsis;
+  user-select: none;
   white-space: nowrap;
 }
 .folderView_title:hover {
@@ -55,6 +56,7 @@
   padding: 0 10px;
   position: absolute;
   text-overflow: ellipsis;
+  user-select: none;
   white-space: nowrap;
   width: 50%;
 }
@@ -130,6 +132,12 @@
   width: 100%;
   cursor: pointer;
 }
+.sliderControl:hover .sliderControl_outer {
+  background-color: #595959;
+}
+.sliderControl:hover .sliderControl_inner {
+  background-color: white;
+}
 .sliderControl.sliderControl-sliderText {
   right: 55px;
   width: auto;
@@ -145,9 +153,6 @@
   border-radius: 2px;
   overflow: hidden;
 }
-.sliderControl_outer:hover {
-  background-color: #595959;
-}
 
 .sliderControl_inner {
   background-color: #e6e6e6;
@@ -155,9 +160,6 @@
   left: 0;
   position: absolute;
   top: 0;
-}
-.sliderControl_inner:hover {
-  background-color: white;
 }
 
 /*# sourceMappingURL=seasoner.css.map */
