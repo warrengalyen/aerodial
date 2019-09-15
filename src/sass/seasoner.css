@@ -1,22 +1,22 @@
-.seasoner {
+.ssjs {
   background-color: #1a1a1a;
   font-size: 11px;
 }
-.seasoner * {
+.ssjs * {
   box-sizing: border-box;
 }
 
-.seasonerDefaultContainer {
+.ssjsDefaultContainer {
   width: 250px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.folderView {
+.ssjsFolderView {
   overflow: hidden;
 }
-.folderView_title {
+.ssjsFolderView_title {
   color: gray;
   cursor: pointer;
   height: 30px;
@@ -27,27 +27,27 @@
   user-select: none;
   white-space: nowrap;
 }
-.folderView_title:hover {
+.ssjsFolderView_title:hover {
   color: #999999;
 }
 
-.folderView_container {
+.ssjsFolderView_container {
   overflow: hidden;
   padding: 0 5px;
 }
-.folderView_container.folderView_container-animated {
+.ssjsFolderView_container.ssjsFolderView_container-animated {
   transition: height 0.1s ease-in-out;
 }
 
-.propView {
+.ssjsPropView {
   background-color: #333333;
   height: 35px;
   position: relative;
 }
-.propView + .propView {
+.ssjsPropView + .ssjsPropView {
   border-top: #2b2b2b solid 1px;
 }
-.propView_label {
+.ssjsPropView_label {
   color: #cccccc;
   height: 35px;
   left: 0;
@@ -61,7 +61,7 @@
   width: 50%;
 }
 
-.propView_container {
+.ssjsPropView_container {
   bottom: 5px;
   left: 50%;
   position: absolute;
@@ -69,7 +69,7 @@
   top: 5px;
 }
 
-.checkboxControl {
+.ssjsCheckboxControl {
   display: block;
   height: 100%;
   left: 0;
@@ -77,7 +77,10 @@
   top: 0;
   width: 100%;
 }
-.checkboxControl_input {
+.ssjsCheckboxControl.ssjsCheckboxControl-disabled {
+  opacity: 0.5;
+}
+.ssjsCheckboxControl_input {
   cursor: pointer;
   display: block;
   height: 100%;
@@ -88,7 +91,7 @@
   width: 100%;
 }
 
-.textControl {
+.ssjsTextControl {
   display: block;
   height: 100%;
   left: 0;
@@ -96,12 +99,19 @@
   top: 0;
   width: 100%;
 }
-.textControl.textControl-sliderText {
+.ssjsTextControl.ssjsTextControl-disabled {
+  opacity: 0.5;
+}
+.ssjsTextControl.ssjsTextControl-disabled .ssjsTextControl_input:hover {
+  background-color: #404040;
+  color: #e6e6e6;
+}
+.ssjsTextControl.ssjsTextControl-sliderText {
   left: auto;
   right: 0;
   width: 50px;
 }
-.textControl_input {
+.ssjsTextControl_input {
   display: block;
   height: 100%;
   left: 0;
@@ -115,15 +125,15 @@
   outline: none;
   padding: 0 5px;
 }
-.textControl_input:focus {
+.ssjsTextControl_input:focus {
   background-color: #4d4d4d;
 }
-.textControl_input:hover {
+.ssjsTextControl_input:hover {
   background-color: #595959;
   color: white;
 }
 
-.sliderControl {
+.ssjsSliderControl {
   display: block;
   height: 100%;
   left: 0;
@@ -132,17 +142,27 @@
   width: 100%;
   cursor: pointer;
 }
-.sliderControl:hover .sliderControl_outer {
+.ssjsSliderControl:hover .ssjsSliderControl_outer {
   background-color: #595959;
 }
-.sliderControl:hover .sliderControl_inner {
+.ssjsSliderControl:hover .ssjsSliderControl_inner {
   background-color: white;
 }
-.sliderControl.sliderControl-sliderText {
+.ssjsSliderControl.ssjsSliderControl-disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.ssjsSliderControl.ssjsSliderControl-disabled:hover .ssjsSliderControl_outer {
+  background-color: #404040;
+}
+.ssjsSliderControl.ssjsSliderControl-disabled:hover .ssjsSliderControl_inner {
+  background-color: #e6e6e6;
+}
+.ssjsSliderControl.ssjsSliderControl-sliderText {
   right: 55px;
   width: auto;
 }
-.sliderControl_outer {
+.ssjsSliderControl_outer {
   display: block;
   height: 100%;
   left: 0;
@@ -154,7 +174,7 @@
   overflow: hidden;
 }
 
-.sliderControl_inner {
+.ssjsSliderControl_inner {
   background-color: #e6e6e6;
   bottom: 0;
   left: 0;
