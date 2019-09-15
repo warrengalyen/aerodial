@@ -1,22 +1,22 @@
-.ssjs {
+.ss {
   background-color: #1a1a1a;
   font-size: 11px;
 }
-.ssjs * {
+.ss * {
   box-sizing: border-box;
 }
 
-.ssjsDefaultContainer {
+.ssDefaultContainer {
   width: 250px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.ssjsFolderView {
+.ssFolderView {
   overflow: hidden;
 }
-.ssjsFolderView_title {
+.ssFolderView_title {
   color: gray;
   cursor: pointer;
   height: 30px;
@@ -27,27 +27,27 @@
   user-select: none;
   white-space: nowrap;
 }
-.ssjsFolderView_title:hover {
+.ssFolderView_title:hover {
   color: #999999;
 }
 
-.ssjsFolderView_container {
+.ssFolderView_container {
   overflow: hidden;
   padding: 0 5px;
 }
-.ssjsFolderView_container.ssjsFolderView_container-animated {
+.ssFolderView_container.ssFolderView_container-animated {
   transition: height 0.1s ease-in-out;
 }
 
-.ssjsPropView {
+.ssPropView {
   background-color: #333333;
   height: 35px;
   position: relative;
 }
-.ssjsPropView + .ssjsPropView {
+.ssPropView + .ssPropView {
   border-top: #2b2b2b solid 1px;
 }
-.ssjsPropView_label {
+.ssPropView_label {
   color: #cccccc;
   height: 35px;
   left: 0;
@@ -61,7 +61,7 @@
   width: 50%;
 }
 
-.ssjsPropView_container {
+.ssPropView_container {
   bottom: 5px;
   left: 50%;
   position: absolute;
@@ -69,7 +69,7 @@
   top: 5px;
 }
 
-.ssjsCheckboxControl {
+.ssCheckboxControl {
   display: block;
   height: 100%;
   left: 0;
@@ -77,16 +77,16 @@
   top: 0;
   width: 100%;
 }
-.ssjsCheckboxControl.ssjsCheckboxControl-disabled {
+.ssCheckboxControl.ssCheckboxControl-disabled {
   opacity: 0.5;
 }
-.ssjsCheckboxControl.ssjsCheckboxControl-disabled .ssjsCheckboxControl_input:hover + .ssjsCheckboxControl_outer {
+.ssCheckboxControl.ssCheckboxControl-disabled .ssCheckboxControl_input:hover + .ssCheckboxControl_outer {
   background-color: #404040;
 }
-.ssjsCheckboxControl.ssjsCheckboxControl-disabled .ssjsCheckboxControl_input:hover + .ssjsCheckboxControl_outer .ssjsCheckboxControl_inner {
+.ssCheckboxControl.ssCheckboxControl-disabled .ssCheckboxControl_input:hover + .ssCheckboxControl_outer .ssCheckboxControl_inner {
   background-color: #e6e6e6;
 }
-.ssjsCheckboxControl_hitArea {
+.ssCheckboxControl_hitArea {
   display: block;
   height: 100%;
   left: 0;
@@ -95,7 +95,7 @@
   width: 100%;
 }
 
-.ssjsCheckboxControl_input {
+.ssCheckboxControl_input {
   display: block;
   height: 100%;
   left: 0;
@@ -108,23 +108,23 @@
   padding: 0;
 }
 
-.ssjsCheckboxControl_input:focus + .ssjsCheckboxControl_outer {
+.ssCheckboxControl_input:focus + .ssCheckboxControl_outer {
   background-color: #4d4d4d;
 }
 
-.ssjsCheckboxControl_input:focus + .ssjsCheckboxControl_outer:hover, .ssjsCheckboxControl_outer:hover {
+.ssCheckboxControl_input:focus + .ssCheckboxControl_outer:hover, .ssCheckboxControl_outer:hover {
   background-color: #595959;
 }
 
-.ssjsCheckboxControl_input:checked + .ssjsCheckboxControl_outer .ssjsCheckboxControl_inner {
+.ssCheckboxControl_input:checked + .ssCheckboxControl_outer .ssCheckboxControl_inner {
   opacity: 1;
 }
 
-.ssjsCheckboxControl_outer:hover .ssjsCheckboxControl_inner {
+.ssCheckboxControl_outer:hover .ssCheckboxControl_inner {
   background-color: white;
 }
 
-.ssjsCheckboxControl_outer {
+.ssCheckboxControl_outer {
   display: block;
   height: 100%;
   left: 0;
@@ -137,7 +137,7 @@
   width: 24px;
 }
 
-.ssjsCheckboxControl_inner {
+.ssCheckboxControl_inner {
   background-color: #e6e6e6;
   border-radius: 2px;
   bottom: 0;
@@ -151,7 +151,7 @@
   width: 14px;
 }
 
-.ssjsTextControl {
+.ssTextControl {
   display: block;
   height: 100%;
   left: 0;
@@ -159,19 +159,19 @@
   top: 0;
   width: 100%;
 }
-.ssjsTextControl.ssjsTextControl-disabled {
+.ssTextControl.ssTextControl-disabled {
   opacity: 0.5;
 }
-.ssjsTextControl.ssjsTextControl-disabled .ssjsTextControl_input:hover {
+.ssTextControl.ssTextControl-disabled .ssTextControl_input:hover {
   background-color: #404040;
   color: #e6e6e6;
 }
-.ssjsTextControl.ssjsTextControl-sliderText {
+.ssTextControl.ssTextControl-sliderText {
   left: auto;
   right: 0;
   width: 50px;
 }
-.ssjsTextControl_input {
+.ssTextControl_input {
   display: block;
   height: 100%;
   left: 0;
@@ -185,15 +185,15 @@
   outline: none;
   padding: 0 5px;
 }
-.ssjsTextControl_input:focus {
+.ssTextControl_input:focus {
   background-color: #4d4d4d;
 }
-.ssjsTextControl_input:hover {
+.ssTextControl_input:hover {
   background-color: #595959;
   color: white;
 }
 
-.ssjsSliderControl {
+.ssSliderControl {
   display: block;
   height: 100%;
   left: 0;
@@ -202,27 +202,27 @@
   width: 100%;
   cursor: pointer;
 }
-.ssjsSliderControl:hover .ssjsSliderControl_outer {
+.ssSliderControl:hover .ssSliderControl_outer {
   background-color: #595959;
 }
-.ssjsSliderControl:hover .ssjsSliderControl_inner {
+.ssSliderControl:hover .ssSliderControl_inner {
   background-color: white;
 }
-.ssjsSliderControl.ssjsSliderControl-disabled {
+.ssSliderControl.ssSliderControl-disabled {
   cursor: default;
   opacity: 0.5;
 }
-.ssjsSliderControl.ssjsSliderControl-disabled:hover .ssjsSliderControl_outer {
+.ssSliderControl.ssSliderControl-disabled:hover .ssSliderControl_outer {
   background-color: #404040;
 }
-.ssjsSliderControl.ssjsSliderControl-disabled:hover .ssjsSliderControl_inner {
+.ssSliderControl.ssSliderControl-disabled:hover .ssSliderControl_inner {
   background-color: #e6e6e6;
 }
-.ssjsSliderControl.ssjsSliderControl-sliderText {
+.ssSliderControl.ssSliderControl-sliderText {
   right: 55px;
   width: auto;
 }
-.ssjsSliderControl_outer {
+.ssSliderControl_outer {
   display: block;
   height: 100%;
   left: 0;
@@ -234,7 +234,7 @@
   overflow: hidden;
 }
 
-.ssjsSliderControl_inner {
+.ssSliderControl_inner {
   background-color: #e6e6e6;
   bottom: 0;
   left: 0;

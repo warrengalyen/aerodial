@@ -16,7 +16,7 @@ const config = {
             entryFile:  './src/main/js/aerodial.js',
             tmpDir:     './tmp/js',
             dstFile:    'aerodial.js',
-            dstDir:     './dst'
+            dstDir:     './doc'
         },
         sass: {
             srcPattern: './src/main/sass/**/*.scss',
@@ -133,9 +133,11 @@ gulp.task('webserver', () => {
         }));
 });
 
-gulp.task('dev', [
-    'main:build', 'main:watch',
-    'doc:build', 'doc:watch',
-    'webserver'
-]);
+gulp.task('dev', (callback) => {
+    runSequence(
+        ['main:build', 'doc:build'],
+        ['main:watch', 'doc:watch', 'webserver'],
+        callback
+    );
+});
 gulp.task('default', ['main:build', 'doc:build']);

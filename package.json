@@ -21,12 +21,10 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^3.2.1",
     "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
     "gulp-webserver": "^0.9.1",
     "run-sequence": "^1.1.5",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {
-    "update": "^0.7.4"
   }
 }
