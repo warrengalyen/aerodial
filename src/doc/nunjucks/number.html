@@ -1,0 +1,77 @@
+{% extends "_template.html" %}
+
+{% set title = 'Number' %}
+
+{% block content %}
+<h2>Range</h2>
+Use <code>min()</code> or <code>max()</code> to specify minimum/maximum value.
+
+<pre>
+var ss = new Aerodial();
+ss.add(target, 'someProperty').min(0);
+</pre>
+
+<div id="minExampleContainer" class="exampleContainer">
+</div>
+
+<p>If you specify both minimum and maximum value, slider control will be appear.</p>
+
+<pre>
+var ss = new Aerodial();
+ss.add(target, 'someProperty').min(0).max(100);
+</pre>
+
+<div id="sliderExampleContainer" class="exampleContainer">
+</div>
+
+<h2>Stepping</h2>
+<p>You can also specify a step of changing value by using <code>step()</code>.</p>
+
+<pre>
+var ss = new Aerodial();
+ss.add(target, 'someProperty').min(0).max(100).step(10);
+</pre>
+
+<div id="stepExampleContainer" class="exampleContainer">
+</div>
+
+
+<h2>List</h2>
+TODO:
+{% endblock %}
+
+{% block script %}
+
+var minParams = {
+someProperty: 50
+};
+var minExample = new Aerodial({
+autoPlace: false
+});
+minExample.add(minParams, 'someProperty').min(0);
+document.getElementById('minExampleContainer').appendChild(
+minExample.getElement()
+);
+
+var sliderParams = {
+someProperty: 50
+};
+var sliderExample = new Aerodial({
+autoPlace: false
+});
+sliderExample.add(sliderParams, 'someProperty').min(0).max(100);
+document.getElementById('sliderExampleContainer').appendChild(
+sliderExample.getElement()
+);
+
+var stepParams = {
+someProperty: 50
+};
+var stepExample = new Aerodial({
+autoPlace: false
+});
+document.getElementById('stepExampleContainer').appendChild(
+stepExample.getElement()
+);
+stepExample.add(stepParams, 'someProperty').min(0).max(100).step(10);
+{% endblock %}

@@ -1,6 +1,8 @@
 
 .idea/
 /doc/*
+/dst/*
+/tmp/*
 
 # Logs
 logs
