@@ -6,7 +6,7 @@ const Controller                 = require('./controller/controller');
 const FolderController           = require('./controller/folder_controller');
 const PropertyController         = require('./controller/property_controller');
 
-class Seasoner {
+class Aerodial {
     constructor(opt_options) {
         const rootController = new Controller();
         const rootView = rootController.getView();
@@ -29,7 +29,7 @@ class Seasoner {
     }
 
     getElement() {
-        return this.rootController_.getView();
+        return this.rootController_.getView().getElement();
     }
 
     add(target, propName) {
@@ -52,13 +52,19 @@ class Seasoner {
 
     getAllProperties_() {
         let cons = [this.rootController_];
-        const result = [];
+        const result = {};
 
         while (cons.length > 0) {
             const con = cons.splice(0, 1)[0];
 
             if (con instanceof PropertyController) {
-                result.push(con.getProperty());
+                const prop = con.getProperty();
+                const propId = prop.getId();
+                if (result[propId] !== undefined) {
+                    // TODO: Found duplicated key
+                    throw new Error();
+                }
+                result[propId] = prop;
             }
 
             cons = cons.concat(con.getSubcontrollers());
@@ -68,53 +74,24 @@ class Seasoner {
     }
 
     loadJson(json) {
-        // TODO: Implement
+        const props = this.getAllProperties_();
+        Object.keys(json).forEach((propId) => {
+            const prop = props[propId];
+            if (prop === undefined) {
+                return;
+            }
+
+            prop.getModel().setValue(json[propId]);
+        });
     }
 
     getJson() {
-        const json = {};
-        this.getAllProperties_().forEach((prop) => {
-            const key = prop.getId();
-            if (json[key] !== undefined) {
-                // TODO: Found duplicated key
-                throw new Error();
-            }
-            json[key] = prop.getModel().getValue();
-        });
-        return json;
+        const props = this.getAllProperties_();
+        return Object.keys(props).reduce((result, propId) => {
+            result[propId] = props[propId].getModel().getValue();
+            return result;
+        }, {});
     }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const params = {
-        easing: 2,
-        rotationAmount: 'str',
-        speed: true,
-        softness: 'foo',
-        toothCount: false,
-        shapeFactor: 4,
-        param1: 2,
-        param2: 'str'
-    };
-    const ss = new Seasoner();
-    ss.add(params, 'easing').min(0).max(10);
-    ss.add(params, 'param1').label('Very long long label').min(0).max(10).step(0.1).sync();
-    ss.add(params, 'param2');
-    const fol1 = ss.addFolder('Motion');
-    fol1.add(params, 'rotationAmount');
-    fol1.add(params, 'speed');
-    const fol2 = ss.addFolder('Appearance');
-    fol2.add(params, 'softness').list(['foo', 'bar', 'baz']);
-    fol2.add(params, 'toothCount');
-    fol2.add(params, 'shapeFactor');
-
-    let t = 0;
-    setInterval(() => {
-        params.param1 = Math.sin(t * 2 * Math.PI) * 10;
-        t = (t + 0.01) % 1.0;
-    }, 1000 / 30);
-
-    setInterval(() => {
-        document.getElementById('log').textContent = JSON.stringify(ss.getJson());
-    }, 1000);
-});
+window.Aerodial = Aerodial;

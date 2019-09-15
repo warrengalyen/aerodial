@@ -1,7 +1,6 @@
 
 .idea/
-www/assets/js/
-www/assets/css/
+/doc/*
 
 # Logs
 logs
