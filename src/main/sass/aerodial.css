@@ -205,14 +205,17 @@
   border-top: #2b2b2b solid 1px;
 }
 .ssPropView_label {
+  bottom: 0;
   color: #cccccc;
-  float: left;
-  height: 34px;
+  height: 22px;
   left: 0;
-  line-height: 34px;
+  line-height: 22px;
+  margin: auto 0;
   overflow: hidden;
   padding: 0 10px;
+  position: absolute;
   text-overflow: ellipsis;
+  top: 0;
   user-select: none;
   white-space: nowrap;
   width: 50%;
