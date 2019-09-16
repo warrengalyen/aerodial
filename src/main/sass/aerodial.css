@@ -120,14 +120,36 @@
 
 .ssfv {
   overflow: hidden;
+  position: relative;
 }
+.ssfv.ssfv-animated .ssfv_arrow {
+  transition: transform 0.2s ease-out;
+}
+.ssfv.ssfv-animated .ssfv_container {
+  transition: height 0.2s ease-out;
+}
+.ssfv_arrow {
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2210px%22%20height%3D%2210px%22%20viewBox%3D%220%200%2010%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22none%22%3E%3Cg%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M5.49%2C2.51%20L1.49%2C7.49%20L9.49%2C7.49%20L5.49%2C2.51%20Z%22%20transform%3D%22translate(5.5%2C5.0)%20scale(-1%2C-1)%20rotate(-90)%20translate(-5.5%2C-5)%20%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 10px;
+  left: 10px;
+  opacity: 0.5;
+  position: absolute;
+  top: 10px;
+  width: 10px;
+}
+.ssfv_arrow.ssfv_arrow-expanded {
+  transform: rotate(90deg);
+}
+
 .ssfv_title {
   color: gray;
   cursor: pointer;
   height: 30px;
   line-height: 30px;
   overflow: hidden;
-  padding-left: 10px;
+  padding-left: 30px;
   text-overflow: ellipsis;
   user-select: none;
   white-space: nowrap;
@@ -139,9 +161,6 @@
 .ssfv_container {
   overflow: hidden;
   padding: 0 5px;
-}
-.ssfv_container.ssfv_container-animated {
-  transition: height 0.1s ease-in-out;
 }
 
 .sslc {
@@ -178,6 +197,18 @@
 .sslc_select:hover {
   background-color: #595959;
   color: white;
+}
+
+.sslc_arrow {
+  background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2210px%22%20height%3D%2210px%22%20viewBox%3D%220%200%2010%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22none%22%3E%3Cg%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M5%2C3%20L1%2C7.99%20L9%2C7.99%20L5%2C3%20Z%22%20transform%3D%22translate(5%2C5.5)%20scale(-1%2C-1)%20translate(-5%2C-5.5)%20%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center;
+  bottom: 0;
+  height: 10px;
+  margin: auto 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 10px;
 }
 
 .ssPropView {
