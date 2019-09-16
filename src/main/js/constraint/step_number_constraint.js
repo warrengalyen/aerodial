@@ -1,26 +1,26 @@
 const Constraint = require('./constraint');
 
 class StepNumberConstraint extends Constraint {
-constructor() {
-super();
+    constructor(stepValue) {
+        super();
 
-    this.stepValue_ = null;
-}
+        this.stepValue_ = stepValue;
+    }
 
-    getStepValue() {
-    return this.stepValue_;
-}
+        getStepValue() {
+        return this.stepValue_;
+    }
 
-setStepValue(stepValue) {
-    this.stepValue_ = stepValue;
-    this.getEmitter().notifyObservers(Constraint.EVENT_CHANGE);
-}
+    setStepValue(stepValue) {
+        this.stepValue_ = stepValue;
+        this.getEmitter().notifyObservers(Constraint.EVENT_CHANGE);
+    }
 
-format(value) {
-    return (this.stepValue_ !== null) ?
-value - value % this.stepValue_ :
-value;
-}
+    format(value) {
+        return (this.stepValue_ !== null) ?
+    value - value % this.stepValue_ :
+    value;
+    }
 }
 
 module.exports = StepNumberConstraint;

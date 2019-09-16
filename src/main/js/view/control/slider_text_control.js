@@ -30,6 +30,8 @@ class SliderTextControl extends CompositeControl {
             )
         );
         this.addSubview(textControl);
+
+        this.applyModel_();
     }
 }
 

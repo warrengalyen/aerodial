@@ -12,9 +12,7 @@ list: false
 };
 
 var ss = new Aerodial();
-ss.add(params, 'bool');
-ss.add(params, 'bool').list({
-yep: true,
-nope: false
+ss.add(params, 'bool', {
+list: ['yep', 'nope']
 });
 {% endblock %}

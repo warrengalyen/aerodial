@@ -49,7 +49,7 @@ someProperty: 50
 var minExample = new Aerodial({
 autoPlace: false
 });
-minExample.add(minParams, 'someProperty').min(0);
+minExample.add(minParams, 'someProperty', {min: 0});
 document.getElementById('minExampleContainer').appendChild(
 minExample.getElement()
 );
@@ -60,7 +60,7 @@ someProperty: 50
 var sliderExample = new Aerodial({
 autoPlace: false
 });
-sliderExample.add(sliderParams, 'someProperty').min(0).max(100);
+sliderExample.add(sliderParams, 'someProperty', {min: 0, max: 100});
 document.getElementById('sliderExampleContainer').appendChild(
 sliderExample.getElement()
 );
@@ -74,7 +74,7 @@ autoPlace: false
 document.getElementById('stepExampleContainer').appendChild(
 stepExample.getElement()
 );
-stepExample.add(stepParams, 'someProperty').min(0).max(100).step(10);
+stepExample.add(stepParams, 'someProperty', {min: 0, max: 100, step: 10});
 
 var listParams = {
 someProperty: 0
@@ -85,9 +85,12 @@ autoPlace: false
 document.getElementById('listExampleContainer').appendChild(
 listExample.getElement()
 );
-listExample.add(listParams, 'someProperty').list({
+listExample.add(listParams, 'someProperty', {
+list: {
 foo: 0,
 bar: 1,
 baz: 2
-}).on('change', function(v) {console.log(v);});
+},
+onChange: function(v) {console.log(v);}
+});
 {% endblock %}
