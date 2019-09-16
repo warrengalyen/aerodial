@@ -29,7 +29,7 @@ class Errors {
             `Property type not supported: '${propertyName}'`,
             String(value)
         ].join('\n'));
-        e.name = 'Aerodial.DuplicatedPropertyIdError';
+        e.name = 'Aerodial.propertyTypeNotSupportedError';
         return e;
     }
 

@@ -193,6 +193,38 @@
   color: white;
 }
 
+.ssListControl {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.ssListControl_select {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  appearance: none;
+  background-color: #404040;
+  border-radius: 2px;
+  border-width: 0;
+  color: #e6e6e6;
+  cursor: pointer;
+  outline: none;
+  padding: 0 5px;
+}
+.ssListControl_select:focus {
+  background-color: #4d4d4d;
+}
+.ssListControl_select:hover {
+  background-color: #595959;
+  color: white;
+}
+
 .ssSliderControl {
   display: block;
   height: 100%;
