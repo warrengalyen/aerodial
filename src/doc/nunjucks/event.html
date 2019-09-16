@@ -66,7 +66,10 @@ autoPlace: false
 document.getElementById('eventExampleContainer').appendChild(
 ss.getElement()
 );
-ss.add(params, 'someProperty').min(0).max(100).on(
+ss.add(params, 'someProperty', {
+min: 0,
+max: 100
+}).on(
 'change',
 function(value) {
 appendLog('change', value);
@@ -87,8 +90,8 @@ autoPlace: false
 document.getElementById('globalEventExampleContainer').appendChild(
 ss.getElement()
 );
-ss.add(params, 'foo').min(0).max(100);
-ss.add(params, 'bar').min(0).max(100);
+ss.add(params, 'foo', {min: 0, max: 100});
+ss.add(params, 'bar', {min: 0, max: 100});
 ss.on('change', function(value, prop) {
 appendLog(
 'change(' + prop.getDisplayName() + ')',
