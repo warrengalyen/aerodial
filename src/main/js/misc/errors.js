@@ -40,6 +40,10 @@ class Errors {
         e.name = 'Aerodial.PropertyNotFound';
         return e;
     }
+
+    static shouldNotHappen() {
+        return new Error('Should not happen...');
+    }
 }
 
 module.exports = Errors;

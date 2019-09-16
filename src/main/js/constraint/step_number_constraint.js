@@ -16,7 +16,7 @@ class StepNumberConstraint extends Constraint {
         this.getEmitter().notifyObservers(Constraint.EVENT_CHANGE);
     }
 
-    format(value) {
+    constrain(value) {
         return (this.stepValue_ !== null) ?
     value - value % this.stepValue_ :
     value;
