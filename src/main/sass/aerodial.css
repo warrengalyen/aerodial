@@ -14,12 +14,8 @@
 }
 
 .sscc {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  height: 24px;
+  width: 100%;
 }
 .sscc.sscc-disabled {
   opacity: 0.5;
@@ -31,25 +27,17 @@
   background-color: #e6e6e6;
 }
 .sscc_hitArea {
-  bottom: 0;
   display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  height: 24px;
+  width: 100%;
 }
 
 .sscc_input {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
   cursor: pointer;
   margin: 0;
   opacity: 0.001;
   padding: 0;
+  position: absolute;
 }
 
 .sscc_input:focus + .sscc_outer {
@@ -69,15 +57,10 @@
 }
 
 .sscc_outer {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
   background-color: #404040;
   border-radius: 2px;
   height: 24px;
+  position: relative;
   width: 24px;
 }
 
@@ -95,6 +78,10 @@
   width: 14px;
 }
 
+.sscpc {
+  height: 24px;
+  position: relative;
+}
 .sscpc_outer {
   background-color: #404040;
   border-radius: 2px;
@@ -106,14 +93,23 @@
 
 .sscpc_inner {
   bottom: 0;
-  display: block;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
 }
 
+.sscptc {
+  height: 24px;
+  position: relative;
+}
+
+.sscpc.sscpc-cpt {
+  position: absolute;
+}
+
 .sstc.sstc-cpt {
+  position: absolute;
   left: 29px;
   right: 0;
 }
@@ -163,33 +159,18 @@
   padding: 0 5px;
 }
 
-.sslc {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
 .sslc_select {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: auto;
-  height: 100%;
-  right: auto;
-  width: 100%;
   appearance: none;
   background-color: #404040;
   border-radius: 2px;
   border-width: 0;
   color: #e6e6e6;
   cursor: pointer;
+  height: 24px;
+  line-height: 24px;
   outline: none;
   padding: 0 5px;
+  width: 100%;
 }
 .sslc_select:focus {
   background-color: #4d4d4d;
@@ -213,20 +194,24 @@
 
 .ssPropView {
   background-color: #333333;
-  height: 35px;
   position: relative;
+}
+.ssPropView:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 .ssPropView + .ssPropView {
   border-top: #2b2b2b solid 1px;
 }
 .ssPropView_label {
   color: #cccccc;
-  height: 35px;
+  float: left;
+  height: 34px;
   left: 0;
-  line-height: 35px;
+  line-height: 34px;
   overflow: hidden;
   padding: 0 10px;
-  position: absolute;
   text-overflow: ellipsis;
   user-select: none;
   white-space: nowrap;
@@ -234,21 +219,15 @@
 }
 
 .ssPropView_container {
-  bottom: 5px;
-  left: 50%;
-  position: absolute;
-  right: 5px;
-  top: 5px;
+  float: right;
+  padding: 5px;
+  width: 50%;
 }
 
 .sssc {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
   cursor: pointer;
+  height: 24px;
+  position: relative;
 }
 .sssc:hover .sssc_outer {
   background-color: #595959;
@@ -267,15 +246,11 @@
   background-color: #e6e6e6;
 }
 .sssc_outer {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
   background-color: #404040;
   border-radius: 2px;
+  height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .sssc_inner {
@@ -286,24 +261,29 @@
   top: 0;
 }
 
+.ssstc {
+  height: 24px;
+  position: relative;
+  width: 100%;
+}
+
 .sssc.sssc-st {
+  left: 0;
   right: 55px;
-  width: auto;
+  position: absolute;
+  top: 0;
 }
 
 .sstc.sstc-st {
-  left: auto;
+  position: absolute;
   right: 0;
+  top: 0;
   width: 50px;
 }
 
 .sstc {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  height: 24px;
+  position: relative;
 }
 .sstc.sstc-disabled {
   opacity: 0.5;
@@ -313,22 +293,15 @@
   color: #e6e6e6;
 }
 .sstc_input {
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: auto;
-  height: 100%;
-  right: auto;
-  width: 100%;
   background-color: #404040;
   border-radius: 2px;
   border-width: 0;
   color: #e6e6e6;
+  height: 24px;
+  line-height: 24px;
   outline: none;
   padding: 0 5px;
+  width: 100%;
 }
 .sstc_input:focus {
   background-color: #4d4d4d;
