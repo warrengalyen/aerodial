@@ -1,17 +1,17 @@
-const BooleanControlFactory = require('../control_factory/boolean_control_factory');
-const ColorControlFactory   = require('../control_factory/color_control_factory');
-const NumberControlFactory  = require('../control_factory/number_control_factory');
-const StringControlFactory  = require('../control_factory/string_control_factory');
-const Errors                = require('../misc/errors');
+const BooleanPropertyViewFactory = require('../factory/boolean_property_view_factory');
+const ColorPropertyViewFactory   = require('../factory/color_property_view_factory');
+const NumberPropertyViewFactory  = require('../factory/number_property_view_factory');
+const StringPropertyViewFactory  = require('../factory/string_property_view_factory');
+const Errors                     = require('../misc/errors');
 
 const CONTROL_FACTORIES = [
-    BooleanControlFactory,
-    ColorControlFactory,
-    NumberControlFactory,
-    StringControlFactory
+    BooleanPropertyViewFactory,
+    ColorPropertyViewFactory,
+    NumberPropertyViewFactory,
+    StringPropertyViewFactory
 ];
 
-class PropertyControllerProvider {
+class PropertyViewProvider {
     static provide(target, propName, opt_options) {
         const value = target[propName];
         const options = (opt_options !== undefined) ?
@@ -36,4 +36,4 @@ class PropertyControllerProvider {
     }
 }
 
-module.exports = PropertyControllerProvider;
+module.exports = PropertyViewProvider;
