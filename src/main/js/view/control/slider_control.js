@@ -61,11 +61,7 @@ class SliderControl extends Control {
     }
 
     onSliderElementMouseDown_(e) {
-        if (this.isDisabled()) {
-            return;
-        }
-
-        this.getEmitter().notifyObservers(
+            this.getEmitter().notifyObservers(
             Control.EVENT_CHANGE,
             [this.getValueFromX_(e.offsetX)]
         );

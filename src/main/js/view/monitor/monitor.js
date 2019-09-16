@@ -1,12 +1,9 @@
-const EventEmitter = require('../../misc/event_emitter');
-const Model        = require('../../model/model');
-const View         = require('../view');
+const Model = require('../../model/model');
+const View  = require('../view');
 
-class Control extends View {
+class Monitor extends View {
     constructor(model) {
         super();
-
-        this.emitter_ = new EventEmitter();
 
         model.getEmitter().on(
             Model.EVENT_CHANGE,
@@ -21,10 +18,6 @@ class Control extends View {
         return this.model_;
     }
 
-    getEmitter() {
-        return this.emitter_;
-    }
-
     applyModel_() {
     }
 
@@ -33,7 +26,6 @@ class Control extends View {
     }
 }
 
-Control.BLOCK_CLASS = 'c';
-Control.EVENT_CHANGE = 'change';
+Monitor.BLOCK_CLASS = 'm';
 
-module.exports = Control;
+module.exports = Monitor;

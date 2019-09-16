@@ -15,8 +15,8 @@ class NumberPropertyViewFactory extends PropertyViewFactory {
         return typeof(value) === 'number';
     }
 
-    static create(target, propName, options) {
-        const propView = super.create(target, propName, options);
+    static createControlProperty(target, propName, opt_options) {
+        const propView = super.createControlProperty(target, propName, opt_options);
 
         // TODO: Refactor
         // Set default number display
@@ -27,6 +27,24 @@ class NumberPropertyViewFactory extends PropertyViewFactory {
         });
 
         return propView;
+    }
+
+    static createMonitorProperty(target, propName, opt_options) {
+        const propView = super.createMonitorProperty(target, propName, opt_options);
+
+        // TODO: Refactor
+        // Set default number display
+        ViewUtil.getAllSubviews(propView).forEach((subview) => {
+            if (subview.setDisplay) {
+                subview.setDisplay(new DefaultNumberDisplay());
+            }
+        });
+
+        return propView;
+    }
+
+    static instanciateModel_() {
+        return new NumberModel();
     }
 
     static getControlClass_(options) {
@@ -41,8 +59,8 @@ class NumberPropertyViewFactory extends PropertyViewFactory {
         return TextControl;
     }
 
-    static instanciateModel_() {
-        return new NumberModel();
+    static getMonitorClass_(options) {
+        return TextMonitor;
     }
 }
 

@@ -6,17 +6,6 @@ class CompositeControl extends Control {
         super(model);
     }
 
-    applyDisabled_() {
-        super.applyDisabled_();
-
-        const disabled = this.isDisabled();
-        this.getSubviews().forEach((subview) => {
-            if (subview instanceof Control) {
-                subview.setDisabled(disabled);
-            }
-        });
-    }
-
     attachControl_(control) {
         control.getEmitter().on(
             Control.EVENT_CHANGE,
