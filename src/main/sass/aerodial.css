@@ -13,10 +13,115 @@
   top: 0;
 }
 
-.ssFolderView {
+.sscc {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sscc.sscc-disabled {
+  opacity: 0.5;
+}
+.sscc.sscc-disabled .sscc_input:hover + .sscc_outer {
+  background-color: #404040;
+}
+.sscc.sscc-disabled .sscc_input:hover + .sscc_outer .sscc_inner {
+  background-color: #e6e6e6;
+}
+.sscc_hitArea {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.sscc_input {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  margin: 0;
+  opacity: 0.001;
+  padding: 0;
+}
+
+.sscc_input:focus + .sscc_outer {
+  background-color: #4d4d4d;
+}
+
+.sscc_input:focus + .sscc_outer:hover, .sscc_outer:hover {
+  background-color: #595959;
+}
+
+.sscc_input:checked + .sscc_outer .sscc_inner {
+  opacity: 1;
+}
+
+.sscc_outer:hover .sscc_inner {
+  background-color: white;
+}
+
+.sscc_outer {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #404040;
+  border-radius: 2px;
+  height: 24px;
+  width: 24px;
+}
+
+.sscc_inner {
+  background-color: #e6e6e6;
+  border-radius: 2px;
+  bottom: 0;
+  height: 14px;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 14px;
+}
+
+.sscpc_outer {
+  background-color: #404040;
+  border-radius: 2px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 24px;
+}
+
+.sscpc_inner {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.sstc.sstc-cpt {
+  left: 29px;
+  right: 0;
+}
+
+.ssfv {
   overflow: hidden;
 }
-.ssFolderView_title {
+.ssfv_title {
   color: gray;
   cursor: pointer;
   height: 30px;
@@ -27,16 +132,52 @@
   user-select: none;
   white-space: nowrap;
 }
-.ssFolderView_title:hover {
+.ssfv_title:hover {
   color: #999999;
 }
 
-.ssFolderView_container {
+.ssfv_container {
   overflow: hidden;
   padding: 0 5px;
 }
-.ssFolderView_container.ssFolderView_container-animated {
+.ssfv_container.ssfv_container-animated {
   transition: height 0.1s ease-in-out;
+}
+
+.sslc {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sslc_select {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: auto;
+  height: 100%;
+  right: auto;
+  width: 100%;
+  appearance: none;
+  background-color: #404040;
+  border-radius: 2px;
+  border-width: 0;
+  color: #e6e6e6;
+  cursor: pointer;
+  outline: none;
+  padding: 0 5px;
+}
+.sslc_select:focus {
+  background-color: #4d4d4d;
+}
+.sslc_select:hover {
+  background-color: #595959;
+  color: white;
 }
 
 .ssPropView {
@@ -69,209 +210,101 @@
   top: 5px;
 }
 
-.ssCheckboxControl {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.ssCheckboxControl.ssCheckboxControl-disabled {
-  opacity: 0.5;
-}
-.ssCheckboxControl.ssCheckboxControl-disabled .ssCheckboxControl_input:hover + .ssCheckboxControl_outer {
-  background-color: #404040;
-}
-.ssCheckboxControl.ssCheckboxControl-disabled .ssCheckboxControl_input:hover + .ssCheckboxControl_outer .ssCheckboxControl_inner {
-  background-color: #e6e6e6;
-}
-.ssCheckboxControl_hitArea {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.ssCheckboxControl_input {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  cursor: pointer;
-  margin: 0;
-  opacity: 0.001;
-  padding: 0;
-}
-
-.ssCheckboxControl_input:focus + .ssCheckboxControl_outer {
-  background-color: #4d4d4d;
-}
-
-.ssCheckboxControl_input:focus + .ssCheckboxControl_outer:hover, .ssCheckboxControl_outer:hover {
-  background-color: #595959;
-}
-
-.ssCheckboxControl_input:checked + .ssCheckboxControl_outer .ssCheckboxControl_inner {
-  opacity: 1;
-}
-
-.ssCheckboxControl_outer:hover .ssCheckboxControl_inner {
-  background-color: white;
-}
-
-.ssCheckboxControl_outer {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: #404040;
-  border-radius: 2px;
-  height: 24px;
-  width: 24px;
-}
-
-.ssCheckboxControl_inner {
-  background-color: #e6e6e6;
-  border-radius: 2px;
+.sssc {
   bottom: 0;
-  height: 14px;
+  display: block;
   left: 0;
-  margin: auto;
-  opacity: 0;
   position: absolute;
   right: 0;
   top: 0;
-  width: 14px;
-}
-
-.ssTextControl {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.ssTextControl.ssTextControl-disabled {
-  opacity: 0.5;
-}
-.ssTextControl.ssTextControl-disabled .ssTextControl_input:hover {
-  background-color: #404040;
-  color: #e6e6e6;
-}
-.ssTextControl.ssTextControl-sliderText {
-  left: auto;
-  right: 0;
-  width: 50px;
-}
-.ssTextControl_input {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: #404040;
-  border-radius: 2px;
-  border-width: 0;
-  color: #e6e6e6;
-  outline: none;
-  padding: 0 5px;
-}
-.ssTextControl_input:focus {
-  background-color: #4d4d4d;
-}
-.ssTextControl_input:hover {
-  background-color: #595959;
-  color: white;
-}
-
-.ssListControl {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.ssListControl_select {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  appearance: none;
-  background-color: #404040;
-  border-radius: 2px;
-  border-width: 0;
-  color: #e6e6e6;
-  cursor: pointer;
-  outline: none;
-  padding: 0 5px;
-}
-.ssListControl_select:focus {
-  background-color: #4d4d4d;
-}
-.ssListControl_select:hover {
-  background-color: #595959;
-  color: white;
-}
-
-.ssSliderControl {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
   cursor: pointer;
 }
-.ssSliderControl:hover .ssSliderControl_outer {
+.sssc:hover .sssc_outer {
   background-color: #595959;
 }
-.ssSliderControl:hover .ssSliderControl_inner {
+.sssc:hover .sssc_inner {
   background-color: white;
 }
-.ssSliderControl.ssSliderControl-disabled {
+.sssc.sssc-disabled {
   cursor: default;
   opacity: 0.5;
 }
-.ssSliderControl.ssSliderControl-disabled:hover .ssSliderControl_outer {
+.sssc.sssc-disabled:hover .sssc_outer {
   background-color: #404040;
 }
-.ssSliderControl.ssSliderControl-disabled:hover .ssSliderControl_inner {
+.sssc.sssc-disabled:hover .sssc_inner {
   background-color: #e6e6e6;
 }
-.ssSliderControl.ssSliderControl-sliderText {
-  right: 55px;
-  width: auto;
-}
-.ssSliderControl_outer {
+.sssc_outer {
+  bottom: 0;
   display: block;
-  height: 100%;
   left: 0;
   position: absolute;
+  right: 0;
   top: 0;
-  width: 100%;
   background-color: #404040;
   border-radius: 2px;
   overflow: hidden;
 }
 
-.ssSliderControl_inner {
+.sssc_inner {
   background-color: #e6e6e6;
   bottom: 0;
   left: 0;
   position: absolute;
   top: 0;
+}
+
+.sssc.sssc-st {
+  right: 55px;
+  width: auto;
+}
+
+.sstc.sstc-st {
+  left: auto;
+  right: 0;
+  width: 50px;
+}
+
+.sstc {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sstc.sstc-disabled {
+  opacity: 0.5;
+}
+.sstc.sstc-disabled .sstc_input:hover {
+  background-color: #404040;
+  color: #e6e6e6;
+}
+.sstc_input {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: auto;
+  height: 100%;
+  right: auto;
+  width: 100%;
+  background-color: #404040;
+  border-radius: 2px;
+  border-width: 0;
+  color: #e6e6e6;
+  outline: none;
+  padding: 0 5px;
+}
+.sstc_input:focus {
+  background-color: #4d4d4d;
+}
+.sstc_input:hover {
+  background-color: #595959;
+  color: white;
 }
 
 /*# sourceMappingURL=aerodial.css.map */
