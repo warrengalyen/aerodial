@@ -1,18 +1,18 @@
-const BooleanPropertyViewFactory = require('../factory/boolean_property_view_factory');
-const ColorPropertyViewFactory   = require('../factory/color_property_view_factory');
-const NumberPropertyViewFactory  = require('../factory/number_property_view_factory');
-const StringPropertyViewFactory  = require('../factory/string_property_view_factory');
+const BooleanPropertyViewFactory = require('./boolean_property_view_factory');
+const ColorPropertyViewFactory   = require('./color_property_view_factory');
+const NumberPropertyViewFactory  = require('./number_property_view_factory');
+const StringPropertyViewFactory  = require('./string_property_view_factory');
 const Errors                     = require('../misc/errors');
 
-const CONTROL_FACTORIES = [
+const FACTORIES = [
     BooleanPropertyViewFactory,
     ColorPropertyViewFactory,
     NumberPropertyViewFactory,
     StringPropertyViewFactory
 ];
 
-class PropertyViewProvider {
-    static provide(target, propName, monitor, opt_options) {
+class PropertyViewFactoryComplex {
+    static create(target, propName, monitor, opt_options) {
         const factory = this.getFactory_(target, propName);
         if (factory === null) {
             throw Errors.propertyTypeNotSupported(
@@ -25,7 +25,7 @@ class PropertyViewProvider {
 
     static getFactory_(target, propName) {
         const value = target[propName];
-        let factories = CONTROL_FACTORIES.reduce((results, factory) => {
+        let factories = FACTORIES.reduce((results, factory) => {
             return factory.supports(value) ?
                 results.concat(factory) :
                 results;
@@ -37,4 +37,4 @@ class PropertyViewProvider {
     }
 }
 
-module.exports = PropertyViewProvider;
+module.exports = PropertyViewFactoryComplex;

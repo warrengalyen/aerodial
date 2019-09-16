@@ -94,7 +94,7 @@ ss.add(params, 'foo', {min: 0, max: 100});
 ss.add(params, 'bar', {min: 0, max: 100});
 ss.on('change', function(value, prop) {
 appendLog(
-'change(' + prop.getDisplayName() + ')',
+'change(' + prop.getLabel() + ')',
 value
 );
 });
