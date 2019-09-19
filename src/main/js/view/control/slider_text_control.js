@@ -21,18 +21,16 @@ class SliderTextControl extends CompositeControl {
         );
         this.addSubview(sliderControl);
 
-        const textControl = new NumberTextControl(this.getModel());
-        textControl.getElement().classList.add(
-            ClassName.get(
-                TextControl.BLOCK_CLASS,
-                null,
-                SliderTextControl.MODIFIER_CLASS
-            )
-        );
-        this.addSubview(textControl);
-
-        this.applyModel_();
-    }
+		const textControl = new NumberTextControl(this.getModel());
+		textControl.getElement().classList.add(
+			ClassName.get(
+				TextControl.BLOCK_CLASS,
+				null,
+				SliderTextControl.MODIFIER_CLASS
+			)
+		);
+		this.addSubview(textControl);
+	}
 }
 
 SliderTextControl.BLOCK_CLASS = 'stc';

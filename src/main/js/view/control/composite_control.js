@@ -1,4 +1,3 @@
-const ClassName     = require('../../misc/class_name');
 const Control       = require('./control');
 
 class CompositeControl extends Control {

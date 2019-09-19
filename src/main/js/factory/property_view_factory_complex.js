@@ -1,7 +1,7 @@
-const BooleanPropertyViewFactory = require('./boolean_property_view_factory');
-const ColorPropertyViewFactory   = require('./color_property_view_factory');
-const NumberPropertyViewFactory  = require('./number_property_view_factory');
-const StringPropertyViewFactory  = require('./string_property_view_factory');
+const BooleanPropertyViewFactory = require('../factory/boolean_property_view_factory');
+const ColorPropertyViewFactory   = require('../factory/color_property_view_factory');
+const NumberPropertyViewFactory  = require('../factory/number_property_view_factory');
+const StringPropertyViewFactory  = require('../factory/string_property_view_factory');
 const Errors                     = require('../misc/errors');
 
 const FACTORIES = [

@@ -17,19 +17,23 @@ class Core {
             opt_options :
             {};
 
-        const autoPlace = (options.autoPlace !== undefined) ?
-            options.autoPlace :
-            true;
-        if (autoPlace) {
-            const containerElem = document.createElement('div');
-            containerElem.classList.add(ClassName.get('DefaultContainer'));
+        const containerElem = (options.container !== undefined) ?
+            options.container :
+            this.createDefaultContainer_();
+        if (containerElem) {
             containerElem.appendChild(this.rootView_.getElement());
-            document.body.appendChild(containerElem);
         }
 
         this.emitter_ = new EventEmitter();
 
-        Appearance.apply();
+        Appearance.inject();
+    }
+
+    createDefaultContainer_() {
+        const containerElem = document.createElement('div');
+        containerElem.classList.add(ClassName.get('DefaultContainer'));
+        document.body.appendChild(containerElem);
+        return containerElem;
     }
 
     getRootView() {
@@ -63,14 +67,18 @@ class Core {
         return folderView;
     }
 
-    getPropertiesForJson_() {
+    getProperties_() {
         const views = ViewUtil.getAllSubviews(this.rootView_);
         const propViews = views.filter((view) => {
             return view instanceof PropertyView;
         });
-        const props = propViews.map((propView) => {
+        return propViews.map((propView) => {
             return propView.getProperty();
         });
+    }
+
+    getPropertiesForJson_() {
+        const props = this.getProperties_();
         const result = {};
         props.forEach((prop) => {
             const propId = prop.getId();
@@ -80,6 +88,12 @@ class Core {
             result[propId] = prop;
         });
         return result;
+    }
+
+    refreshAllProperties() {
+        this.getProperties_().forEach((prop) => {
+            prop.applySourceValue();
+        });
     }
 
     getJson() {

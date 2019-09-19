@@ -29,6 +29,7 @@ class TextControl extends Control {
         this.inputElem_ = inputElem;
 
         this.formatter_ = new Formatter();
+		this.applyModel_();
     }
 
     getFormatter() {

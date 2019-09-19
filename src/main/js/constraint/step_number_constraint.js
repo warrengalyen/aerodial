@@ -11,16 +11,11 @@ class StepNumberConstraint extends Constraint {
         return this.stepValue_;
     }
 
-    setStepValue(stepValue) {
-        this.stepValue_ = stepValue;
-        this.getEmitter().notifyObservers(Constraint.EVENT_CHANGE);
-    }
-
-    constrain(value) {
-        return (this.stepValue_ !== null) ?
-    value - value % this.stepValue_ :
-    value;
-    }
+	constrain(value) {
+		return (this.stepValue_ !== null) ?
+			value - value % this.stepValue_ :
+			value;
+	}
 }
 
 module.exports = StepNumberConstraint;

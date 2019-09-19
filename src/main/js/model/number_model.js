@@ -4,7 +4,7 @@ class NumberModel extends Model {
     constructor() {
         super();
 
-        this.value_ = 0.0;;
+		this.value_ = 0.0;
     }
 
     static validate(value) {

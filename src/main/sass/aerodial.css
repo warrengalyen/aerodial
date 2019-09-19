@@ -185,10 +185,22 @@
   right: 0;
 }
 
-.sslc_select {
-  appearance: none;
+.sslc {
   background-color: #404040;
   border-radius: 2px;
+}
+.sslc:focus {
+  background-color: #4d4d4d;
+}
+.sslc:hover {
+  background-color: #595959;
+}
+.sslc:hover .sslc_select {
+  color: white;
+}
+.sslc_select {
+  appearance: none;
+  background-color: transparent;
   border-width: 0;
   color: #e6e6e6;
   cursor: pointer;
@@ -196,14 +208,8 @@
   line-height: 24px;
   outline: none;
   padding: 0 5px;
+  position: relative;
   width: 100%;
-}
-.sslc_select:focus {
-  background-color: #4d4d4d;
-}
-.sslc_select:hover {
-  background-color: #595959;
-  color: white;
 }
 
 .sslc_arrow {
@@ -266,12 +272,22 @@
 }
 
 .sstc {
+  background-color: #404040;
+  border-radius: 2px;
   height: 24px;
   position: relative;
 }
+.sstc:focus {
+  background-color: #4d4d4d;
+}
+.sstc:hover {
+  background-color: #595959;
+}
+.sstc:hover .sstc_input {
+  color: white;
+}
 .sstc_input {
-  background-color: #404040;
-  border-radius: 2px;
+  background-color: transparent;
   border-width: 0;
   color: #e6e6e6;
   height: 24px;
@@ -279,13 +295,6 @@
   outline: none;
   padding: 0 5px;
   width: 100%;
-}
-.sstc_input:focus {
-  background-color: #4d4d4d;
-}
-.sstc_input:hover {
-  background-color: #595959;
-  color: white;
 }
 
 .ssgm {
@@ -301,13 +310,33 @@
   width: 100%;
 }
 
+.sslm {
+  background-color: #404040;
+  border-radius: 2px;
+  height: 72px;
+  position: relative;
+}
+.sslm_textarea {
+  background-color: transparent;
+  border-width: 0;
+  color: rgba(230, 230, 230, 0.5);
+  display: block;
+  height: 72px;
+  line-height: 24px;
+  outline: none;
+  padding: 0 5px;
+  resize: none;
+  width: 100%;
+}
+
 .sstm {
+  background-color: #404040;
+  border-radius: 2px;
   height: 24px;
   position: relative;
 }
 .sstm_input {
-  background-color: #404040;
-  border-radius: 2px;
+  background-color: transparent;
   border-width: 0;
   color: rgba(230, 230, 230, 0.5);
   height: 24px;
