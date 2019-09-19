@@ -3,14 +3,14 @@
 {% set title = 'String' %}
 
 {% block content %}
-<p>seasoner.js provides a text field for a string property.</p>
+<p>aerodial.js provides a text field for a string property.</p>
 
 <div class="codeBlock">
   <div class="codeBlock_code">
 		<pre><code class="js">var params = {
   name: 'cocopon',
 };
-var ss = Seasoner();
+var ss = Aerodial();
 ss.add(params, 'name');</code></pre>
   </div>
   <div class="codeBlock_example">
@@ -25,7 +25,7 @@ ss.add(params, 'name');</code></pre>
 
 <div class="codeBlock">
   <div class="codeBlock_code">
-		<pre><code class="js">var ss = Seasoner();
+		<pre><code class="js">var ss = Aerodial();
 ss.add(target, 'direction').list([
   'left',
   'up',
@@ -42,7 +42,7 @@ ss.add(target, 'direction').list([
 
 <div class="codeBlock">
   <div class="codeBlock_code">
-		<pre><code class="js">var ss = Seasoner();
+		<pre><code class="js">var ss = Aerodial();
 ss.add(target, 'vimKey').list([
   left:  'H',
   up:    'K',
@@ -61,7 +61,7 @@ ss.add(target, 'vimKey').list([
 var params = {
 name: 'cocopon',
 };
-var ss = Seasoner({
+var ss = Aerodial({
 container: document.getElementById('example')
 });
 ss.add(params, 'name');
@@ -72,7 +72,7 @@ var params = {
 direction: 'left',
 '(value)': ''
 };
-var ss = Seasoner({
+var ss = Aerodial({
 container: document.getElementById('listExample')
 });
 ss.add(params, 'direction', {
@@ -93,7 +93,7 @@ var params = {
 vimKey: 'H',
 '(value)': ''
 };
-var ss = Seasoner({
+var ss = Aerodial({
 container: document.getElementById('namedListExample')
 });
 ss.add(params, 'vimKey', {

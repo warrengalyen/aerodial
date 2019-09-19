@@ -3,14 +3,14 @@
 {% set title = 'Number' %}
 
 {% block content %}
-<p>seasoner.js provides a text field for a number property by default.</p>
+<p>aerodial.js provides a text field for a number property by default.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_code">
 		<pre><code class="js">var params = {
   speed: 0.5
 };
-var ss = Seasoner();
+var ss = Aerodial();
 ss.add(params, 'speed');</code></pre>
     </div>
     <div class="codeBlock_example">
@@ -24,7 +24,7 @@ Use <code>min</code> or <code>max</code> to specify minimum/maximum value.
 
 <div class="codeBlock">
     <div class="codeBlock_code">
-		<pre><code class="js">var ss = Seasoner();
+		<pre><code class="js">var ss = Aerodial();
 ss.add(target, 'speed', {min: 0});</code></pre>
     </div>
     <div class="codeBlock_example">
@@ -36,7 +36,7 @@ ss.add(target, 'speed', {min: 0});</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_code">
-		<pre><code class="js">var ss = Seasoner();
+		<pre><code class="js">var ss = Aerodial();
 ss.add(target, 'speed', {min: 0, max: 100});</code></pre>
     </div>
     <div class="codeBlock_example">
@@ -50,7 +50,7 @@ ss.add(target, 'speed', {min: 0, max: 100});</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_code">
-		<pre><code class="js">var ss = Seasoner();
+		<pre><code class="js">var ss = Aerodial();
 ss.add(target, 'particleCount', {
   min: 0, max: 100, step: 10
 });</code></pre>
@@ -66,7 +66,7 @@ ss.add(target, 'particleCount', {
 
 <div class="codeBlock">
     <div class="codeBlock_code">
-		<pre><code class="js">var ss = Seasoner();
+		<pre><code class="js">var ss = Aerodial();
 ss.add(target, 'direction', {
   list: {
     none: 0,
@@ -87,7 +87,7 @@ ss.add(target, 'direction', {
 var params = {
 speed: 0.5,
 };
-var ss = Seasoner({
+var ss = Aerodial({
 container: document.getElementById('example')
 });
 ss.add(params, 'speed');
@@ -97,7 +97,7 @@ ss.add(params, 'speed');
 var params = {
 speed: 50
 };
-var ss = Seasoner({
+var ss = Aerodial({
 container: document.getElementById('minExample')
 });
 ss.add(params, 'speed', {min: 0});
@@ -107,7 +107,7 @@ ss.add(params, 'speed', {min: 0});
 var params = {
 speed: 50
 };
-var ss = Seasoner({
+var ss = Aerodial({
 container: document.getElementById('sliderExample')
 });
 ss.add(params, 'speed', {min: 0, max: 100});
@@ -117,7 +117,7 @@ ss.add(params, 'speed', {min: 0, max: 100});
 var params = {
 particleCount: 50
 };
-var ss = Seasoner({
+var ss = Aerodial({
 container: document.getElementById('stepExample')
 });
 ss.add(params, 'particleCount', {min: 0, max: 100, step: 10});
@@ -128,7 +128,7 @@ var params = {
 direction: 0,
 '(value)': ''
 };
-var ss = Seasoner({
+var ss = Aerodial({
 container: document.getElementById('listExample')
 });
 ss.add(params, 'direction', {
