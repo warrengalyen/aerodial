@@ -11,11 +11,8 @@ var params = {
 color: '#ff0000'
 };
 
-var ssColor = new Aerodial({
-autoPlace: false
+var ssColor = Aerodial({
+container: document.getElementById('colorExample')
 });
-document.getElementById('colorExample').appendChild(
-ssColor.getElement()
-);
 ssColor.add(params, 'color');
 {% endblock %}
