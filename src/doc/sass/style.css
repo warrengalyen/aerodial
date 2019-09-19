@@ -3,26 +3,38 @@
 }
 
 html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #f0f0f0;
   font-family: sans-serif;
   font-size: 13px;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 4rem 0 1rem;
+  text-transform: capitalize;
+}
+
 pre {
-  background-color: #eee;
-  border-radius: 2px;
-  color: #888;
   font-family: Menlo, Courier, monospace;
   line-height: 1.8;
-  margin: 1rem 0;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
+}
+pre > code, pre > .hljs {
+  padding: 0;
 }
 
 p {
@@ -54,8 +66,24 @@ code {
   width: 600px;
 }
 
-.exampleContainer {
-  margin: 2rem auto;
+.codeBlock {
+  background-color: #eee;
+  border-radius: 2px;
+  color: #888;
+  margin: 2rem 0;
+  padding: 5px;
+}
+.codeBlock_code {
+  padding: 15px 15px 20px;
+}
+
+.codeBlock_example {
+  border-top: #ddd dotted 1px;
+  padding: 20px 15px 15px;
+}
+
+.codeBlock_ssContainer {
+  margin: 0 auto;
   width: 250px;
 }
 

@@ -3,16 +3,58 @@
 {% set title = 'Overview' %}
 
 {% block content %}
+<p>aerodial.js provides a checkbox field for a boolean property by default.</p>
+
+<div class="codeBlock">
+    <div class="codeBlock_code">
+		<pre><code class="js">var params = {
+  debug: true
+};
+var ss = Aerodial();
+ss.add(params, 'debug');</code></pre>
+    </div>
+    <div class="codeBlock_example">
+        <div id="example" class="codeBlock_ssContainer"></div>
+    </div>
+</div>
+
+
+<h2>List</h2>
+<div class="codeBlock">
+    <div class="codeBlock_code">
+		<pre><code class="js">var ss = Aerodial();
+ss.add(target, 'debug', {
+  list: ['Enabled', 'Disabled']
+});</code></pre>
+    </div>
+    <div class="codeBlock_example">
+        <div id="listExample" class="codeBlock_ssContainer"></div>
+    </div>
+</div>
 {% endblock %}
 
 {% block script %}
+(function() {
 var params = {
-bool: true,
-list: false
+debug: true
 };
 
-var ss = Aerodial();
-ss.add(params, 'bool', {
-list: ['yep', 'nope']
+var ss = Aerodial({
+container: document.getElementById('example')
 });
+ss.add(params, 'debug');
+})();
+
+(function() {
+var params = {
+debug: false
+};
+
+var ss = Aerodial({
+container: document.getElementById('listExample')
+});
+ss.add(params, 'debug', {
+list: ['Enabled', 'Disabled']
+});
+})();
 {% endblock %}
