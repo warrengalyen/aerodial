@@ -47,7 +47,7 @@ ss.add(params, 'debug');
 (function() {
 var params = {
 debug: false,
-log: ''
+'(value)': ''
 };
 var ss = Aerodial({
 container: document.getElementById('listExample')
@@ -55,8 +55,9 @@ container: document.getElementById('listExample')
 ss.add(params, 'debug', {
 list: ['Enabled', 'Disabled']
 }).on('change', function(value) {
-params.log = String(value);
+params['(value)'] = String(value);
 ss.refresh();
 });
+ss.monitor(params, '(value)');
 })();
 {% endblock %}

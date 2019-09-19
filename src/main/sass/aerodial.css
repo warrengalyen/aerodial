@@ -321,11 +321,12 @@
   border-width: 0;
   color: rgba(230, 230, 230, 0.5);
   display: block;
-  height: 72px;
+  height: 100%;
   line-height: 24px;
   outline: none;
   padding: 0 5px;
   resize: none;
+  white-space: pre;
   width: 100%;
 }
 

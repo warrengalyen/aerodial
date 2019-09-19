@@ -24,6 +24,14 @@ class Errors {
         return e;
     }
 
+    static propertyNotFound(propertyName) {
+        const e = new Error(
+            `Property not found: '${propertyName}'`
+        );
+        e.name = 'Aerodial.propertyNotFoundError';
+        return e;
+    }
+
     static propertyTypeNotSupported(propertyName, value) {
         const e = new Error([
             `Property type not supported: '${propertyName}'`,

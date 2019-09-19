@@ -3,14 +3,14 @@
 {% set title = 'String' %}
 
 {% block content %}
-<p>aerodial.js provides a text field for a string property.</p>
+<p>seasoner.js provides a text field for a string property.</p>
 
 <div class="codeBlock">
   <div class="codeBlock_code">
 		<pre><code class="js">var params = {
   name: 'cocopon',
 };
-var ss = Aerodial();
+var ss = Seasoner();
 ss.add(params, 'name');</code></pre>
   </div>
   <div class="codeBlock_example">
@@ -25,7 +25,7 @@ ss.add(params, 'name');</code></pre>
 
 <div class="codeBlock">
   <div class="codeBlock_code">
-		<pre><code class="js">var ss = Aerodial();
+		<pre><code class="js">var ss = Seasoner();
 ss.add(target, 'direction').list([
   'left',
   'up',
@@ -38,13 +38,11 @@ ss.add(target, 'direction').list([
   </div>
 </div>
 
-TODO: Log
-
 <p>And also an object that has string values:</p>
 
 <div class="codeBlock">
   <div class="codeBlock_code">
-		<pre><code class="js">var ss = Aerodial();
+		<pre><code class="js">var ss = Seasoner();
 ss.add(target, 'vimKey').list([
   left:  'H',
   up:    'K',
@@ -56,8 +54,6 @@ ss.add(target, 'vimKey').list([
     <div id="namedListExample" class="codeBlock_ssContainer"></div>
   </div>
 </div>
-
-TODO: Log
 {% endblock %}
 
 {% block script %}
@@ -65,7 +61,7 @@ TODO: Log
 var params = {
 name: 'cocopon',
 };
-var ss = Aerodial({
+var ss = Seasoner({
 container: document.getElementById('example')
 });
 ss.add(params, 'name');
@@ -74,8 +70,9 @@ ss.add(params, 'name');
 (function() {
 var params = {
 direction: 'left',
+'(value)': ''
 };
-var ss = Aerodial({
+var ss = Seasoner({
 container: document.getElementById('listExample')
 });
 ss.add(params, 'direction', {
@@ -85,14 +82,18 @@ list: [
 'right',
 'down'
 ]
+}).on('change', function(value) {
+params['(value)'] = value;
 });
+ss.monitor(params, '(value)');
 })();
 
 (function() {
 var params = {
 vimKey: 'H',
+'(value)': ''
 };
-var ss = Aerodial({
+var ss = Seasoner({
 container: document.getElementById('namedListExample')
 });
 ss.add(params, 'vimKey', {
@@ -102,6 +103,9 @@ up:    'K',
 right: 'L',
 down:  'J'
 }
+}).on('change', function(value) {
+params['(value)'] = value;
 });
+ss.monitor(params, '(value)');
 })();
 {% endblock %}
