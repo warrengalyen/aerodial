@@ -49,6 +49,11 @@ class CoreInterface {
         return new ButtonViewInterface(buttonView);
     }
 
+    addSeparator() {
+        const separatorView = new SeparatorView();
+        this.core_.getRootView().addSubview(separatorView);
+    }
+
     getJson() {
         return this.core_.getJson();
     }

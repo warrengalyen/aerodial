@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: Verdana, sans-serif;
   font-size: 13px;
   margin: 0;
   padding: 0;
@@ -46,6 +46,14 @@ p + p {
   margin-top: 0.5rem;
 }
 
+dl, ol, ul {
+  margin: 1rem 0;
+}
+
+li + li {
+  margin-top: 0.5rem;
+}
+
 code {
   background-color: #eee;
   border-radius: 2px;
@@ -63,7 +71,10 @@ code {
   background-color: white;
   margin: 0 auto;
   padding: 30px;
-  width: 600px;
+  width: 620px;
+}
+.content > *:last-child {
+  margin-bottom: 0;
 }
 
 .codeBlock {
@@ -85,41 +96,42 @@ code {
   border-top: #ddd dotted 1px;
 }
 
-.codeBlock_foo {
-  float: left;
-  width: 50%;
-}
-
-.codeBlock_bar {
-  bottom: 20px;
-  padding: 0 20px;
-  position: absolute;
-  right: 0;
-  top: 20px;
-  width: 50%;
-}
-
-.codeBlock_code {
-  padding: 20px;
-}
-
 .codeBlock_ssContainer {
   margin: 0 auto;
   width: 250px;
 }
 
 .codeBlock_textBox {
-  background-color: transparent;
+  background-color: #ddd;
+  border-radius: 2px;
   border-width: 0;
-  color: #888;
+  color: #aaa;
   font-family: Menlo, Courier, monospace;
-  font-size: 1rem;
-  height: 9rem;
+  font-size: 0.9rem;
+  height: 139px;
   line-height: 1.8;
   outline: none;
-  padding: 0;
+  padding: 10px;
   resize: none;
+  white-space: pre;
   width: 100%;
+}
+
+.twoColumnLayout:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.twoColumnLayout_leftColumn {
+  float: left;
+  padding-right: 10px;
+  width: 50%;
+}
+
+.twoColumnLayout_rightColumn {
+  float: left;
+  padding-left: 10px;
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

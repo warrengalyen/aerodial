@@ -1,9 +1,11 @@
 .ss {
-  background-color: #1a1a23;
-  font-size: 11px;
+  background-color: #1a1d23;
+  padding: 0 5px;
 }
 .ss * {
   box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
 }
 
 .ssDefaultContainer {
@@ -13,33 +15,39 @@
   top: 0;
 }
 
-.ssbv {
+.ssbtv {
+  background-color: #2e3138;
   padding: 5px;
   position: relative;
 }
-.ssbv_button {
+.ssbtv_button {
   appearance: none;
-  background-color: #393946;
+  background-color: #40454f;
   border-width: 0;
   border-radius: 2px;
-  color: #c7c7d1;
+  color: #cfd2d8;
   cursor: pointer;
-  height: 24px;
-  line-height: 24px;
+  height: 23px;
+  line-height: 23px;
   outline: none;
   padding: 0;
   transition: background-color 0.2s ease-out;
   width: 100%;
 }
-.ssbv_button:focus {
-  background-color: #454554;
+.ssbtv_button:focus {
+  background-color: #4c515d;
 }
-.ssbv_button:hover {
-  background-color: #505062;
-  color: #e3e3e8;
+.ssbtv_button:hover {
+  background-color: #575e6b;
+  color: #ebedef;
 }
-.ssbv_button:active {
-  background-color: #67677e;
+.ssbtv_button:active {
+  background-color: #6e7687;
+}
+
+.ssbtv + .ssprv,
+.ssprv + .ssbtv {
+  border-top: #22252a solid 1px;
 }
 
 .ssfv {
@@ -57,10 +65,11 @@
   background-position: center center;
   background-repeat: no-repeat;
   height: 10px;
-  left: 10px;
+  right: 10px;
   opacity: 0.3;
   position: absolute;
-  top: 10px;
+  top: 11.5px;
+  transform: rotate(-90deg);
   width: 10px;
 }
 .ssfv_arrow.ssfv_arrow-expanded {
@@ -68,12 +77,13 @@
 }
 
 .ssfv_title {
-  color: rgba(199, 199, 209, 0.5);
+  color: rgba(199, 202, 209, 0.5);
   cursor: pointer;
-  height: 30px;
-  line-height: 30px;
+  height: 33px;
+  line-height: 33px;
   overflow: hidden;
-  padding-left: 30px;
+  padding-left: 5px;
+  padding-right: 30px;
   position: relative;
   text-overflow: ellipsis;
   transition: color 0.2s ease-out;
@@ -81,35 +91,34 @@
   white-space: nowrap;
 }
 .ssfv_title:hover {
-  color: rgba(227, 227, 232, 0.5);
+  color: rgba(241, 242, 244, 0.5);
 }
 
 .ssfv_container {
   overflow: hidden;
-  padding: 0 5px;
 }
 
-.ssp {
-  background-color: #2e2e38;
+.ssprv {
+  background-color: #2e3138;
   position: relative;
 }
-.ssp:after {
+.ssprv:after {
   clear: both;
   content: "";
   display: block;
 }
-.ssp + .ssp {
-  border-top: transparent solid 1px;
+.ssprv + .ssprv {
+  border-top: #22252a solid 1px;
 }
-.ssp_label {
+.ssprv_label {
   bottom: 0;
-  color: rgba(199, 199, 209, 0.7);
+  color: rgba(199, 202, 209, 0.7);
   height: 22px;
   left: 0;
   line-height: 22px;
   margin: auto 0;
   overflow: hidden;
-  padding: 0 10px;
+  padding: 0 5px;
   position: absolute;
   text-overflow: ellipsis;
   top: 0;
@@ -118,23 +127,27 @@
   width: 38%;
 }
 
-.ssp_container {
+.ssprv_container {
   float: right;
   padding: 5px;
   width: 62%;
 }
 
-.sscc {
-  height: 24px;
+.ssspv {
+  height: 5px;
+}
+
+.sscbc {
+  height: 23px;
   width: 100%;
 }
-.sscc_hitArea {
+.sscbc_hitArea {
   display: block;
-  height: 24px;
+  height: 23px;
   width: 100%;
 }
 
-.sscc_input {
+.sscbc_input {
   cursor: pointer;
   margin: 0;
   opacity: 0.001;
@@ -142,36 +155,37 @@
   position: absolute;
 }
 
-.sscc_input:focus + .sscc_outer {
-  background-color: #454554;
+.sscbc_input:focus + .sscbc_outer {
+  background-color: #4c515d;
 }
 
-.sscc_input:focus + .sscc_outer:hover, .sscc_outer:hover {
-  background-color: #505062;
+.sscbc_input:focus + .sscbc_outer:hover, .sscbc_outer:hover {
+  background-color: #575e6b;
 }
 
-.sscc_input:checked + .sscc_outer .sscc_inner {
+.sscbc_input:checked + .sscbc_outer .sscbc_inner {
   opacity: 1;
 }
 
-.sscc_outer:hover .sscc_inner {
-  background-color: #e3e3e8;
+.sscbc_outer:hover .sscbc_inner {
+  background-color: #ebedef;
 }
 
-.sscc_outer {
-  background-color: #393946;
+.sscbc_outer {
+  background-color: #40454f;
   border-radius: 2px;
-  height: 24px;
+  cursor: pointer;
+  height: 23px;
   position: relative;
   transition: background-color 0.2s ease-out;
-  width: 24px;
+  width: 23px;
 }
 
-.sscc_inner {
-  background-color: #c7c7d1;
+.sscbc_inner {
+  background-color: #cfd2d8;
   border-radius: 2px;
   bottom: 0;
-  height: 14px;
+  height: 13px;
   left: 0;
   margin: auto;
   opacity: 0;
@@ -179,20 +193,20 @@
   right: 0;
   top: 0;
   transition: opacity 0.1s ease-out;
-  width: 14px;
+  width: 13px;
 }
 
 .sscpc {
-  height: 24px;
+  height: 23px;
   position: relative;
 }
 .sscpc_outer {
-  background-color: #393946;
+  background-color: #40454f;
   border-radius: 2px;
-  height: 24px;
+  height: 23px;
   overflow: hidden;
   position: relative;
-  width: 24px;
+  width: 23px;
 }
 
 .sscpc_inner {
@@ -204,7 +218,7 @@
 }
 
 .sscptc {
-  height: 24px;
+  height: 23px;
   position: relative;
 }
 
@@ -214,31 +228,31 @@
 
 .sstc.sstc-cpt {
   position: absolute;
-  left: 29px;
+  left: 28px;
   right: 0;
 }
 
 .sslc {
-  background-color: #393946;
+  background-color: #40454f;
   border-radius: 2px;
 }
 .sslc:focus {
-  background-color: #454554;
+  background-color: #4c515d;
 }
 .sslc:hover {
-  background-color: #505062;
+  background-color: #575e6b;
 }
 .sslc:hover .sslc_select {
-  color: #e3e3e8;
+  color: #ebedef;
 }
 .sslc_select {
   appearance: none;
   background-color: transparent;
   border-width: 0;
-  color: #c7c7d1;
+  color: #cfd2d8;
   cursor: pointer;
-  height: 24px;
-  line-height: 24px;
+  height: 23px;
+  line-height: 23px;
   outline: none;
   padding: 0 5px;
   position: relative;
@@ -259,17 +273,17 @@
 
 .sssc {
   cursor: pointer;
-  height: 24px;
+  height: 23px;
   position: relative;
 }
 .sssc:hover .sssc_outer {
-  background-color: #505062;
+  background-color: #575e6b;
 }
 .sssc:hover .sssc_inner {
-  background-color: #e3e3e8;
+  background-color: #ebedef;
 }
 .sssc_outer {
-  background-color: #393946;
+  background-color: #40454f;
   border-radius: 2px;
   height: 100%;
   overflow: hidden;
@@ -278,7 +292,7 @@
 }
 
 .sssc_inner {
-  background-color: #c7c7d1;
+  background-color: #cfd2d8;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -287,7 +301,7 @@
 }
 
 .ssstc {
-  height: 24px;
+  height: 23px;
   position: relative;
   width: 100%;
 }
@@ -307,56 +321,56 @@
 }
 
 .sstc {
-  height: 24px;
+  height: 23px;
   position: relative;
 }
 .sstc_input {
   appearance: none;
-  background-color: #393946;
+  background-color: #40454f;
   border-radius: 2px;
   border-width: 0;
-  color: #c7c7d1;
-  height: 24px;
-  line-height: 24px;
+  color: #cfd2d8;
+  height: 100%;
+  line-height: 23px;
   outline: none;
   padding: 0 5px;
   transition: background-color 0.2s ease-out;
   width: 100%;
 }
 .sstc_input:focus {
-  background-color: #454554;
+  background-color: #4c515d;
 }
 .sstc_input:hover {
-  background-color: #505062;
-  color: #e3e3e8;
+  background-color: #575e6b;
+  color: #ebedef;
 }
 
 .ssgm {
-  height: 72px;
+  height: 69px;
   position: relative;
 }
 .ssgm_canvas {
-  background-color: #393946;
+  background-color: #40454f;
   border-radius: 2px;
-  color: rgba(199, 199, 209, 0.5);
+  color: rgba(207, 210, 216, 0.5);
   display: block;
-  height: 72px;
+  height: 69px;
   width: 100%;
 }
 
 .sslm {
-  background-color: #393946;
+  background-color: #40454f;
   border-radius: 2px;
-  height: 72px;
+  height: 69px;
   position: relative;
 }
 .sslm_textarea {
   background-color: transparent;
   border-width: 0;
-  color: rgba(199, 199, 209, 0.5);
+  color: rgba(207, 210, 216, 0.5);
   display: block;
   height: 100%;
-  line-height: 24px;
+  line-height: 23px;
   outline: none;
   padding: 0 5px;
   resize: none;
@@ -365,17 +379,17 @@
 }
 
 .sstm {
-  background-color: #393946;
+  background-color: #40454f;
   border-radius: 2px;
-  height: 24px;
+  height: 23px;
   position: relative;
 }
 .sstm_input {
   background-color: transparent;
   border-width: 0;
-  color: rgba(199, 199, 209, 0.5);
-  height: 24px;
-  line-height: 24px;
+  color: rgba(207, 210, 216, 0.5);
+  height: 23px;
+  line-height: 23px;
   outline: none;
   padding: 0 5px;
   width: 100%;
