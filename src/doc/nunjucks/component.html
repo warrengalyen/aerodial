@@ -8,18 +8,18 @@
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var pane = Aerodial();
+		<pre><code class="js">var aero = Aerodial();
 
-var folder1 = pane.addFolder('Interaction');
+var folder1 = aero.addFolder('Interaction');
 folder1.add(params, 'power');
 folder1.add(params, 'range');
 
-var folder2 = pane.addFolder('Appearance');
+var folder2 = aero.addFolder('Appearance');
 folder2.add(params, 'color')
 folder2.add(params, 'size');</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
-        <div id="folderExample1" class="codeBlock_paneContainer"></div>
+        <div id="folderExample1" class="codeBlock_aeroContainer"></div>
     </div>
 </div>
 
@@ -27,19 +27,19 @@ folder2.add(params, 'size');</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var pane = Aerodial();
+		<pre><code class="js">var aero = Aerodial();
 
-var folder1 = pane.addFolder('Interaction');
+var folder1 = aero.addFolder('Interaction');
 folder1.add(params, 'power');
 folder1.add(params, 'range');
 folder1.close();
 
-var folder2 = pane.addFolder('Appearance');
+var folder2 = aero.addFolder('Appearance');
 folder2.add(params, 'color')
 folder2.add(target, 'size');</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
-        <div id="folderExample2" class="codeBlock_paneContainer"></div>
+        <div id="folderExample2" class="codeBlock_aeroContainer"></div>
     </div>
 </div>
 
@@ -49,8 +49,8 @@ folder2.add(target, 'size');</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var pane = Aerodial();
-pane.addButton('Fire').on(
+		<pre><code class="js">var aero = Aerodial();
+aero.addButton('Fire').on(
   'click',
   function() {
     console.log('clicked');
@@ -59,7 +59,7 @@ pane.addButton('Fire').on(
 </code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
-        <div id="buttonExample" class="codeBlock_paneContainer"></div>
+        <div id="buttonExample" class="codeBlock_aeroContainer"></div>
     </div>
 </div>
 
@@ -69,14 +69,14 @@ pane.addButton('Fire').on(
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var pane = Aerodial();
-pane.addButton('Action');
-pane.addSeparator();
-pane.addButton('Import');
-pane.addButton('Export');</code></pre>
+		<pre><code class="js">var aero = Aerodial();
+aero.addButton('Action');
+aero.addSeparator();
+aero.addButton('Import');
+aero.addButton('Export');</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
-        <div id="separatorExample" class="codeBlock_paneContainer"></div>
+        <div id="separatorExample" class="codeBlock_aeroContainer"></div>
     </div>
 </div>
 {% endblock %}
@@ -90,30 +90,30 @@ size: 30
 };
 
 (function() {
-var pane = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('folderExample1')
 });
 
-var folder1 = pane.addFolder('Interaction');
+var folder1 = aero.addFolder('Interaction');
 folder1.add(params, 'power');
 folder1.add(params, 'range');
 
-var folder2 = pane.addFolder('Appearance');
+var folder2 = aero.addFolder('Appearance');
 folder2.add(params, 'color')
 folder2.add(params, 'size');
 })();
 
 (function() {
-var pane = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('folderExample2')
 });
 
-var folder1 = pane.addFolder('Interaction');
+var folder1 = aero.addFolder('Interaction');
 folder1.add(params, 'power');
 folder1.add(params, 'range');
 folder1.close();
 
-var folder2 = pane.addFolder('Appearance');
+var folder2 = aero.addFolder('Appearance');
 folder2.add(params, 'color')
 folder2.add(params, 'size');
 })();
@@ -123,24 +123,24 @@ var params = {
 count: 0,
 '(log)': ''
 };
-var pane = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('buttonExample')
 });
-pane.addButton('Fire').on('click', function() {
+aero.addButton('Fire').on('click', function() {
 params['(log)'] = 'clicked: ' + String(++params.count);
 });
-pane.monitor(params, '(log)', {
+aero.monitor(params, '(log)', {
 count: 10
 });
 })();
 
 (function() {
-var pane = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('separatorExample')
 });
-pane.addButton('Action');
-pane.addSeparator();
-pane.addButton('Import');
-pane.addButton('Export');
+aero.addButton('Action');
+aero.addSeparator();
+aero.addButton('Import');
+aero.addButton('Export');
 })();
 {% endblock %}

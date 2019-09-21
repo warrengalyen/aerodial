@@ -8,25 +8,25 @@
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var pane = Aerodial();
-pane.add(target, 'initSpeed', {
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'initSpeed', {
   label: 'Initial speed',
   min: 0.0,
   max: 1.0
 });</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
-        <div id="labelExample" class="codeBlock_paneContainer"></div>
+        <div id="labelExample" class="codeBlock_aeroContainer"></div>
     </div>
 </div>
 
 
-<h2>Place a pane in a specified element</h2>
+<h2>Place a aero in a specified element</h2>
 <p>You can specify a container element by <code>container</code> option.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var pane = Aerodial({
+		<pre><code class="js">var aero = Aerodial({
   container: document.getElementById('someElementId')
 });
 </code></pre>
@@ -39,10 +39,10 @@ pane.add(target, 'initSpeed', {
 var params = {
 initSpeed: 0.38
 };
-var pane = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('labelExample')
 });
-pane.add(params, 'initSpeed', {
+aero.add(params, 'initSpeed', {
 label: 'Initial speed',
 min: 0.0,
 max: 1.0

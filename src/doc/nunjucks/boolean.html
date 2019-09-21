@@ -10,11 +10,11 @@
 		<pre><code class="js">var params = {
   debug: true
 };
-var pane = Aerodial();
-pane.add(params, 'debug');</code></pre>
+var aero = Aerodial();
+aero.add(params, 'debug');</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
-        <div id="example" class="codeBlock_paneContainer"></div>
+        <div id="example" class="codeBlock_aeroContainer"></div>
     </div>
 </div>
 
@@ -24,13 +24,13 @@ pane.add(params, 'debug');</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var pane = Aerodial();
-pane.add(target, 'debug', {
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'debug', {
   list: ['Enabled', 'Disabled']
 });</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
-        <div id="listExample" class="codeBlock_paneContainer"></div>
+        <div id="listExample" class="codeBlock_aeroContainer"></div>
     </div>
 </div>
 {% endblock %}
@@ -40,10 +40,10 @@ pane.add(target, 'debug', {
 var params = {
 debug: true
 };
-var pane = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('example')
 });
-pane.add(params, 'debug');
+aero.add(params, 'debug');
 })();
 
 (function() {
@@ -51,14 +51,14 @@ var params = {
 debug: false,
 '(value)': ''
 };
-var pane = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('listExample')
 });
-pane.add(params, 'debug', {
+aero.add(params, 'debug', {
 list: ['Enabled', 'Disabled']
 }).on('change', function(value) {
 params['(value)'] = String(value);
 });
-pane.monitor(params, '(value)');
+aero.monitor(params, '(value)');
 })();
 {% endblock %}
