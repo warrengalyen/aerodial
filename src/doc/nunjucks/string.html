@@ -10,8 +10,8 @@
 		<pre><code class="js">var params = {
   name: 'cocopon',
 };
-var ss = Aerodial();
-ss.add(params, 'name');</code></pre>
+var aero = Aerodial();
+aero.add(params, 'name');</code></pre>
   </div>
   <div class="codeBlock_section">
     <div id="example" class="codeBlock_ssContainer"></div>
@@ -24,8 +24,8 @@ ss.add(params, 'name');</code></pre>
 
 <div class="codeBlock">
   <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'direction').list([
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'direction').list([
   'left',
   'up',
   'right'
@@ -41,8 +41,8 @@ ss.add(target, 'direction').list([
 
 <div class="codeBlock">
   <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'vimKey').list([
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'vimKey').list([
   left:  'H',
   up:    'K',
   right: 'L',
@@ -60,10 +60,10 @@ ss.add(target, 'vimKey').list([
 var params = {
 name: 'cocopon',
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('example')
 });
-ss.add(params, 'name');
+aero.add(params, 'name');
 })();
 
 (function() {
@@ -71,10 +71,10 @@ var params = {
 direction: 'left',
 '(value)': ''
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('listExample')
 });
-ss.add(params, 'direction', {
+aero.add(params, 'direction', {
 list: [
 'left',
 'up',
@@ -84,7 +84,7 @@ list: [
 }).on('change', function(value) {
 params['(value)'] = value;
 });
-ss.monitor(params, '(value)');
+aero.monitor(params, '(value)');
 })();
 
 (function() {
@@ -92,10 +92,10 @@ var params = {
 vimKey: 'H',
 '(value)': ''
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('namedListExample')
 });
-ss.add(params, 'vimKey', {
+aero.add(params, 'vimKey', {
 list: {
 left:  'H',
 up:    'K',
@@ -105,6 +105,6 @@ down:  'J'
 }).on('change', function(value) {
 params['(value)'] = value;
 });
-ss.monitor(params, '(value)');
+aero.monitor(params, '(value)');
 })();
 {% endblock %}

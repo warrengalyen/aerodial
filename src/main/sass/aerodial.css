@@ -1,26 +1,26 @@
-.ss {
+.aero {
   background-color: #1a1d23;
   padding: 0 5px;
 }
-.ss * {
+.aero * {
   box-sizing: border-box;
   font-family: Verdana, sans-serif;
   font-size: 11px;
 }
 
-.ssDefaultContainer {
+.aeroDefaultContainer {
   width: 250px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.ssbtv {
+.aerobtv {
   background-color: #2e3138;
   padding: 5px;
   position: relative;
 }
-.ssbtv_button {
+.aerobtv_button {
   appearance: none;
   background-color: #40454f;
   border-width: 0;
@@ -34,33 +34,33 @@
   transition: background-color 0.2s ease-out;
   width: 100%;
 }
-.ssbtv_button:focus {
+.aerobtv_button:focus {
   background-color: #4c515d;
 }
-.ssbtv_button:hover {
+.aerobtv_button:hover {
   background-color: #575e6b;
   color: #ebedef;
 }
-.ssbtv_button:active {
+.aerobtv_button:active {
   background-color: #6e7687;
 }
 
-.ssbtv + .ssprv,
-.ssprv + .ssbtv {
+.aerobtv + .aeroprv,
+.aeroprv + .aerobtv {
   border-top: #22252a solid 1px;
 }
 
-.ssfv {
+.aerofv {
   overflow: hidden;
   position: relative;
 }
-.ssfv.ssfv-animated .ssfv_arrow {
+.aerofv.aerofv-animated .aerofv_arrow {
   transition: transform 0.2s ease-out;
 }
-.ssfv.ssfv-animated .ssfv_container {
+.aerofv.aerofv-animated .aerofv_container {
   transition: height 0.2s ease-out;
 }
-.ssfv_arrow {
+.aerofv_arrow {
   background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2210px%22%20height%3D%2210px%22%20viewBox%3D%220%200%2010%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22none%22%3E%3Cg%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M5.49%2C2.51%20L1.49%2C7.49%20L9.49%2C7.49%20L5.49%2C2.51%20Z%22%20transform%3D%22translate(5.5%2C5.0)%20scale(-1%2C-1)%20rotate(-90)%20translate(-5.5%2C-5)%20%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   background-position: center center;
   background-repeat: no-repeat;
@@ -72,11 +72,11 @@
   transform: rotate(-90deg);
   width: 10px;
 }
-.ssfv_arrow.ssfv_arrow-expanded {
+.aerofv_arrow.aerofv_arrow-expanded {
   transform: rotate(90deg);
 }
 
-.ssfv_title {
+.aerofv_title {
   color: rgba(199, 202, 209, 0.5);
   cursor: pointer;
   height: 33px;
@@ -90,27 +90,27 @@
   user-select: none;
   white-space: nowrap;
 }
-.ssfv_title:hover {
+.aerofv_title:hover {
   color: rgba(241, 242, 244, 0.5);
 }
 
-.ssfv_container {
+.aerofv_container {
   overflow: hidden;
 }
 
-.ssprv {
+.aeroprv {
   background-color: #2e3138;
   position: relative;
 }
-.ssprv:after {
+.aeroprv:after {
   clear: both;
   content: "";
   display: block;
 }
-.ssprv + .ssprv {
+.aeroprv + .aeroprv {
   border-top: #22252a solid 1px;
 }
-.ssprv_label {
+.aeroprv_label {
   bottom: 0;
   color: rgba(199, 202, 209, 0.7);
   height: 22px;
@@ -127,27 +127,27 @@
   width: 38%;
 }
 
-.ssprv_container {
+.aeroprv_container {
   float: right;
   padding: 5px;
   width: 62%;
 }
 
-.ssspv {
+.aerospv {
   height: 5px;
 }
 
-.sscbc {
+.aerocbc {
   height: 23px;
   width: 100%;
 }
-.sscbc_hitArea {
+.aerocbc_hitArea {
   display: block;
   height: 23px;
   width: 100%;
 }
 
-.sscbc_input {
+.aerocbc_input {
   cursor: pointer;
   margin: 0;
   opacity: 0.001;
@@ -155,23 +155,23 @@
   position: absolute;
 }
 
-.sscbc_input:focus + .sscbc_outer {
+.aerocbc_input:focus + .aerocbc_outer {
   background-color: #4c515d;
 }
 
-.sscbc_input:focus + .sscbc_outer:hover, .sscbc_outer:hover {
+.aerocbc_input:focus + .aerocbc_outer:hover, .aerocbc_outer:hover {
   background-color: #575e6b;
 }
 
-.sscbc_input:checked + .sscbc_outer .sscbc_inner {
+.aerocbc_input:checked + .aerocbc_outer .aerocbc_inner {
   opacity: 1;
 }
 
-.sscbc_outer:hover .sscbc_inner {
+.aerocbc_outer:hover .aerocbc_inner {
   background-color: #ebedef;
 }
 
-.sscbc_outer {
+.aerocbc_outer {
   background-color: #40454f;
   border-radius: 2px;
   cursor: pointer;
@@ -181,7 +181,7 @@
   width: 23px;
 }
 
-.sscbc_inner {
+.aerocbc_inner {
   background-color: #cfd2d8;
   border-radius: 2px;
   bottom: 0;
@@ -196,11 +196,11 @@
   width: 13px;
 }
 
-.sscpc {
+.aerocpc {
   height: 23px;
   position: relative;
 }
-.sscpc_outer {
+.aerocpc_outer {
   background-color: #40454f;
   border-radius: 2px;
   height: 23px;
@@ -209,7 +209,7 @@
   width: 23px;
 }
 
-.sscpc_inner {
+.aerocpc_inner {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -217,35 +217,35 @@
   top: 0;
 }
 
-.sscptc {
+.aerocptc {
   height: 23px;
   position: relative;
 }
 
-.sscpc.sscpc-cpt {
+.aerocpc.aerocpc-cpt {
   position: absolute;
 }
 
-.sstc.sstc-cpt {
+.aerotc.aerotc-cpt {
   position: absolute;
   left: 28px;
   right: 0;
 }
 
-.sslc {
+.aerolc {
   background-color: #40454f;
   border-radius: 2px;
 }
-.sslc:focus {
+.aerolc:focus {
   background-color: #4c515d;
 }
-.sslc:hover {
+.aerolc:hover {
   background-color: #575e6b;
 }
-.sslc:hover .sslc_select {
+.aerolc:hover .aerolc_select {
   color: #ebedef;
 }
-.sslc_select {
+.aerolc_select {
   appearance: none;
   background-color: transparent;
   border-width: 0;
@@ -259,7 +259,7 @@
   width: 100%;
 }
 
-.sslc_arrow {
+.aerolc_arrow {
   background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2210px%22%20height%3D%2210px%22%20viewBox%3D%220%200%2010%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22none%22%3E%3Cg%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M5%2C3%20L1%2C7.99%20L9%2C7.99%20L5%2C3%20Z%22%20transform%3D%22translate(5%2C5.5)%20scale(-1%2C-1)%20translate(-5%2C-5.5)%20%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center;
   bottom: 0;
   height: 10px;
@@ -271,18 +271,18 @@
   width: 10px;
 }
 
-.sssc {
+.aerosc {
   cursor: pointer;
   height: 23px;
   position: relative;
 }
-.sssc:hover .sssc_outer {
+.aerosc:hover .aerosc_outer {
   background-color: #575e6b;
 }
-.sssc:hover .sssc_inner {
+.aerosc:hover .aerosc_inner {
   background-color: #ebedef;
 }
-.sssc_outer {
+.aerosc_outer {
   background-color: #40454f;
   border-radius: 2px;
   height: 100%;
@@ -291,7 +291,7 @@
   transition: background-color 0.2s ease-out;
 }
 
-.sssc_inner {
+.aerosc_inner {
   background-color: #cfd2d8;
   bottom: 0;
   left: 0;
@@ -300,31 +300,31 @@
   transition: background-color 0.2s ease-out;
 }
 
-.ssstc {
+.aerostc {
   height: 23px;
   position: relative;
   width: 100%;
 }
 
-.sssc.sssc-st {
+.aerosc.aerosc-st {
   left: 0;
   right: 55px;
   position: absolute;
   top: 0;
 }
 
-.sstc.sstc-st {
+.aerotc.aerotc-st {
   position: absolute;
   right: 0;
   top: 0;
   width: 50px;
 }
 
-.sstc {
+.aerotc {
   height: 23px;
   position: relative;
 }
-.sstc_input {
+.aerotc_input {
   appearance: none;
   background-color: #40454f;
   border-radius: 2px;
@@ -337,19 +337,19 @@
   transition: background-color 0.2s ease-out;
   width: 100%;
 }
-.sstc_input:focus {
+.aerotc_input:focus {
   background-color: #4c515d;
 }
-.sstc_input:hover {
+.aerotc_input:hover {
   background-color: #575e6b;
   color: #ebedef;
 }
 
-.ssgm {
+.aerogm {
   height: 69px;
   position: relative;
 }
-.ssgm_canvas {
+.aerogm_canvas {
   background-color: #40454f;
   border-radius: 2px;
   color: rgba(207, 210, 216, 0.5);
@@ -358,13 +358,13 @@
   width: 100%;
 }
 
-.sslm {
+.aerolm {
   background-color: #40454f;
   border-radius: 2px;
   height: 69px;
   position: relative;
 }
-.sslm_textarea {
+.aerolm_textarea {
   background-color: transparent;
   border-width: 0;
   color: rgba(207, 210, 216, 0.5);
@@ -378,13 +378,13 @@
   width: 100%;
 }
 
-.sstm {
+.aerotm {
   background-color: #40454f;
   border-radius: 2px;
   height: 23px;
   position: relative;
 }
-.sstm_input {
+.aerotm_input {
   background-color: transparent;
   border-width: 0;
   color: rgba(207, 210, 216, 0.5);

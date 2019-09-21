@@ -8,8 +8,8 @@
 
 <div class="codeBlock">
   <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'speed', {min: 0, max: 100}).on(
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'speed', {min: 0, max: 100}).on(
   'change',
   function(value) {
     console.log(value);
@@ -27,10 +27,10 @@ ss.add(target, 'speed', {min: 0, max: 100}).on(
 
 <div class="codeBlock">
   <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'power', {min: 0, max: 100});
-ss.add(target, 'size', {min: 0, max: 100});
-ss.on(
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'power', {min: 0, max: 100});
+aero.add(target, 'size', {min: 0, max: 100});
+aero.on(
   'change',
   function(value, property) {
     console.log(property.getLabel());
@@ -52,16 +52,16 @@ var params = {
 speed: 50,
 '(log)': ''
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('eventExample')
 });
-ss.add(params, 'speed', {
+aero.add(params, 'speed', {
 min: 0,
 max: 100
 }).on('change', function(value) {
 params['(log)'] = String(value);
 });
-ss.monitor(params, '(log)', {
+aero.monitor(params, '(log)', {
 count: 10
 });
 })();
@@ -72,19 +72,19 @@ power: 50,
 size: 50,
 '(log)': ''
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('globalEventExample')
 });
-ss.add(params, 'power', {min: 0, max: 100});
-ss.add(params, 'size', {min: 0, max: 100});
-ss.on('change', function(value, prop) {
+aero.add(params, 'power', {min: 0, max: 100});
+aero.add(params, 'size', {min: 0, max: 100});
+aero.on('change', function(value, prop) {
 if (prop.getId() === '(log)') {
 // Prevent infinite loop
 return;
 }
 params['(log)'] = prop.getLabel() + ': ' + String(value);
 });
-ss.monitor(params, '(log)', {
+aero.monitor(params, '(log)', {
 count: 10
 });
 })();

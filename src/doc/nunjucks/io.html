@@ -50,9 +50,9 @@ ssTo.setJson(json);</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'speed1');
-ss.add(target, 'speed2', {
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'speed1');
+aero.add(target, 'speed2', {
   id: 'initSpeed'
 });</code></pre>
     </div>
@@ -90,18 +90,18 @@ color: '#f80',
 size: 10,
 speed: 1.0
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('exportExample')
 });
-ss.add(params, 'color');
-ss.add(params, 'size', {min: 1, max: 100});
-ss.add(params, 'speed', {min: 0.0, max: 1.0});
+aero.add(params, 'color');
+aero.add(params, 'size', {min: 1, max: 100});
+aero.add(params, 'speed', {min: 0.0, max: 1.0});
 
-ss.on('change', function() {
-showJson(ss.getJson());
+aero.on('change', function() {
+showJson(aero.getJson());
 });
 
-showJson(ss.getJson());
+showJson(aero.getJson());
 })();
 
 (function() {
@@ -110,12 +110,12 @@ color: '#08f',
 size: 20,
 speed: 0.5
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('importExample')
 });
-ss.addButton('Import').on('click', function() {
+aero.addButton('Import').on('click', function() {
 var json = JSON.parse(document.getElementById('importArea').textContent);
-ss.setJson(json);
+aero.setJson(json);
 });
 ss.addSeparator();
 ss.add(params, 'color');

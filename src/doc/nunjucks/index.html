@@ -15,7 +15,7 @@
     <div class="codeBlock_section">
 		<pre><code class="html">&lt;script src=&quot;aerodial.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
-var ss = Aerodial();
+var aero = Aerodial();
 &lt;/script&gt;</code></pre>
     </div>
 </div>
@@ -33,19 +33,19 @@ shapeFactor: 4,
 param1: 2,
 param2: 'str'
 };
-var ss = Aerodial();
-ss.add(params, 'easing', {min: 0, max: 10}).on('change', function(value) {
+var aero = Aerodial();
+aero.add(params, 'easing', {min: 0, max: 10}).on('change', function(value) {
 console.log(value);
 });
-ss.add(params, 'color');
-ss.monitor(params, 'param1', {
+aero.add(params, 'color');
+aero.monitor(params, 'param1', {
 label: 'Very long long label'
 });
-ss.add(params, 'param2');
-var fol1 = ss.addFolder('Motion');
+aero.add(params, 'param2');
+var fol1 = aero.addFolder('Motion');
 fol1.add(params, 'rotationAmount');
 fol1.add(params, 'speed');
-var fol2 = ss.addFolder('Appearance');
+var fol2 = aero.addFolder('Appearance');
 fol2.add(params, 'softness', {
 list: ['foo', 'bar', 'baz']
 });

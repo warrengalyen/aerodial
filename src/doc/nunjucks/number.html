@@ -10,8 +10,8 @@
 		<pre><code class="js">var params = {
   speed: 0.5
 };
-var ss = Aerodial();
-ss.add(params, 'speed');</code></pre>
+var aero = Aerodial();
+aero.add(params, 'speed');</code></pre>
     </div>
     <div class="codeBlock_section">
         <div id="example" class="codeBlock_ssContainer"></div>
@@ -24,8 +24,8 @@ Use <code>min</code> or <code>max</code> option to specify minimum/maximum value
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'speed', {min: 0});</code></pre>
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'speed', {min: 0});</code></pre>
     </div>
     <div class="codeBlock_section">
         <div id="minExample" class="codeBlock_ssContainer"></div>
@@ -36,8 +36,8 @@ ss.add(target, 'speed', {min: 0});</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'speed', {min: 0, max: 100});</code></pre>
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'speed', {min: 0, max: 100});</code></pre>
     </div>
     <div class="codeBlock_section">
         <div id="sliderExample" class="codeBlock_ssContainer"></div>
@@ -50,8 +50,8 @@ ss.add(target, 'speed', {min: 0, max: 100});</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'particleCount', {
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'particleCount', {
   min: 0, max: 100, step: 10
 });</code></pre>
     </div>
@@ -66,8 +66,8 @@ ss.add(target, 'particleCount', {
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'direction', {
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'direction', {
   list: {
     none: 0,
     horizontal: 1,
@@ -87,40 +87,40 @@ ss.add(target, 'direction', {
 var params = {
 speed: 0.5,
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('example')
 });
-ss.add(params, 'speed');
+aero.add(params, 'speed');
 })();
 
 (function() {
 var params = {
 speed: 50
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('minExample')
 });
-ss.add(params, 'speed', {min: 0});
+aero.add(params, 'speed', {min: 0});
 })();
 
 (function() {
 var params = {
 speed: 50
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('sliderExample')
 });
-ss.add(params, 'speed', {min: 0, max: 100});
+aero.add(params, 'speed', {min: 0, max: 100});
 })();
 
 (function() {
 var params = {
 particleCount: 50
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('stepExample')
 });
-ss.add(params, 'particleCount', {min: 0, max: 100, step: 10});
+aero.add(params, 'particleCount', {min: 0, max: 100, step: 10});
 })();
 
 (function() {
@@ -128,10 +128,10 @@ var params = {
 direction: 0,
 '(value)': ''
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('listExample')
 });
-ss.add(params, 'direction', {
+aero.add(params, 'direction', {
 list: {
 none: 0,
 horizontal: 1,
@@ -141,6 +141,6 @@ both: 3
 }).on('change', function(value) {
 params['(value)'] = String(value);
 });;
-ss.monitor(params, '(value)');
+aero.monitor(params, '(value)');
 })();
 {% endblock %}

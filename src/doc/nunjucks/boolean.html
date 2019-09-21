@@ -10,8 +10,8 @@
 		<pre><code class="js">var params = {
   debug: true
 };
-var ss = Aerodial();
-ss.add(params, 'debug');</code></pre>
+var aero = Aerodial();
+aero.add(params, 'debug');</code></pre>
     </div>
     <div class="codeBlock_section">
         <div id="example" class="codeBlock_ssContainer"></div>
@@ -22,8 +22,8 @@ ss.add(params, 'debug');</code></pre>
 <h2>List</h2>
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var ss = Aerodial();
-ss.add(target, 'debug', {
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'debug', {
   list: ['Enabled', 'Disabled']
 });</code></pre>
     </div>
@@ -38,10 +38,10 @@ ss.add(target, 'debug', {
 var params = {
 debug: true
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('example')
 });
-ss.add(params, 'debug');
+aero.add(params, 'debug');
 })();
 
 (function() {
@@ -49,15 +49,15 @@ var params = {
 debug: false,
 '(value)': ''
 };
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('listExample')
 });
-ss.add(params, 'debug', {
+aero.add(params, 'debug', {
 list: ['Enabled', 'Disabled']
 }).on('change', function(value) {
 params['(value)'] = String(value);
-ss.refresh();
+aero.refresh();
 });
-ss.monitor(params, '(value)');
+aero.monitor(params, '(value)');
 })();
 {% endblock %}

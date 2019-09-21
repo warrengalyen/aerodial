@@ -40,17 +40,17 @@ params.wave = Math.sin(t * 2 * Math.PI) + Math.sin(t * 3 * Math.PI);
 }, 1000 / 60);
 
 (function() {
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('textExample')
 });
-ss.monitor(params, 'wave');
+aero.monitor(params, 'wave');
 })();
 
 (function() {
-var ss = Aerodial({
+var aero = Aerodial({
 container: document.getElementById('graphExample')
 });
-ss.monitor(params, 'wave', {
+aero.monitor(params, 'wave', {
 graph: true,
 min: -5.0,
 max: +5.0,
