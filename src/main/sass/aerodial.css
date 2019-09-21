@@ -5,8 +5,8 @@
   top: 0;
 }
 
-.aeronoTransition,
-.aeronoTransition * {
+.aeroNoTransition,
+.aeroNoTransition * {
   transition: all 0s ease !important;
 }
 
@@ -140,6 +140,12 @@
 .aerorfv {
   padding: 5px;
 }
+.aerorfv_button:focus .aerorfv_arrow {
+  opacity: 0.5;
+}
+.aerorfv_button:hover .aerorfv_arrow {
+  opacity: 0.75;
+}
 .aerorfv_button {
   background-color: transparent;
   border-width: 0;
@@ -163,7 +169,7 @@
   right: 0;
   top: 0;
   transform: rotate(90deg);
-  transition: transform 0.4s ease-in-out;
+  transition: opacity 0.2s ease-out, transform 0.4s ease-in-out;
   width: 10px;
 }
 .aerorfv_arrow.aerorfv_arrow-expanded {
