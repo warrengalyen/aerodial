@@ -46,11 +46,11 @@
   border-top: #353941 solid 1px;
 }
 
-.aerofv {
+.aeroflv {
   overflow: hidden;
   position: relative;
 }
-.aerofv_arrow {
+.aeroflv_arrow {
   background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2210px%22%20height%3D%2210px%22%20viewBox%3D%220%200%2010%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22none%22%3E%3Cg%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M5.49%2C2.51%20L1.49%2C7.49%20L9.49%2C7.49%20L5.49%2C2.51%20Z%22%20transform%3D%22translate(5.5%2C5.0)%20scale(-1%2C-1)%20rotate(-90)%20translate(-5.5%2C-5)%20%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center;
   height: 10px;
   right: 10px;
@@ -61,11 +61,11 @@
   transition: transform 0.2s ease-in-out;
   width: 10px;
 }
-.aerofv_arrow.aerofv_arrow-expanded {
+.aeroflv_arrow.aeroflv_arrow-expanded {
   transform: rotate(90deg);
 }
 
-.aerofv_title {
+.aeroflv_title {
   color: rgba(199, 202, 209, 0.5);
   cursor: pointer;
   height: 33px;
@@ -79,11 +79,11 @@
   user-select: none;
   white-space: nowrap;
 }
-.aerofv_title:hover {
+.aeroflv_title:hover {
   color: rgba(241, 242, 244, 0.5);
 }
 
-.aerofv_container {
+.aeroflv_container {
   overflow: hidden;
   transition: height 0.2s ease-in-out;
 }
@@ -123,16 +123,16 @@
   width: 62%;
 }
 
-.aerorv {
+.aerortv {
   background-color: #2b303b;
   padding: 0 5px;
 }
-.aerorv * {
+.aerortv * {
   box-sizing: border-box;
   font-family: Verdana, sans-serif;
   font-size: 11px;
 }
-.aerorv_main {
+.aerortv_main {
   overflow: hidden;
   transition: height 0.4s ease-in-out;
 }
@@ -263,26 +263,26 @@
   position: absolute;
 }
 
-.aerotc.aerotc-cpt {
+.aerotxc.aerotxc-cpt {
   position: absolute;
   left: 28px;
   right: 0;
 }
 
-.aerolc {
+.aerolsc {
   background-color: #535965;
   border-radius: 2px;
 }
-.aerolc:focus {
+.aerolsc:focus {
   background-color: #5e6573;
 }
-.aerolc:hover {
+.aerolsc:hover {
   background-color: #6a7181;
 }
-.aerolc:hover .aerolc_select {
+.aerolsc:hover .aerolsc_select {
   color: #ebedef;
 }
-.aerolc_select {
+.aerolsc_select {
   appearance: none;
   background-color: transparent;
   border-width: 0;
@@ -296,7 +296,7 @@
   width: 100%;
 }
 
-.aerolc_arrow {
+.aerolsc_arrow {
   background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2210px%22%20height%3D%2210px%22%20viewBox%3D%220%200%2010%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22none%22%3E%3Cg%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M5%2C3%20L1%2C7.99%20L9%2C7.99%20L5%2C3%20Z%22%20transform%3D%22translate(5%2C5.5)%20scale(-1%2C-1)%20translate(-5%2C-5.5)%20%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat center center;
   bottom: 0;
   height: 10px;
@@ -308,18 +308,18 @@
   width: 10px;
 }
 
-.aerosc {
+.aeroslc {
   cursor: pointer;
   height: 23px;
   position: relative;
 }
-.aerosc:hover .aerosc_outer {
+.aeroslc:hover .aeroslc_outer {
   background-color: #6a7181;
 }
-.aerosc:hover .aerosc_inner {
+.aeroslc:hover .aeroslc_inner {
   background-color: #ebedef;
 }
-.aerosc_outer {
+.aeroslc_outer {
   background-color: #535965;
   border-radius: 2px;
   height: 100%;
@@ -328,7 +328,7 @@
   transition: background-color 0.2s ease-out;
 }
 
-.aerosc_inner {
+.aeroslc_inner {
   background-color: #cfd2d8;
   bottom: 0;
   left: 0;
@@ -337,31 +337,31 @@
   transition: background-color 0.2s ease-out;
 }
 
-.aerostc {
+.aerosltc {
   height: 23px;
   position: relative;
   width: 100%;
 }
 
-.aerosc.aerosc-st {
+.aeroslc.aeroslc-st {
   left: 0;
   right: 55px;
   position: absolute;
   top: 0;
 }
 
-.aerotc.aerotc-st {
+.aerotxc.aerotxc-slt {
   position: absolute;
   right: 0;
   top: 0;
   width: 50px;
 }
 
-.aerotc {
+.aerotxc {
   height: 23px;
   position: relative;
 }
-.aerotc_input {
+.aerotxc_input {
   appearance: none;
   background-color: #535965;
   border-radius: 2px;
@@ -374,19 +374,19 @@
   transition: background-color 0.2s ease-out;
   width: 100%;
 }
-.aerotc_input:focus {
+.aerotxc_input:focus {
   background-color: #5e6573;
 }
-.aerotc_input:hover {
+.aerotxc_input:hover {
   background-color: #6a7181;
   color: #ebedef;
 }
 
-.aerogm {
+.aerogrm {
   height: 69px;
   position: relative;
 }
-.aerogm_canvas {
+.aerogrm_canvas {
   background-color: #535965;
   border-radius: 2px;
   color: rgba(207, 210, 216, 0.5);
@@ -415,13 +415,13 @@
   width: 100%;
 }
 
-.aerotm {
+.aerotxm {
   background-color: #535965;
   border-radius: 2px;
   height: 23px;
   position: relative;
 }
-.aerotm_input {
+.aerotxm_input {
   background-color: transparent;
   border-width: 0;
   color: rgba(207, 210, 216, 0.5);
