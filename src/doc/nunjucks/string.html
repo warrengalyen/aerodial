@@ -61,6 +61,7 @@ var params = {
 name: 'cocopon',
 };
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('example')
 });
 aero.add(params, 'name');
@@ -72,6 +73,7 @@ direction: 'left',
 '(value)': ''
 };
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('listExample')
 });
 aero.add(params, 'direction', {
@@ -93,6 +95,7 @@ vimKey: 'H',
 '(value)': ''
 };
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('namedListExample')
 });
 aero.add(params, 'vimKey', {

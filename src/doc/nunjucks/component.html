@@ -4,7 +4,7 @@
 
 {% block content %}
 <h2>Folder</h2>
-<p>Use <code>addFolder()</code> to add a collapsible folder. It returns a instance of added folder, so you can add all types of property by using its <code>add()</code> and <code>monitor()</code> just like other properties.</p>
+<p>Use <code>addFolder()</code> to add a foldable folder. It returns a instance of added folder, so you can add all types of property by using its <code>add()</code> and <code>monitor()</code> just like other properties.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
@@ -91,6 +91,7 @@ size: 30
 
 (function() {
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('folderExample1')
 });
 
@@ -105,6 +106,7 @@ folder2.add(params, 'size');
 
 (function() {
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('folderExample2')
 });
 
@@ -124,6 +126,7 @@ count: 0,
 '(log)': ''
 };
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('buttonExample')
 });
 aero.addButton('Fire').on('click', function() {
@@ -136,6 +139,7 @@ count: 10
 
 (function() {
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('separatorExample')
 });
 aero.addButton('Action');

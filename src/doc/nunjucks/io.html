@@ -93,6 +93,7 @@ size: 10,
 speed: 1.0
 };
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('exportExample')
 });
 aero.add(params, 'color');
@@ -113,6 +114,7 @@ size: 20,
 speed: 0.5
 };
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('importExample')
 });
 aero.addButton('Import').on('click', function() {
@@ -133,6 +135,7 @@ var params2 = {
 speed: 0.7
 };
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('idExample')
 });
 aero.add(params1, 'speed', {

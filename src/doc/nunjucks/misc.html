@@ -4,7 +4,7 @@
 
 {% block content %}
 <h2>Changing a label of a property</h2>
-<p>Property name will be used as a label by default. To change it, use <code>label</code> option.</p>
+<p>Property name will be used as a label by default. Use <code>label</code> option to change it.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
@@ -21,7 +21,7 @@ aero.add(target, 'initSpeed', {
 </div>
 
 
-<h2>Placing a pane in a specified element</h2>
+<h2>Placing a aero in a specified element</h2>
 <p>You can specify a container element by <code>container</code> option.</p>
 
 <div class="codeBlock">
@@ -33,8 +33,30 @@ aero.add(target, 'initSpeed', {
     </div>
 </div>
 
-<h2>Hiding a collapse button</h2>
-<p>TODO:</p>
+<h2>Disabling fold</h2>
+<p>Set <code>foldable</code> option to false.</p>
+
+<div class="codeBlock">
+    <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial({
+  foldable: false
+});</code></pre>
+    </div>
+</div>
+
+
+<h2>Refreshing property views manually</h2>
+<p>Aerodial doesn't watch a property change automatically, so you should refresh manually if you change a property without Aerodial. Call <code>refresh()</code> to refresh all property views.</p>
+
+<div class="codeBlock">
+    <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial();
+
+// (changed a property without Aerodial...)
+
+aero.refresh();</code></pre>
+    </div>
+</div>
 {% endblock %}
 
 {% block script %}
@@ -43,6 +65,7 @@ var params = {
 initSpeed: 0.38
 };
 var aero = Aerodial({
+foldable: false,
 container: document.getElementById('labelExample')
 });
 aero.add(params, 'initSpeed', {
