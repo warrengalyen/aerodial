@@ -100,9 +100,6 @@ class RootFolderView extends View {
                 },
                 () => {
                     mainViewElem.style.height = `${mainViewHeight}px`;
-                },
-                () => {
-                    Style.setTransitionEnabled(mainViewElem, true);
                 }
             ]);
 
@@ -113,10 +110,21 @@ class RootFolderView extends View {
             if (this.expanded_) {
                 const duration = Style.getTransitionDuration(mainViewElem, 'height');
                 this.timer_ = setTimeout(() => {
-                    // Set height to 'auto' at the end of transition for folding a folder
-                    mainViewElem.style.height = 'auto';
                     this.timer_ = null;
                 }, animated ? duration : 0);
+
+                Style.runSeparately(mainViewElem, [
+                    () => {
+                        Style.setTransitionEnabled(mainViewElem, false);
+                    },
+                    () => {
+                        // Set height to 'auto' at the end of transition for folding a folder
+                        mainViewElem.style.height = 'auto';
+                    },
+                    () => {
+                        Style.setTransitionEnabled(mainViewElem, true);
+                    }
+                ]);
             }
         }
     }
