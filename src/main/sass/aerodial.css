@@ -13,6 +13,35 @@
   top: 0;
 }
 
+.ssbv {
+  padding: 5px;
+  position: relative;
+}
+.ssbv_button {
+  appearance: none;
+  background-color: #393946;
+  border-width: 0;
+  border-radius: 2px;
+  color: #c7c7d1;
+  cursor: pointer;
+  height: 24px;
+  line-height: 24px;
+  outline: none;
+  padding: 0;
+  transition: background-color 0.2s ease-out;
+  width: 100%;
+}
+.ssbv_button:focus {
+  background-color: #454554;
+}
+.ssbv_button:hover {
+  background-color: #505062;
+  color: #e3e3e8;
+}
+.ssbv_button:active {
+  background-color: #67677e;
+}
+
 .ssfv {
   overflow: hidden;
   position: relative;
@@ -282,6 +311,7 @@
   position: relative;
 }
 .sstc_input {
+  appearance: none;
   background-color: #393946;
   border-radius: 2px;
   border-width: 0;

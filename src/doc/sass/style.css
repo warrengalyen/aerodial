@@ -71,20 +71,55 @@ code {
   border-radius: 2px;
   color: #888;
   margin: 2rem 0;
-  padding: 5px;
 }
-.codeBlock_code {
-  padding: 15px 15px 20px;
+.codeBlock_section {
+  padding: 20px;
+  position: relative;
+}
+.codeBlock_section:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.codeBlock_section + .codeBlock_section {
+  border-top: #ddd dotted 1px;
 }
 
-.codeBlock_example {
-  border-top: #ddd dotted 1px;
-  padding: 20px 15px 15px;
+.codeBlock_foo {
+  float: left;
+  width: 50%;
+}
+
+.codeBlock_bar {
+  bottom: 20px;
+  padding: 0 20px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 50%;
+}
+
+.codeBlock_code {
+  padding: 20px;
 }
 
 .codeBlock_ssContainer {
   margin: 0 auto;
   width: 250px;
+}
+
+.codeBlock_textBox {
+  background-color: transparent;
+  border-width: 0;
+  color: #888;
+  font-family: Menlo, Courier, monospace;
+  font-size: 1rem;
+  height: 9rem;
+  line-height: 1.8;
+  outline: none;
+  padding: 0;
+  resize: none;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
