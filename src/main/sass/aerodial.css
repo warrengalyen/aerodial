@@ -45,6 +45,7 @@
   background-color: #6e7687;
 }
 
+.aerobtv + .aerobtv,
 .aerobtv + .aeroprv,
 .aeroprv + .aerobtv {
   border-top: #22252a solid 1px;
