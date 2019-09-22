@@ -1,5 +1,6 @@
 const ButtonView            = require('../view/button_view');
 const FolderView            = require('../view/folder_view');
+const SeparatorView         = require('../view/separator_view');
 const ButtonViewInterface   = require('./button_view_interface');
 const FolderViewInterface   = require('./folder_view_interface');
 const PropertyViewInterface = require('./property_view_interface');

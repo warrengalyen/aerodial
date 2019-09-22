@@ -96,11 +96,11 @@ class RootFolderView extends View {
                 const duration = Style.getMaxTransitionDuration(mainViewElem, 'height');
                 this.timer_ = setTimeout(() => {
                     this.timer_ = null;
-                }, animated ? duration : 0);
 
                 Style.runTransition(mainViewElem, () => {
                     mainViewElem.style.height = 'auto';
                 }, false);
+				}, animated ? duration : 0);
             }
         }
     }

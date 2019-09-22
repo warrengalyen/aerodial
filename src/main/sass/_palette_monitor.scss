@@ -1,6 +1,7 @@
-.#{$prefix}cpc {
+.#{$prefix}plm {
     height: $color-palette-control-outer-size;
     position: relative;
+
     @at-root {
         &_outer {
             background-color: $input-background-color;

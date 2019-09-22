@@ -14,7 +14,7 @@ var aero = Aerodial();
 aero.add(params, 'name');</code></pre>
   </div>
   <div class="codeBlock_section codeBlock_section-example">
-    <div id="example" class="codeBlock_ssContainer"></div>
+		<div id="stringExample" class="codeBlock_paneContainer"></div>
   </div>
 </div>
 
@@ -33,11 +33,11 @@ aero.add(target, 'direction').list([
 ]);</code></pre>
   </div>
   <div class="codeBlock_section codeBlock_section-example">
-    <div id="listExample" class="codeBlock_ssContainer"></div>
+    <div id="listExample" class="codeBlock_aeroContainer"></div>
   </div>
 </div>
 
-<p>And also an object that has string values:</p>
+<p>An object that has string values is also supported:</p>
 
 <div class="codeBlock">
   <div class="codeBlock_section">
@@ -50,7 +50,7 @@ aero.add(target, 'vimKey').list([
 ]);</code></pre>
   </div>
   <div class="codeBlock_section codeBlock_section-example">
-    <div id="namedListExample" class="codeBlock_ssContainer"></div>
+		<div id="namedListExample" class="codeBlock_paneContainer"></div>
   </div>
 </div>
 {% endblock %}
@@ -62,7 +62,7 @@ name: 'cocopon',
 };
 var aero = Aerodial({
 foldable: false,
-container: document.getElementById('example')
+		container: document.getElementById('stringExample')
 });
 aero.add(params, 'name');
 })();

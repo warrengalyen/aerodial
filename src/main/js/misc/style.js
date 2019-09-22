@@ -2,7 +2,7 @@ const ClassName = require('./class_name');
 
 class Style {
     /**
-     * Injects a default style for Tweakpane.
+     * Injects a default style for Aerodial.
      */
     static injectDefault() {
         if (document.getElementById(this.ELEMENT_ID) !== null) {

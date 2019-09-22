@@ -1,6 +1,6 @@
 class ClassName {
     static get(block, opt_element, opt_modifier) {
-        let result = `ss${block}`;
+		let result = `aero${block}`;
         if (opt_element) {
             result += `_${opt_element}`;
         }

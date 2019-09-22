@@ -1,18 +1,18 @@
 const ClassName = require('../../misc/class_name');
 const Monitor   = require('./monitor');
 
-class LogMonitor extends Monitor {
+class MultilineTextMonitor extends Monitor {
     constructor(property) {
         super(property);
 
         const elem = this.getElement();
         elem.classList.add(
-            ClassName.get(LogMonitor.BLOCK_CLASS)
+            ClassName.get(MultilineTextMonitor.BLOCK_CLASS)
         );
 
         const textareaElem = document.createElement('textarea');
         textareaElem.classList.add(
-            ClassName.get(LogMonitor.BLOCK_CLASS, 'textarea')
+            ClassName.get(MultilineTextMonitor.BLOCK_CLASS, 'textarea')
         );
         textareaElem.readOnly = true;
         elem.appendChild(textareaElem);
@@ -25,18 +25,10 @@ class LogMonitor extends Monitor {
         super.applyModel_();
 
         const model = this.getProperty().getModel();
-        const lines = model.getRecords().slice();
-        lines.push(model.getValue());
-
-		const textareaElem = this.textareaElem_;
-		const bottommost = (textareaElem.scrollTop === (textareaElem.scrollHeight - textareaElem.clientHeight));
-		textareaElem.textContent = lines.join('\n');
-		if (bottommost) {
-			textareaElem.scrollTop = textareaElem.scrollHeight;
+        this.textareaElem_.textContent = model.getValue();
     }
-	}
 }
 
-LogMonitor.BLOCK_CLASS = 'lgm';
+MultilineTextMonitor.BLOCK_CLASS = 'mtm';
 
-module.exports = LogMonitor;
+module.exports = MultilineTextMonitor;

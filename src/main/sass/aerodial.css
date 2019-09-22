@@ -11,13 +11,13 @@
 }
 
 .aerobtv {
-  background-color: #40454f;
+  background-color: #494f5a;
   padding: 5px;
   position: relative;
 }
 .aerobtv_button {
   appearance: none;
-  background-color: #535965;
+  background-color: #5c6370;
   border-width: 0;
   border-radius: 2px;
   color: #cfd2d8;
@@ -30,20 +30,20 @@
   width: 100%;
 }
 .aerobtv_button:focus {
-  background-color: #5e6573;
+  background-color: #676f7e;
 }
 .aerobtv_button:hover {
-  background-color: #6a7181;
+  background-color: #737b8c;
   color: #ebedef;
 }
 .aerobtv_button:active {
-  background-color: #848b9a;
+  background-color: #8f96a3;
 }
 
 .aerobtv + .aerobtv,
 .aerobtv + .aeroprv,
 .aeroprv + .aerobtv {
-  border-top: #353941 solid 1px;
+  border-top: #3e434c solid 1px;
 }
 
 .aeroflv {
@@ -111,7 +111,7 @@
 }
 
 .aeroprv {
-  background-color: #40454f;
+  background-color: #494f5a;
   position: relative;
 }
 .aeroprv:after {
@@ -120,7 +120,7 @@
   display: block;
 }
 .aeroprv + .aeroprv {
-  border-top: #353941 solid 1px;
+  border-top: #3e434c solid 1px;
 }
 .aeroprv_label {
   bottom: 0;
@@ -187,6 +187,7 @@
   height: 10px;
   left: 0;
   margin: auto;
+  opacity: 0.25;
   position: absolute;
   right: 0;
   top: 0;
@@ -221,11 +222,11 @@
 }
 
 .aerocbc_input:focus + .aerocbc_outer {
-  background-color: #5e6573;
+  background-color: #676f7e;
 }
 
 .aerocbc_input:focus + .aerocbc_outer:hover, .aerocbc_outer:hover {
-  background-color: #6a7181;
+  background-color: #737b8c;
 }
 
 .aerocbc_input:checked + .aerocbc_outer .aerocbc_inner {
@@ -237,7 +238,7 @@
 }
 
 .aerocbc_outer {
-  background-color: #535965;
+  background-color: #5c6370;
   border-radius: 2px;
   cursor: pointer;
   height: 23px;
@@ -261,51 +262,15 @@
   width: 13px;
 }
 
-.aerocpc {
-  height: 23px;
-  position: relative;
-}
-.aerocpc_outer {
-  background-color: #535965;
-  border-radius: 2px;
-  height: 23px;
-  overflow: hidden;
-  position: relative;
-  width: 23px;
-}
-
-.aerocpc_inner {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.aerocptc {
-  height: 23px;
-  position: relative;
-}
-
-.aerocpc.aerocpc-cpt {
-  position: absolute;
-}
-
-.aerotxc.aerotxc-cpt {
-  position: absolute;
-  left: 28px;
-  right: 0;
-}
-
 .aerolsc {
-  background-color: #535965;
+  background-color: #5c6370;
   border-radius: 2px;
 }
 .aerolsc:focus {
-  background-color: #5e6573;
+  background-color: #676f7e;
 }
 .aerolsc:hover {
-  background-color: #6a7181;
+  background-color: #737b8c;
 }
 .aerolsc:hover .aerolsc_select {
   color: #ebedef;
@@ -336,19 +301,55 @@
   width: 10px;
 }
 
+.aeroplc {
+  height: 23px;
+  position: relative;
+}
+.aeroplc_outer {
+  background-color: #5c6370;
+  border-radius: 2px;
+  height: 23px;
+  overflow: hidden;
+  position: relative;
+  width: 23px;
+}
+
+.aeroplc_inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.aeroptc {
+  height: 23px;
+  position: relative;
+}
+
+.aeroplc.aeroplc-pt {
+  position: absolute;
+}
+
+.aerotxc.aerotxc-pt {
+  position: absolute;
+  left: 28px;
+  right: 0;
+}
+
 .aeroslc {
   cursor: pointer;
   height: 23px;
   position: relative;
 }
 .aeroslc:hover .aeroslc_outer {
-  background-color: #6a7181;
+  background-color: #737b8c;
 }
 .aeroslc:hover .aeroslc_inner {
   background-color: #ebedef;
 }
 .aeroslc_outer {
-  background-color: #535965;
+  background-color: #5c6370;
   border-radius: 2px;
   height: 100%;
   overflow: hidden;
@@ -365,7 +366,7 @@
   transition: background-color 0.2s ease-out;
 }
 
-.aerosltc {
+.aerostc {
   height: 23px;
   position: relative;
   width: 100%;
@@ -378,7 +379,7 @@
   top: 0;
 }
 
-.aerotxc.aerotxc-slt {
+.aerotxc.aerotxc-st {
   position: absolute;
   right: 0;
   top: 0;
@@ -391,7 +392,7 @@
 }
 .aerotxc_input {
   appearance: none;
-  background-color: #535965;
+  background-color: #5c6370;
   border-radius: 2px;
   border-width: 0;
   color: #cfd2d8;
@@ -403,11 +404,56 @@
   width: 100%;
 }
 .aerotxc_input:focus {
-  background-color: #5e6573;
+  background-color: #676f7e;
 }
 .aerotxc_input:hover {
-  background-color: #6a7181;
+  background-color: #737b8c;
   color: #ebedef;
+}
+
+.aerocbm {
+  height: 23px;
+  width: 100%;
+}
+.aerocbm_hitArea {
+  display: block;
+  height: 23px;
+  width: 100%;
+}
+
+.aerocbm_input {
+  margin: 0;
+  opacity: 0.001;
+  padding: 0;
+  position: absolute;
+}
+
+.aerocbm_input:checked + .aerocbm_outer .aerocbm_inner {
+  opacity: 1;
+}
+
+.aerocbm_outer {
+  background-color: #5c6370;
+  border-radius: 2px;
+  height: 23px;
+  position: relative;
+  transition: background-color 0.2s ease-out;
+  width: 23px;
+}
+
+.aerocbm_inner {
+  background-color: #cfd2d8;
+  border-radius: 2px;
+  bottom: 0;
+  height: 13px;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.1s ease-out;
+  width: 13px;
 }
 
 .aerogrm {
@@ -415,7 +461,7 @@
   position: relative;
 }
 .aerogrm_canvas {
-  background-color: #535965;
+  background-color: #5c6370;
   border-radius: 2px;
   color: #cfd2d8;
   display: block;
@@ -423,13 +469,13 @@
   width: 100%;
 }
 
-.aerolm {
-  background-color: #535965;
+.aerolgm {
+  background-color: #5c6370;
   border-radius: 2px;
   height: 69px;
   position: relative;
 }
-.aerolm_textarea {
+.aerolgm_textarea {
   background-color: transparent;
   border-width: 0;
   color: rgba(207, 210, 216, 0.5);
@@ -443,8 +489,64 @@
   width: 100%;
 }
 
+.aeromtm {
+  background-color: #5c6370;
+  border-radius: 2px;
+  height: 69px;
+  position: relative;
+}
+.aeromtm_textarea {
+  background-color: transparent;
+  border-width: 0;
+  color: rgba(207, 210, 216, 0.5);
+  display: block;
+  height: 100%;
+  line-height: 23px;
+  outline: none;
+  padding: 0 5px;
+  resize: none;
+  white-space: pre;
+  width: 100%;
+}
+
+.aeroplm {
+  height: 23px;
+  position: relative;
+}
+.aeroplm_outer {
+  background-color: #5c6370;
+  border-radius: 2px;
+  height: 23px;
+  overflow: hidden;
+  position: relative;
+  width: 23px;
+}
+
+.aeroplm_inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.aeroptm {
+  height: 23px;
+  position: relative;
+}
+
+.aeroplm.aeroplm-pt {
+  position: absolute;
+}
+
+.aerotxm.aerotxm-pt {
+  position: absolute;
+  left: 28px;
+  right: 0;
+}
+
 .aerotxm {
-  background-color: #535965;
+  background-color: #5c6370;
   border-radius: 2px;
   height: 23px;
   position: relative;
@@ -460,4 +562,4 @@
   width: 100%;
 }
 
-/*# sourceMappingURL=aerodial.css.map */
+/*# sourceMappingURL=style.css.map */

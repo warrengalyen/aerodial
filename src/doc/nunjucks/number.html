@@ -3,7 +3,7 @@
 {% set title = 'Number' %}
 
 {% block content %}
-<p>aerodial.js provides a text field for a number property by default.</p>
+<p>Aerodial provides a text field for a number property by default.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
@@ -13,8 +13,8 @@
 var aero = Aerodial();
 aero.add(params, 'speed');</code></pre>
     </div>
-    <div class="codeBlock_section">
-        <div id="example" class="codeBlock_ssContainer"></div>
+	<div class="codeBlock_section codeBlock_section-example">
+		<div id="numberExample" class="codeBlock_paneContainer"></div>
     </div>
 </div>
 
@@ -27,8 +27,8 @@ Use <code>min</code> or <code>max</code> option to specify minimum/maximum value
 		<pre><code class="js">var aero = Aerodial();
 aero.add(target, 'speed', {min: 0});</code></pre>
     </div>
-    <div class="codeBlock_section">
-        <div id="minExample" class="codeBlock_ssContainer"></div>
+	<div class="codeBlock_section codeBlock_section-example">
+		<div id="minExample" class="codeBlock_paneContainer"></div>
     </div>
 </div>
 
@@ -39,8 +39,8 @@ aero.add(target, 'speed', {min: 0});</code></pre>
 		<pre><code class="js">var aero = Aerodial();
 aero.add(target, 'speed', {min: 0, max: 100});</code></pre>
     </div>
-    <div class="codeBlock_section">
-        <div id="sliderExample" class="codeBlock_ssContainer"></div>
+	<div class="codeBlock_section codeBlock_section-example">
+		<div id="sliderExample" class="codeBlock_paneContainer"></div>
     </div>
 </div>
 
@@ -55,8 +55,8 @@ aero.add(target, 'particleCount', {
   min: 0, max: 100, step: 10
 });</code></pre>
     </div>
-    <div class="codeBlock_section">
-        <div id="stepExample" class="codeBlock_ssContainer"></div>
+	<div class="codeBlock_section codeBlock_section-example">
+		<div id="stepExample" class="codeBlock_paneContainer"></div>
     </div>
 </div>
 
@@ -76,8 +76,8 @@ aero.add(target, 'direction', {
   }
 });</code></pre>
     </div>
-    <div class="codeBlock_section">
-        <div id="listExample" class="codeBlock_ssContainer"></div>
+	<div class="codeBlock_section codeBlock_section-example">
+		<div id="listExample" class="codeBlock_paneContainer"></div>
     </div>
 </div>
 {% endblock %}
@@ -89,7 +89,7 @@ speed: 0.5,
 };
 var aero = Aerodial({
 foldable: false,
-container: document.getElementById('example')
+		container: document.getElementById('numberExample')
 });
 aero.add(params, 'speed');
 })();

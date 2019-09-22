@@ -1,58 +1,58 @@
-const Control       = require('./control');
+const Control = require('./control');
 
 class CompositeControl extends Control {
-    constructor(model) {
-        super(model);
-    }
+	constructor(model) {
+		super(model);
+	}
 
-    attachControl_(control) {
-        control.getEmitter().on(
-            Control.EVENT_CHANGE,
-            this.onSubcontrolChange_,
-            this
-        );
-    }
+	attachControl_(control) {
+		control.getEmitter().on(
+			Control.EVENT_CHANGE,
+			this.onSubcontrolChange_,
+			this
+		);
+	}
 
-    detachControl_(control) {
-        control.getEmitter().off(
-            Control.EVENT_CHANGE,
-            this.onSubcontrolChange_,
-            this
-        );
-    }
+	detachControl_(control) {
+		control.getEmitter().off(
+			Control.EVENT_CHANGE,
+			this.onSubcontrolChange_,
+			this
+		);
+	}
 
-    addSubview(subview) {
-        const added = super.addSubview(subview);
-        if (!added) {
-            return false;
-        }
+	addSubview(subview) {
+		const added = super.addSubview(subview);
+		if (!added) {
+			return false;
+		}
 
-        if (subview instanceof Control) {
-            this.attachControl_(subview);
-        }
+		if (subview instanceof Control) {
+			this.attachControl_(subview);
+		}
 
-        return true;
-    }
+		return true;
+	}
 
-    removeSubview(subview) {
-        const removed = super.removeSubview(subview);
-        if (!removed) {
-            return false;
-        }
+	removeSubview(subview) {
+		const removed = super.removeSubview(subview);
+		if (!removed) {
+			return false;
+		}
 
-        if (subview instanceof Control) {
-            this.detachControl_(subview);
-        }
+		if (subview instanceof Control) {
+			this.detachControl_(subview);
+		}
 
-        return true;
-    }
+		return true;
+	}
 
-    onSubcontrolChange_(value) {
-        this.getEmitter().notifyObservers(
-            Control.EVENT_CHANGE,
-            [value]
-        );
-    }
+	onSubcontrolChange_(value) {
+		this.getEmitter().notifyObservers(
+			Control.EVENT_CHANGE,
+			[value]
+		);
+	}
 }
 
 module.exports = CompositeControl;

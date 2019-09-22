@@ -16,12 +16,12 @@ aero.add(target, 'initSpeed', {
 });</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
-        <div id="labelExample" class="codeBlock_aeroContainer"></div>
+		<div id="labelExample" class="codeBlock_paneContainer"></div>
     </div>
 </div>
 
 
-<h2>Placing a aero in a specified element</h2>
+<h2>Placing a pane in a specified element</h2>
 <p>You can specify a container element by <code>container</code> option.</p>
 
 <div class="codeBlock">
@@ -49,12 +49,8 @@ aero.add(target, 'initSpeed', {
 <p>Aerodial doesn't watch a property change automatically, so you need to refresh it manually if a property is changed without Aerodial. Call <code>refresh()</code> to refresh all property views.</p>
 
 <div class="codeBlock">
-    <div class="codeBlock_section">
-
-
-<div class="codeBlock">
-    <div class="codeBlock_section">
-		<pre><code class="js">var aero = Aerodial();
+	<div class="codeBlock_section">
+		<pre><code class="js">var pane = Tweakpane();
 
 // (changed a property without Aerodial...)
 

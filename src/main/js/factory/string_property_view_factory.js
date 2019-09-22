@@ -4,6 +4,7 @@ const StringRecordModel   = require('../model/string_record_model');
 const ListControl         = require('../view/control/list_control');
 const TextControl         = require('../view/control/text_control');
 const LogMonitor          = require('../view/monitor/log_monitor');
+const MultilineTextMonitor = require('../view/monitor/multiline_text_monitor');
 const TextMonitor         = require('../view/monitor/text_monitor');
 const PropertyViewFactory = require('./property_view_factory');
 
@@ -29,6 +30,9 @@ class StringPropertyViewFactory extends PropertyViewFactory {
     }
 
     static createMonitor_(property, options) {
+		if (options.multiline !== undefined) {
+			return new MultilineTextMonitor(property);
+		}
         if (options.count !== undefined) {
             return new LogMonitor(property);
         }

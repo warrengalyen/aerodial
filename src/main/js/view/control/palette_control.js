@@ -2,23 +2,23 @@ const ColorFormatter = require('../../formatter/color_formatter');
 const ClassName      = require('../../misc/class_name');
 const Control        = require('./control');
 
-class ColorPaletteControl extends Control {
+class PaletteControl extends Control {
     constructor(model) {
         super(model);
 
         this.getElement().classList.add(
-            ClassName.get(ColorPaletteControl.BLOCK_CLASS)
+			ClassName.get(PaletteControl.BLOCK_CLASS)
         );
 
         const outerElem = document.createElement('div');
         outerElem.classList.add(
-            ClassName.get(ColorPaletteControl.BLOCK_CLASS, 'outer')
+			ClassName.get(PaletteControl.BLOCK_CLASS, 'outer')
         );
         this.elem_.appendChild(outerElem);
 
         const innerElem = document.createElement('div');
         innerElem.classList.add(
-            ClassName.get(ColorPaletteControl.BLOCK_CLASS, 'inner')
+			ClassName.get(PaletteControl.BLOCK_CLASS, 'inner')
         );
         outerElem.appendChild(innerElem);
         this.innerElem_ = innerElem;
@@ -38,6 +38,6 @@ class ColorPaletteControl extends Control {
     }
 }
 
-ColorPaletteControl.BLOCK_CLASS = 'cpc';
+PaletteControl.BLOCK_CLASS = 'plc';
 
-module.exports = ColorPaletteControl;
+module.exports = PaletteControl;

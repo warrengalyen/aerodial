@@ -1,17 +1,35 @@
 const Errors = require('../misc/errors');
 
+/**
+ * Codec provides a way to convert between model value and value from JSON or input element.
+ */
 class Codec {
-    static canDecode(value) {
-        throw Errors.notImplemented('canDecode');
-    }
+	/**
+	 * Returns whether it can decode a value.
+	 * @param {} value A value
+	 * @return {boolean} true if it can decode a value
+	 */
+	static canDecode(value) {
+		throw Errors.notImplemented('canDecode');
+	}
 
-    static decode(value) {
-        throw Errors.notImplemented('decode');
-    }
+	/**
+	 * Decodes a value.
+	 * @param {} value A value
+	 * @return {} A decoded value
+	 */
+	static decode(value) {
+		throw Errors.notImplemented('decode');
+	}
 
-    static encode(value) {
-        throw Errors.notImplemented('encode');
-    }
+	/**
+	 * Encodes a value.
+	 * @param {} value A value
+	 * @return {} A encoded value
+	 */
+	static encode(value) {
+		throw Errors.notImplemented('encode');
+	}
 }
 
 module.exports = Codec;
