@@ -25,8 +25,9 @@ class GulpConfig {
 
         this.doc = {
             nunjucks: {
-                pattern: './src/doc/nunjucks/**/*.nunj',
-                srcPattern: './src/doc/nunjucks/**/!(_)*.nunj',
+                pattern: './src/doc/nunjucks/**/*.html',
+                srcPattern: './src/doc/nunjucks/**/!(_)*.html',
+                extname: '.html',
                 dstDir: './doc'
             },
             sass: {
