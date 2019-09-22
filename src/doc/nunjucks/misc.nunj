@@ -1,0 +1,78 @@
+{% extends "_template.nunj" %}
+
+{% set title = 'Misc' %}
+
+{% block content %}
+    <h2>Changing a label of a property</h2>
+    <p>Property name will be used as a label by default. Use <code>label</code> option to change it.</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'initSpeed', {
+  label: 'Initial speed',
+  min: 0.0,
+  max: 1.0
+});</code></pre>
+        </div>
+        <div class="codeBlock_section codeBlock_section-example">
+            <div id="labelExample" class="codeBlock_paneContainer"></div>
+        </div>
+    </div>
+
+
+    <h2>Placing a pane in a specified element</h2>
+    <p>You can specify a container element by <code>container</code> option.</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial({
+  container: document.getElementById('someElementId')
+});
+</code></pre>
+        </div>
+    </div>
+
+    <h2>Disabling fold</h2>
+    <p>Set <code>foldable</code> option to false.</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial({
+  foldable: false
+});</code></pre>
+        </div>
+    </div>
+
+
+    <h2>Refreshing property views manually</h2>
+    <p>Aerodial doesn't watch a property change automatically, so you need to refresh it manually if a property is
+        changed without Aerodial. Call <code>refresh()</code> to refresh all property views.</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var pane = Tweakpane();
+
+// (changed a property without Aerodial...)
+
+aero.refresh();</code></pre>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    (function() {
+    var params = {
+    initSpeed: 0.38
+    };
+    var aero = Aerodial({
+    foldable: false,
+    container: document.getElementById('labelExample')
+    });
+    aero.add(params, 'initSpeed', {
+    label: 'Initial speed',
+    min: 0.0,
+    max: 1.0
+    });
+    })();
+{% endblock %}

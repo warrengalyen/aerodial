@@ -13,15 +13,13 @@
 </div>
 
 <div class="menu">
-    {% include "_menu.html" %}
+    {% include "_menu.nunj" %}
 </div>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
-{%
-set scriptPath = 'aerodial-' + config.version +
-('.min' if config.production else '') +
-'.js'
-%}
+{% set scriptPath = 'aerodial-' + config.version +
+    ('.min' if config.production else '') +
+    '.js' %}
 <script src="{{ scriptPath }}"></script>
 <script>
     hljs.initHighlightingOnLoad();

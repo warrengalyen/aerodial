@@ -1,0 +1,113 @@
+{% extends "_template.nunj" %}
+
+{% set title = 'String' %}
+
+{% block content %}
+    <p>aerodial.js provides a text field for a string property.</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var params = {
+  name: 'cocopon',
+};
+var aero = Aerodial();
+aero.add(params, 'name');</code></pre>
+        </div>
+        <div class="codeBlock_section codeBlock_section-example">
+            <div id="stringExample" class="codeBlock_paneContainer"></div>
+        </div>
+    </div>
+
+
+    <h2>List</h2>
+    <p>If you want to choose a value from the list, pass a string list as <code>list</code> option:</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'direction').list([
+  'left',
+  'up',
+  'right'
+  'down'
+]);</code></pre>
+        </div>
+        <div class="codeBlock_section codeBlock_section-example">
+            <div id="listExample" class="codeBlock_aeroContainer"></div>
+        </div>
+    </div>
+
+    <p>An object that has string values is also supported:</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'vimKey').list([
+  left:  'H',
+  up:    'K',
+  right: 'L',
+  down:  'J'
+]);</code></pre>
+        </div>
+        <div class="codeBlock_section codeBlock_section-example">
+            <div id="namedListExample" class="codeBlock_paneContainer"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    (function() {
+    var params = {
+    name: 'cocopon',
+    };
+    var aero = Aerodial({
+    foldable: false,
+    container: document.getElementById('stringExample')
+    });
+    aero.add(params, 'name');
+    })();
+
+    (function() {
+    var params = {
+    direction: 'left',
+    '(value)': ''
+    };
+    var aero = Aerodial({
+    foldable: false,
+    container: document.getElementById('listExample')
+    });
+    aero.add(params, 'direction', {
+    list: [
+    'left',
+    'up',
+    'right',
+    'down'
+    ]
+    }).on('change', function(value) {
+    params['(value)'] = value;
+    });
+    aero.monitor(params, '(value)');
+    })();
+
+    (function() {
+    var params = {
+    vimKey: 'H',
+    '(value)': ''
+    };
+    var aero = Aerodial({
+    foldable: false,
+    container: document.getElementById('namedListExample')
+    });
+    aero.add(params, 'vimKey', {
+    list: {
+    left:  'H',
+    up:    'K',
+    right: 'L',
+    down:  'J'
+    }
+    }).on('change', function(value) {
+    params['(value)'] = value;
+    });
+    aero.monitor(params, '(value)');
+    })();
+{% endblock %}

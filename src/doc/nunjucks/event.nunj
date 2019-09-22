@@ -1,0 +1,93 @@
+{% extends "_template.nunj" %}
+
+{% set title = 'Events' %}
+
+{% block content %}
+    <p>Use <code>on()</code> of specific property to listen to its changes.</p>
+    <p><code>'change'</code> event will be called continuously when the user controls a slider.</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'speed', {min: 0, max: 100}).on(
+  'change',
+  function(value) {
+    console.log(value);
+  }
+);</code></pre>
+        </div>
+        <div class="codeBlock_section codeBlock_section-example">
+            <div id="eventExample" class="codeBlock_paneContainer"></div>
+        </div>
+    </div>
+
+
+    <h2>Global event</h2>
+    <p>If you want to listen to changes of all properties, use <code>on()</code> of the root object.</p>
+
+    <div class="codeBlock">
+        <div class="codeBlock_section">
+		<pre><code class="js">var aero = Aerodial();
+aero.add(target, 'power', {min: 0, max: 100});
+aero.add(target, 'size', {min: 0, max: 100});
+aero.on(
+  'change',
+  function(value, property) {
+    console.log(property.getLabel());
+    console.log(value);
+  }
+);</code></pre>
+        </div>
+        <div class="codeBlock_section codeBlock_section-example">
+            <div id="globalEventExample" class="codeBlock_paneContainer"></div>
+        </div>
+    </div>
+
+    <p>See <a href="TODO:path/to/property">Property</a> for the specification of <code>Property</code> class.</p>
+{% endblock %}
+
+{% block script %}
+    (function() {
+    var params = {
+    speed: 50,
+    '(log)': ''
+    };
+    var aero = Aerodial({
+    foldable: false,
+    container: document.getElementById('eventExample')
+    });
+    aero.add(params, 'speed', {
+    min: 0,
+    max: 100
+    }).on('change', function(value) {
+    params['(log)'] = String(value);
+    });
+    aero.monitor(params, '(log)', {
+    count: 10
+    });
+    })();
+
+    (function() {
+    var params = {
+    power: 50,
+    size: 50,
+    '(log)': ''
+    };
+    var aero = Aerodial({
+    foldable: false,
+    container: document.getElementById('globalEventExample')
+    });
+    aero.add(params, 'power', {min: 0, max: 100});
+    aero.add(params, 'size', {min: 0, max: 100});
+    aero.on('change', function(value, prop) {
+    if (prop.getId() === '(log)') {
+    // Prevent infinite loop
+    return;
+    }
+    params['(log)'] = prop.getLabel() + ': ' + String(value);
+    });
+    aero.monitor(params, '(log)', {
+    count: 10
+    });
+    })();
+{% endblock %}
