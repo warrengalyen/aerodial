@@ -183,4 +183,46 @@ a:hover {
   width: 50%;
 }
 
+.sketchBlock {
+  background-color: white;
+  border: rgba(0, 0, 0, 0.1) solid 1px;
+  height: 400px;
+  position: relative;
+}
+.sketchBlock_sketchLayout {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 250px;
+  top: 0;
+}
+
+.sketchBlock_tpLayout {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+}
+
+.sketchBlock_sketch {
+  display: block;
+}
+
+.sketchBlock_ad {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.sketchBlock_ad a {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: block;
+  font-size: 0.8rem;
+  padding: 3px 6px;
+  text-decoration: none;
+}
+.sketchBlock_ad a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /*# sourceMappingURL=style.css.map */
