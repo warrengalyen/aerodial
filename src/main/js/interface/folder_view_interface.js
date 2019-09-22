@@ -1,41 +1,78 @@
 const PropertyViewFactoryComplex = require('../factory/property_view_factory_complex');
-const PropertyViewInterface      = require('../interface/property_view_interface');
+const ButtonView                 = require('../view/button_view');
+const SeparatorView              = require('../view/separator_view');
+const ButtonViewInterface        = require('./button_view_interface');
+const PropertyViewInterface      = require('./property_view_interface');
 
 class FolderViewInterface {
-    constructor(view) {
-        this.view_ = view;
-    }
+	constructor(view) {
+		this.view_ = view;
+	}
 
-    add(target, propName, options) {
-        const propView = PropertyViewFactoryComplex.create(target, propName, false, options);
-        this.view_.addSubview(propView);
-        return new PropertyViewInterface(propView);
-    }
+	add(target, propName, opt_options) {
+		const options = (opt_options !== undefined) ?
+			opt_options :
+			{};
+		options.forMonitor = false;
 
-    monitor(target, propName, options) {
-        const propView = PropertyViewFactoryComplex.create(target, propName, true, options);
-        this.view_.addSubview(propView);
+		const propView = PropertyViewFactoryComplex.create(
+			target, propName, options
+		);
 
-        return new PropertyViewInterface(propView);
-    }
+		this.view_.addSubview(propView);
+		return new PropertyViewInterface(propView);
+	}
 
-    /**
-     * Open a folder.
-     * @return {FolderViewInterface}
-     */
-    open() {
-        this.view_.setExpanded(true, false);
-        return this;
-    }
+	monitor(target, propName, opt_options) {
+		const options = (opt_options !== undefined) ?
+			opt_options :
+			{};
+		options.forMonitor = true;
 
-    /**
-     * Close a folder.
-     * @return {FolderViewInterface}
-     */
-    close() {
-        this.view_.setExpanded(false, false);
-        return this;
-    }
+		const propView = PropertyViewFactoryComplex.create(
+			target, propName, options
+		);
+
+		this.view_.addSubview(propView);
+		return new PropertyViewInterface(propView);
+	}
+
+	/**
+	 * Opens a folder.
+	 * @return {FolderViewInterface}
+	 */
+	open() {
+		this.view_.setExpanded(true, false);
+		return this;
+	}
+
+	/**
+	 * Closes a folder.
+	 * @return {FolderViewInterface}
+	 */
+	close() {
+		this.view_.setExpanded(false, false);
+		return this;
+	}
+
+	/**
+	 * Adds a clickable button.
+	 * @param {string} title A title
+	 * @return {ButtonViewInterface}
+	 */
+	addButton(title) {
+		const buttonView = new ButtonView(title);
+		this.view_.addSubview(buttonView);
+		return new ButtonViewInterface(buttonView);
+	}
+
+	/**
+	 * Adds a separator.
+	 */
+	addSeparator() {
+		const separatorView = new SeparatorView();
+		this.view_.addSubview(separatorView);
+	}
 }
 
 module.exports = FolderViewInterface;
