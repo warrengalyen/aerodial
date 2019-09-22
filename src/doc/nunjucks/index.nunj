@@ -36,9 +36,7 @@ var aero = Aerodial();
     param2: 'str'
     };
     var aero = Aerodial();
-    aero.add(params, 'easing', {min: 0, max: 10}).on('change', function(value) {
-    console.log(value);
-    });
+    pane.add(params, 'easing', {min: 0, max: 10});
     aero.add(params, 'color');
     aero.monitor(params, 'param1', {
     label: 'Very long long label'

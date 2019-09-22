@@ -11,13 +11,13 @@
 }
 
 .aerobtv {
-  background-color: #494f5a;
+  background-color: #4e5056;
   padding: 5px;
   position: relative;
 }
 .aerobtv_button {
   appearance: none;
-  background-color: #5c6370;
+  background-color: #61646b;
   border-width: 0;
   border-radius: 2px;
   color: #cfd2d8;
@@ -30,20 +30,20 @@
   width: 100%;
 }
 .aerobtv_button:focus {
-  background-color: #676f7e;
+  background-color: #6d7178;
 }
 .aerobtv_button:hover {
-  background-color: #737b8c;
+  background-color: #797d86;
   color: #ebedef;
 }
 .aerobtv_button:active {
-  background-color: #8f96a3;
+  background-color: #94979e;
 }
 
 .aerobtv + .aerobtv,
 .aerobtv + .aeroprv,
 .aeroprv + .aerobtv {
-  border-top: #3e434c solid 1px;
+  border-top: #414448 solid 1px;
 }
 
 .aeroflv {
@@ -111,7 +111,7 @@
 }
 
 .aeroprv {
-  background-color: #494f5a;
+  background-color: #4e5056;
   position: relative;
 }
 .aeroprv:after {
@@ -120,7 +120,7 @@
   display: block;
 }
 .aeroprv + .aeroprv {
-  border-top: #3e434c solid 1px;
+  border-top: #414448 solid 1px;
 }
 .aeroprv_label {
   bottom: 0;
@@ -146,7 +146,7 @@
 }
 
 .aerortv {
-  background-color: #2b303b;
+  background-color: #2e3138;
   padding: 0 5px;
 }
 .aerortv * {
@@ -222,11 +222,11 @@
 }
 
 .aerocbc_input:focus + .aerocbc_outer {
-  background-color: #676f7e;
+  background-color: #6d7178;
 }
 
 .aerocbc_input:focus + .aerocbc_outer:hover, .aerocbc_outer:hover {
-  background-color: #737b8c;
+  background-color: #797d86;
 }
 
 .aerocbc_input:checked + .aerocbc_outer .aerocbc_inner {
@@ -238,7 +238,7 @@
 }
 
 .aerocbc_outer {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   cursor: pointer;
   height: 23px;
@@ -263,14 +263,14 @@
 }
 
 .aerolsc {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
 }
 .aerolsc:focus {
-  background-color: #676f7e;
+  background-color: #6d7178;
 }
 .aerolsc:hover {
-  background-color: #737b8c;
+  background-color: #797d86;
 }
 .aerolsc:hover .aerolsc_select {
   color: #ebedef;
@@ -306,7 +306,7 @@
   position: relative;
 }
 .aeroplc_outer {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   height: 23px;
   overflow: hidden;
@@ -343,13 +343,13 @@
   position: relative;
 }
 .aeroslc:hover .aeroslc_outer {
-  background-color: #737b8c;
+  background-color: #797d86;
 }
 .aeroslc:hover .aeroslc_inner {
   background-color: #ebedef;
 }
 .aeroslc_outer {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   height: 100%;
   overflow: hidden;
@@ -392,7 +392,7 @@
 }
 .aerotxc_input {
   appearance: none;
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   border-width: 0;
   color: #cfd2d8;
@@ -404,10 +404,10 @@
   width: 100%;
 }
 .aerotxc_input:focus {
-  background-color: #676f7e;
+  background-color: #6d7178;
 }
 .aerotxc_input:hover {
-  background-color: #737b8c;
+  background-color: #797d86;
   color: #ebedef;
 }
 
@@ -433,7 +433,7 @@
 }
 
 .aerocbm_outer {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   height: 23px;
   position: relative;
@@ -461,7 +461,7 @@
   position: relative;
 }
 .aerogrm_canvas {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   color: #cfd2d8;
   display: block;
@@ -470,7 +470,7 @@
 }
 
 .aerolgm {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   height: 69px;
   position: relative;
@@ -490,7 +490,7 @@
 }
 
 .aeromtm {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   height: 69px;
   position: relative;
@@ -514,7 +514,7 @@
   position: relative;
 }
 .aeroplm_outer {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   height: 23px;
   overflow: hidden;
@@ -546,7 +546,7 @@
 }
 
 .aerotxm {
-  background-color: #5c6370;
+  background-color: #61646b;
   border-radius: 2px;
   height: 23px;
   position: relative;
@@ -562,4 +562,4 @@
   width: 100%;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=aerodial.css.map */
