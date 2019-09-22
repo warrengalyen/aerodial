@@ -1,13 +1,13 @@
 {% extends "_template.html" %}
 
+{% set id = 'color' %}
 {% set title = 'Color' %}
 
 {% block content %}
-    <p>String property that can be recognized as a hex color (e.g. <code>'#rrggbb'</code> or <code>'#rgb'</code>), will
-        be treated as a color property.</p>
+<p>String property that can be recognized as a hex color (e.g. <code>'#rrggbb'</code> or <code>'#rgb'</code>), will be treated as a color property.</p>
 
-    <div class="codeBlock">
-        <div class="codeBlock_section">
+<div class="codeBlock">
+    <div class="codeBlock_section">
 		<pre><code>var params = {
   keyColor: '#00ff00'
 };
@@ -15,23 +15,9 @@ var aero = Aerodial({
   container: document.getElementById('colorExample')
 });
 aero.add(params, 'keyColor');</code></pre>
-        </div>
-        <div class="codeBlock_section codeBlock_section-example">
-            <div id="colorExample" class="codeBlock_paneContainer"></div>
-        </div>
     </div>
-{% endblock %}
-
-{% block script %}
-    (function() {
-    var params = {
-    keyColor: '#00ff00'
-    };
-
-    var aero = Aerodial({
-    foldable: false,
-    container: document.getElementById('colorExample')
-    });
-    aero.add(params, 'keyColor');
-    })();
+    <div class="codeBlock_section codeBlock_section-example">
+        <div id="colorExample" class="codeBlock_aeroContainer"></div>
+    </div>
+</div>
 {% endblock %}

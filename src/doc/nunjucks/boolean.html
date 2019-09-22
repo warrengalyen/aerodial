@@ -1,67 +1,37 @@
 {% extends "_template.html" %}
 
-{% set title = 'Overview' %}
+{% set id = 'boolean' %}
+{% set title = 'Boolean' %}
 
 {% block content %}
-    <p>Aerodial provides a checkbox field for a boolean property by default.</p>
+<p>Aerodial provides a checkbox field for a boolean property by default.</p>
 
-    <div class="codeBlock">
-        <div class="codeBlock_section">
+<div class="codeBlock">
+    <div class="codeBlock_section">
 		<pre><code class="js">var params = {
   debug: true
 };
 var aero = Aerodial();
 aero.add(params, 'debug');</code></pre>
-        </div>
-        <div class="codeBlock_section codeBlock_section-example">
-            <div id="example" class="codeBlock_paneContainer"></div>
-        </div>
     </div>
+    <div class="codeBlock_section codeBlock_section-example">
+        <div id="example" class="codeBlock_aeroContainer"></div>
+    </div>
+</div>
 
 
-    <h2>List</h2>
-    <p>You can use a named list for boolean value. Pass an array of two string values (true, false) to <code>list</code>
-        option.</p>
+<h2>List</h2>
+<p>You can use a named list for boolean value. Pass an array of two string values (true, false) to <code>list</code> option.</p>
 
-    <div class="codeBlock">
-        <div class="codeBlock_section">
+<div class="codeBlock">
+    <div class="codeBlock_section">
 		<pre><code class="js">var aero = Aerodial();
 aero.add(target, 'debug', {
   list: ['Enabled', 'Disabled']
 });</code></pre>
-        </div>
-        <div class="codeBlock_section codeBlock_section-example">
-            <div id="listExample" class="codeBlock_paneContainer"></div>
-        </div>
     </div>
-{% endblock %}
-
-{% block script %}
-    (function() {
-    var params = {
-    debug: true
-    };
-    var aero = Aerodial({
-    foldable: false,
-    container: document.getElementById('example')
-    });
-    aero.add(params, 'debug');
-    })();
-
-    (function() {
-    var params = {
-    debug: false,
-    '(value)': ''
-    };
-    var aero = Aerodial({
-    foldable: false,
-    container: document.getElementById('listExample')
-    });
-    aero.add(params, 'debug', {
-    list: ['Enabled', 'Disabled']
-    }).on('change', function(value) {
-    params['(value)'] = String(value);
-    });
-    aero.monitor(params, '(value)');
-    })();
+    <div class="codeBlock_section codeBlock_section-example">
+        <div id="listExample" class="codeBlock_aeroContainer"></div>
+    </div>
+</div>
 {% endblock %}
