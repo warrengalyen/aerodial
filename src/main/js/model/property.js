@@ -1,89 +1,81 @@
 const CodecProvider = require('../codec/codec_provider');
-const EventEmitter  = require('../misc/event_emitter');
-const Model         = require('../model/model');
+const EventEmitter = require('../misc/event_emitter');
+const Model = require('../model/model');
 
 class Property {
-    constructor(builder) {
-        this.target_ = builder.getTarget();
-        this.propName_ = builder.getPropertyName();
-        this.label_ = builder.getLabel();
-        this.id_ = builder.getId();
-        this.forMonitor_ = builder.isForMonitor();
+	constructor(builder) {
+		this.target_ = builder.getTarget();
+		this.propName_ = builder.getPropertyName();
+		this.label_ = builder.getLabel();
+		this.id_ = builder.getId();
+		this.forMonitor_ = builder.isForMonitor();
 
-        this.model_ = builder.getModel();
-        this.model_.getEmitter().on(
-            Model.EVENT_CHANGE,
-            this.onModelChange_,
-            this
-        );
-        this.codec_ = CodecProvider.provide(this.model_);
+		this.model_ = builder.getModel();
+		this.codec_ = CodecProvider.provide(this.model_);
 
-        this.emitter_ = new EventEmitter();
-    }
+		this.emitter_ = new EventEmitter();
+	}
 
-    getEmitter() {
-        return this.emitter_;
-    }
+	getEmitter() {
+		return this.emitter_;
+	}
 
-    getTarget() {
-        return this.target_;
-    }
+	getTarget() {
+		return this.target_;
+	}
 
-    getPropertyName() {
-        return this.propName_;
-    }
+	getPropertyName() {
+		return this.propName_;
+	}
 
-    getId() {
-        return this.id_;
-    }
+	getId() {
+		return this.id_;
+	}
 
-    getLabel() {
-        return this.label_;
-    }
+	getLabel() {
+		return this.label_;
+	}
 
-    getModel() {
-        return this.model_;
-    }
+	getModel() {
+		return this.model_;
+	}
 
-    getCodec() {
-        return this.codec_;
-    }
+	getCodec() {
+		return this.codec_;
+	}
 
-    getValue() {
-        return this.codec_.encode(
-            this.model_.getValue()
-        );
-    }
+	getValue() {
+		return this.codec_.encode(
+			this.model_.getValue()
+		);
+	}
 
-    isForMonitor() {
-        return this.forMonitor_;
-    }
+	isForMonitor() {
+		return this.forMonitor_;
+	}
 
-    setValue(value) {
-        if (!this.codec_.canDecode(value)) {
-            return false;
-        }
-        this.model_.setValue(
-            this.codec_.decode(value)
-        );
+	setValue(value, opt_updatesSource) {
+		if (!this.codec_.canDecode(value)) {
+			return false;
+		}
+		const decodedValue = this.codec_.decode(value);
 
-        return true;
-    }
+		const updatesSource = (opt_updatesSource !== undefined) ?
+			opt_updatesSource :
+			false;
+		if (updatesSource) {
+			this.target_[this.propName_] = decodedValue;
+		}
 
-    applySourceValue() {
-        this.setValue(this.target_[this.propName_]);
-    }
+		this.model_.setValue(decodedValue);
 
-    updateSourceValue() {
-        this.target_[this.propName_] = this.getValue();
-    }
 
-    onModelChange_() {
-        this.emitter_.notifyObservers(
-            Property.EVENT_MODEL_CHANGE,
-            [this]
-        );
-    }
+		return true;
+	}
+
+	applySourceValue() {
+		this.setValue(this.target_[this.propName_]);
+	}
 }
 
 Property.EVENT_MODEL_CHANGE = 'modelchange';
