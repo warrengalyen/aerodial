@@ -5,11 +5,11 @@ var sketchParams = sketch.getParameters();
 var nigiri = sketch.getNigiri();
 var neta = nigiri.getNeta();
 
-var pane = Aerodial({
+var aero = Aerodial({
 	container: document.getElementById('tp')
 });
 
-var folder1 = pane.addFolder('Appearance');
+var folder1 = aero.addFolder('Appearance');
 folder1.add(sketchParams, 'neta', {
 	list: [
 		'hotate',
@@ -18,7 +18,7 @@ folder1.add(sketchParams, 'neta', {
 	]
 });
 
-var folder2 = pane.addFolder('Physics');
+var folder2 = aero.addFolder('Physics');
 folder2.add(sketchParams, 'gravity', {
 	min: 0.1,
 	max: 1.0
