@@ -1,7 +1,7 @@
 const Aerodial = require('../src/main/js/aerodial');
 
 describe('Aerodial', () => {
-	it('should handle cange event and get correct value', () => {
+	it('should handle change event and get correct value', () => {
 		const INITIAL_VALUE = 'initial';
 		const CHANGED_VALUE = 'changed';
 		const params = {
