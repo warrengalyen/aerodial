@@ -186,7 +186,8 @@ a:hover {
 .sketchBlock {
   background-color: white;
   border: rgba(0, 0, 0, 0.1) solid 1px;
-  height: 400px;
+  height: 450px;
+  overflow: hidden;
   position: relative;
 }
 .sketchBlock_sketchLayout {
@@ -198,6 +199,7 @@ a:hover {
 }
 
 .sketchBlock_tpLayout {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   position: absolute;
   right: 0;
   top: 0;
@@ -214,7 +216,7 @@ a:hover {
   position: absolute;
 }
 .sketchBlock_ad a {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   display: block;
   font-size: 0.8rem;
