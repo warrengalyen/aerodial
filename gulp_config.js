@@ -47,8 +47,7 @@ class GulpConfig {
         };
 
         this.serverDirs = [
-            './doc',
-            './dst'
+            './doc'
         ];
     }
 
