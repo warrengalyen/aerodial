@@ -161,16 +161,16 @@ a:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   bottom: 0;
   color: #8f91a3;
-  left: -200px;
+  transform: translateX(-200px);
   overflow-y: auto;
   padding: 60px 0 0;
   position: fixed;
   top: 0;
-  transition: left 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   width: 200px;
 }
 .menu_body.menu_body-expanded {
-  left: 0;
+  transform: translateX(0);
 }
 .menu_body ul {
   list-style-type: none;
