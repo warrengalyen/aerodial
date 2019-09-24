@@ -89,7 +89,7 @@ a:hover {
 }
 
 .hero_title {
-  color: rgba(0, 0, 0, 0.05);
+  color: rgba(41, 43, 61, 0.3);
   font-size: 2.6rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
@@ -100,7 +100,7 @@ a:hover {
   width: 100%;
 }
 
-.hero_aeroContainer {
+.hero_paneContainer {
   bottom: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   left: 0;
@@ -120,35 +120,65 @@ a:hover {
   margin-bottom: 0;
 }
 
-.menu {
+.menu_button {
+  appearance: none;
+  background-color: transparent;
+  border-width: 0;
+  color: #292b3d;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 60px;
+  opacity: 0.3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: color 0.3s ease-in-out, opacity 0.15s ease-out;
+  width: 60px;
+}
+.menu_button:hover {
+  opacity: 1;
+}
+.menu_button:focus {
+  outline: none;
+}
+.menu_button.menu_button-expanded {
+  color: #8f91a3;
+}
+
+.menu_body {
   background-color: rgba(69, 70, 84, 0.95);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   bottom: 0;
   color: #8f91a3;
-  right: 0;
+  left: -250px;
   overflow-y: auto;
-  padding: 20px 0;
+  padding: 60px 0 0;
   position: fixed;
   top: 0;
+  transition: left 0.3s ease-in-out;
   width: 250px;
 }
-.menu ul {
+.menu_body.menu_body-expanded {
+  left: 0;
+}
+.menu_body ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.menu li {
+.menu_body li {
   margin: 0;
   padding: 0;
 }
-.menu a {
+.menu_body a {
   color: #c7c8d1;
   display: block;
   text-decoration: none;
 }
-.menu a:hover {
+.menu_body a:hover {
   background-color: rgba(217, 219, 242, 0.1);
 }
+
 .menu_title {
   display: block;
   padding: 0.5rem 30px;
@@ -180,7 +210,7 @@ a:hover {
   background-color: #d5d6dd;
 }
 
-.codeBlock_aeroContainer {
+.codeBlock_paneContainer {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   width: 250px;
