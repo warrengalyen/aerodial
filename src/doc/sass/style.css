@@ -105,7 +105,7 @@ a:hover {
   width: 100%;
 }
 
-.hero_paneContainer {
+.hero_aeroContainer {
   bottom: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   left: 0;
@@ -221,13 +221,13 @@ a:hover {
   background-color: #d5d6dd;
 }
 
-.codeBlock_paneContainer {
+.codeBlock_aeroContainer {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   width: 250px;
 }
 @media (max-width: 1120px) {
-  .codeBlock_paneContainer {
+  .codeBlock_aeroContainer {
     max-width: 250px;
     width: auto;
   }
@@ -288,6 +288,11 @@ a:hover {
   overflow: hidden;
   position: relative;
 }
+@media (max-width: 500px) {
+  .sketchBlock {
+    height: auto;
+  }
+}
 .sketchBlock_sketchLayout {
   bottom: 0;
   left: 0;
@@ -295,13 +300,27 @@ a:hover {
   right: 250px;
   top: 0;
 }
+@media (max-width: 500px) {
+  .sketchBlock_sketchLayout {
+    height: 240px;
+    position: relative;
+    right: auto;
+  }
+}
 
-.sketchBlock_tpLayout {
+.sketchBlock_aeroLayout {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   position: absolute;
   right: 0;
   top: 0;
   width: 250px;
+}
+@media (max-width: 500px) {
+  .sketchBlock_aeroLayout {
+    position: static;
+    right: auto;
+    width: auto;
+  }
 }
 
 .sketchBlock_sketch {
