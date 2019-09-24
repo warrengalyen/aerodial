@@ -79,6 +79,11 @@ a:hover {
   height: 300px;
   position: relative;
 }
+@media (max-width: 1120px) {
+  .hero {
+    height: 240px;
+  }
+}
 .hero_body {
   height: 100px;
   position: absolute;
@@ -115,6 +120,12 @@ a:hover {
   padding: 60px 30px;
   position: relative;
   width: 620px;
+}
+@media (max-width: 1120px) {
+  .content {
+    padding: 30px;
+    width: auto;
+  }
 }
 .content > *:last-child {
   margin-bottom: 0;
@@ -215,6 +226,12 @@ a:hover {
   margin: 0 auto;
   width: 250px;
 }
+@media (max-width: 1120px) {
+  .codeBlock_paneContainer {
+    max-width: 250px;
+    width: auto;
+  }
+}
 
 .codeBlock_textBox {
   background-color: #c1c2cd;
@@ -242,11 +259,26 @@ a:hover {
   padding-right: 10px;
   width: 50%;
 }
+@media (max-width: 1120px) {
+  .twoColumnLayout_leftColumn {
+    float: none;
+    padding-right: 0;
+    width: auto;
+  }
+}
 
 .twoColumnLayout_rightColumn {
   float: left;
   padding-left: 10px;
   width: 50%;
+}
+@media (max-width: 1120px) {
+  .twoColumnLayout_rightColumn {
+    float: none;
+    padding-left: 0;
+    padding-top: 20px;
+    width: auto;
+  }
 }
 
 .sketchBlock {
