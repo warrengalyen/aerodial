@@ -79,7 +79,7 @@ a:hover {
   height: 300px;
   position: relative;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1020px) {
   .hero {
     height: 240px;
   }
@@ -121,7 +121,7 @@ a:hover {
   position: relative;
   width: 620px;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1020px) {
   .content {
     padding: 30px;
     width: auto;
@@ -161,13 +161,13 @@ a:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   bottom: 0;
   color: #8f91a3;
-  left: -250px;
+  left: -200px;
   overflow-y: auto;
   padding: 60px 0 0;
   position: fixed;
   top: 0;
   transition: left 0.3s ease-in-out;
-  width: 250px;
+  width: 200px;
 }
 .menu_body.menu_body-expanded {
   left: 0;
@@ -226,7 +226,7 @@ a:hover {
   margin: 0 auto;
   width: 250px;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1020px) {
   .codeBlock_aeroContainer {
     max-width: 250px;
     width: auto;
@@ -259,7 +259,7 @@ a:hover {
   padding-right: 10px;
   width: 50%;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1020px) {
   .twoColumnLayout_leftColumn {
     float: none;
     padding-right: 0;
@@ -272,7 +272,7 @@ a:hover {
   padding-left: 10px;
   width: 50%;
 }
-@media (max-width: 1120px) {
+@media (max-width: 1020px) {
   .twoColumnLayout_rightColumn {
     float: none;
     padding-left: 0;
