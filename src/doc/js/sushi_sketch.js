@@ -114,7 +114,7 @@ class Nigiri extends PIXI.Container {
 	}
 }
 
-class Sketch {
+class SushiSketch {
 	constructor(canvasElement) {
 		this.renderer_ = PIXI.autoDetectRenderer(0, 0, {
 			antialias: true,
