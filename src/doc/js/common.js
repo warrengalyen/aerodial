@@ -1,11 +1,19 @@
+let sketch = null;
+
 var aero = Aerodial({
 	foldable: false,
 	container: document.getElementsByClassName('hero_aeroContainer').item(0)
 });
-
 aero.add({slider: 0}, 'slider', {
-	min: 0,
-	max: 100,
+	min: 0.0,
+	max: 1.0,
+}).on('change', (value) => {
+	if (sketch === null) {
+		sketch = new PhysicsSketch(
+			document.getElementById('heroSketch')
+		);
+	}
+	sketch.updateLevel(value);
 });
 
 class Menu {
