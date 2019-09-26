@@ -1,104 +1,113 @@
 const Style     = require('../misc/style');
 const ClassName = require('../misc/class_name');
+const Folder    = require('../model/folder');
+const Model     = require('../model/model');
 const View      = require('./view');
 
 class FolderView extends View {
-    constructor(title) {
-        super();
+	constructor(title) {
+		super();
 
-        const elem = this.getElement();
-        elem.classList.add(
-            ClassName.get(FolderView.BLOCK_CLASS)
-        );
+		const elem = this.getElement();
+		elem.classList.add(
+			ClassName.get(FolderView.BLOCK_CLASS)
+		);
 
-        const buttonElem = document.createElement('button');
-        buttonElem.classList.add(
-            ClassName.get(FolderView.BLOCK_CLASS, 'button')
-        );
-        buttonElem.addEventListener(
-            'click',
-            this.onButtonElementClick_.bind(this)
-        );
-        elem.appendChild(buttonElem);
+		const buttonElem = document.createElement('button');
+		buttonElem.classList.add(
+			ClassName.get(FolderView.BLOCK_CLASS, 'button')
+		);
+		buttonElem.addEventListener(
+			'click',
+			this.onButtonElementClick_.bind(this)
+		);
+		elem.appendChild(buttonElem);
 
-        const arrowElem = document.createElement('span');
-        arrowElem.classList.add(
-            ClassName.get(FolderView.BLOCK_CLASS, 'arrow')
-        );
-        buttonElem.appendChild(arrowElem);
-        this.arrowElem_ = arrowElem;
+		const arrowElem = document.createElement('span');
+		arrowElem.classList.add(
+			ClassName.get(FolderView.BLOCK_CLASS, 'arrow')
+		);
+		buttonElem.appendChild(arrowElem);
+		this.arrowElem_ = arrowElem;
 
-        const titleElem = document.createElement('span');
-        titleElem.textContent = title;
-        titleElem.classList.add(
-            ClassName.get(FolderView.BLOCK_CLASS, 'title')
-        );
-        buttonElem.appendChild(titleElem);
+		const titleElem = document.createElement('span');
+		titleElem.textContent = title;
+		titleElem.classList.add(
+			ClassName.get(FolderView.BLOCK_CLASS, 'title')
+		);
+		buttonElem.appendChild(titleElem);
 
-        const containerElem = document.createElement('div');
-        containerElem.classList.add(
-            ClassName.get(FolderView.BLOCK_CLASS, 'container')
-        );
-        elem.appendChild(containerElem);
-        this.containerElem_ = containerElem;
+		const containerElem = document.createElement('div');
+		containerElem.classList.add(
+			ClassName.get(FolderView.BLOCK_CLASS, 'container')
+		);
+		elem.appendChild(containerElem);
+		this.containerElem_ = containerElem;
 
-        this.setExpanded(true, false);
-    }
+		const folder = new Folder();
+		folder.getEmitter().on(
+			Model.EVENT_CHANGE,
+			this.onFolderChange_,
+			this
+		);
+		this.folder_ = folder;
+		this.folder_.setExpanded(true, false);
+	}
 
-    getContainerElement_() {
-        return this.containerElem_;
-    }
+	getContainerElement_() {
+		return this.containerElem_;
+	}
 
-    isExpanded() {
-        return this.expanded_;
-    }
+	getFolder() {
+		return this.folder_;
+	}
 
-    setExpanded(expanded, opt_animated) {
-        this.expanded_ = expanded;
-        this.applyExpanded_(opt_animated);
-    }
+	getContentHeight_() {
+		return this.subviews_.reduce((total, subview) => {
+			return total + subview.getElement().offsetHeight;
+		}, 0);
+	}
 
-    applyExpanded_(opt_animated) {
-        const animated = (opt_animated !== undefined) ?
-            opt_animated :
-            true;
+	applyExpanded_() {
+		const folder = this.folder_;
 
-        Style.runTransition(this.arrowElem_, (arrowElem) => {
-            const arrowClass = ClassName.get(
-                FolderView.BLOCK_CLASS,
-                'arrow',
-                'expanded'
-            );
-            if (this.expanded_) {
-                arrowElem.classList.add(arrowClass);
-            }
-            else {
-                arrowElem.classList.remove(arrowClass);
-            }
-        }, animated);
+		Style.runTransition(this.arrowElem_, (arrowElem) => {
+			const arrowClass = ClassName.get(
+				FolderView.BLOCK_CLASS,
+				'arrow',
+				'expanded'
+			);
+			if (folder.isExpanded()) {
+				arrowElem.classList.add(arrowClass);
+			}
+			else {
+				arrowElem.classList.remove(arrowClass);
+			}
+		}, folder.shouldAnimate());
 
-        Style.runTransition(this.containerElem_, (containerElem) => {
-            const contentHeight = this.expanded_ ?
-                this.getContentHeight_() :
-                0;
-            containerElem.style.height = `${contentHeight}px`;
-        }, animated);
-    }
+		Style.runTransition(this.containerElem_, (containerElem) => {
+			const contentHeight = folder.isExpanded() ?
+				this.getContentHeight_() :
+				0;
+			containerElem.style.height = `${contentHeight}px`;
+		}, folder.shouldAnimate());
+	}
 
-    getContentHeight_() {
-        return this.subviews_.reduce((total, subview) => {
-            return total + subview.getElement().offsetHeight;
-        }, 0);
-    }
+	addSubview(subview) {
+		super.addSubview(subview);
+		this.applyExpanded_();
+	}
 
-    addSubview(subview) {
-        super.addSubview(subview);
-        this.applyExpanded_(false);
-    }
+	onButtonElementClick_() {
+		this.folder_.setExpanded(
+			!this.folder_.isExpanded(),
+			true
+		);
+	}
 
-    onButtonElementClick_() {
-        this.setExpanded(!this.isExpanded());
-    }
+	onFolderChange_() {
+		this.applyExpanded_();
+	}
 }
 
 FolderView.BLOCK_CLASS = 'flv';
