@@ -3,7 +3,7 @@
 (() => {
 	let sketch = null;
 
-	var aero = Aerodial({
+	var aero = new Aerodial({
 		foldable: false,
 		container: document.getElementsByClassName('hero_aeroContainer').item(0)
 	});

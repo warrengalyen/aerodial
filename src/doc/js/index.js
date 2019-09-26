@@ -3,7 +3,7 @@ var sketch = new SushiSketch(
 );
 var sketchParams = sketch.getParameters();
 
-var aero = Aerodial({
+var aero = new Aerodial({
 	container: document.getElementById('tp')
 });
 

@@ -3,7 +3,7 @@
         speed: 50,
         '(log)': ''
     };
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('eventExample')
     });
@@ -24,7 +24,7 @@
         size: 50,
         '(log)': ''
     };
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('globalEventExample')
     });

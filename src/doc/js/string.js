@@ -2,7 +2,7 @@
     var params = {
         name: 'mechanika',
     };
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('stringExample')
     });
@@ -14,7 +14,7 @@
         direction: 'left',
         '(value)': ''
     };
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('listExample')
     });
@@ -36,7 +36,7 @@
         vimKey: 'H',
         '(value)': ''
     };
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('namedListExample')
     });

@@ -8,7 +8,7 @@
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var aeroFrom = Aerodial();
+		<pre><code class="js">var aeroFrom = new Aerodial();
 // ...
 var json = aeroFrom.getJson();
 console.log(json);</code></pre>
@@ -29,7 +29,7 @@ console.log(json);</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var aeroTo = Aerodial();
+		<pre><code class="js">var aeroTo = new Aerodial();
 // ...
 aeroTo.setJson(json);</code></pre>
     </div>
@@ -51,7 +51,7 @@ aeroTo.setJson(json);</code></pre>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var aero = Aerodial();
+		<pre><code class="js">var aero = new Aerodial();
 aero.add(target1, 'speed', {
   id: 'target1_speed'
 });

@@ -9,7 +9,7 @@
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var aero = Aerodial();
+		<pre><code class="js">var aero = new Aerodial();
 aero.add(target, 'initSpeed', {
   label: 'Initial speed',
   min: 0.0,
@@ -27,7 +27,7 @@ aero.add(target, 'initSpeed', {
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var aero = Aerodial({
+		<pre><code class="js">var aero = new Aerodial({
   container: document.getElementById('someElementId')
 });
 </code></pre>
@@ -40,7 +40,7 @@ aero.add(target, 'initSpeed', {
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var aero = Aerodial({
+		<pre><code class="js">var aero = new Aerodial({
   foldable: false
 });</code></pre>
     </div>
@@ -52,7 +52,7 @@ aero.add(target, 'initSpeed', {
 
 <div class="codeBlock">
     <div class="codeBlock_section">
-		<pre><code class="js">var aero = Aerodial();
+		<pre><code class="js">var aero = new Aerodial();
 
 // (changed a property without Aerodial...)
 
@@ -67,13 +67,13 @@ aero.refresh();</code></pre>
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">// Add a CSS style for the default container
-var aero1 = Aerodial();
+var aero1 = new Aerodial();
 var styleElem = document.createElement('style');
 styleElem.textContent = '.tpDefaultContainer {width: 320px;}';
 document.appendChild(styleElem);
 
 // Or, specify another container
-var aero2 = Aerodial({
+var aero2 = new Aerodial({
   container: document.getElementById('yourContainer')
 });</code></pre>
     </div>

@@ -3,7 +3,7 @@
         keyColor: '#00ff00'
     };
 
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('colorExample')
     });

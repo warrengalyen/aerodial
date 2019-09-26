@@ -2,7 +2,7 @@
     var params = {
         debug: true
     };
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('example')
     });
@@ -14,7 +14,7 @@
         debug: false,
         '(value)': ''
     };
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('listExample')
     });

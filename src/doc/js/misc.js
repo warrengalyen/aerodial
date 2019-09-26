@@ -2,7 +2,7 @@
     var params = {
         initSpeed: 0.38
     };
-    var aero = Aerodial({
+    var aero = new Aerodial({
         foldable: false,
         container: document.getElementById('labelExample')
     });
