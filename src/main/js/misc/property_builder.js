@@ -1,55 +1,51 @@
 const Property = require('../model/property/property');
 
 class PropertyBuilder {
-    constructor(target, propName, model) {
-        this.target_ = target;
-        this.propName_ = propName;
-        this.model_ = model;
+	constructor(ref, model) {
+		this.ref_ = ref;
+		this.model_ = model;
 
-        this.forMonitor_ = false;
-        this.id_ = propName;
-        this.label_ = propName;
-    }
+		this.forMonitor_ = false;
+		const propName = this.ref_.getPropertyName();
+		this.id_ = propName;
+		this.label_ = propName;
+	}
 
-    getTarget() {
-        return this.target_;
-    }
+	getReference() {
+		return this.ref_;
+	}
 
-    getPropertyName() {
-        return this.propName_;
-    }
+	getModel() {
+		return this.model_;
+	}
 
-    getModel() {
-        return this.model_;
-    }
+	getId() {
+		return this.id_;
+	}
 
-    getId() {
-        return this.id_;
-    }
+	setId(id) {
+		this.id_ = id;
+	}
 
-    setId(id) {
-        this.id_ = id;
-    }
+	getLabel() {
+		return this.label_;
+	}
 
-    getLabel() {
-        return this.label_;
-    }
+	setLabel(label) {
+		this.label_ = label;
+	}
 
-    setLabel(label) {
-        this.label_ = label;
-    }
+	isForMonitor() {
+		return this.forMonitor_;
+	}
 
-    isForMonitor() {
-        return this.forMonitor_;
-    }
+	setForMonitor(forMonitor) {
+		this.forMonitor_ = forMonitor;
+	}
 
-    setForMonitor(forMonitor) {
-        this.forMonitor_ = forMonitor;
-    }
-
-    build() {
-        return new Property(this);
-    }
+	build() {
+		return new Property(this);
+	}
 }
 
 module.exports = PropertyBuilder;
