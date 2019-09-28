@@ -6,7 +6,7 @@
 		foldable: false,
 		container: document.getElementById('numberExample')
 	});
-	aero.add(params, 'speed');
+	aero.text(params, 'speed');
 })();
 
 (function() {
@@ -17,7 +17,7 @@
 		foldable: false,
 		container: document.getElementById('minExample')
 	});
-	aero.add(params, 'speed', {min: 0});
+	aero.text(params, 'speed', {min: 0});
 })();
 
 (function() {
@@ -28,7 +28,7 @@
 		foldable: false,
 		container: document.getElementById('sliderExample')
 	});
-	aero.add(params, 'speed', {min: 0, max: 100});
+	aero.slider(params, 'speed', {min: 0, max: 100});
 })();
 
 (function() {
@@ -39,7 +39,7 @@
 		foldable: false,
 		container: document.getElementById('stepExample')
 	});
-	aero.add(params, 'particleCount', {min: 0, max: 100, step: 10});
+	aero.slider(params, 'particleCount', {min: 0, max: 100, step: 10});
 })();
 
 (function() {

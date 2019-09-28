@@ -6,7 +6,7 @@
         foldable: false,
         container: document.getElementById('stringExample')
     });
-    aero.add(params, 'name');
+    aero.text(params, 'name');
 })();
 
 (function() {

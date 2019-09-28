@@ -12,7 +12,7 @@
   speed: 0.5
 };
 var aero = new Aerodial();
-aero.add(params, 'speed');</code></pre>
+aero.text(params, 'speed');</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
         <div id="numberExample" class="codeBlock_aeroContainer"></div>
@@ -26,19 +26,19 @@ Use <code>min</code> or <code>max</code> option to specify minimum/maximum value
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.add(target, 'speed', {min: 0});</code></pre>
+aero.text(target, 'speed', {min: 0});</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
         <div id="minExample" class="codeBlock_aeroContainer"></div>
     </div>
 </div>
 
-<p>If you specify both minimum and maximum value, slider control will be appear.</p>
+<p>If you want to use a slider control, use <code>slider()</code> and specify both minimum and maximum value.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.add(target, 'speed', {min: 0, max: 100});</code></pre>
+aero.slider(target, 'speed', {min: 0, max: 100});</code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
         <div id="sliderExample" class="codeBlock_aeroContainer"></div>
@@ -52,7 +52,7 @@ aero.add(target, 'speed', {min: 0, max: 100});</code></pre>
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.add(target, 'particleCount', {
+aero.slider(target, 'particleCount', {
   min: 0, max: 100, step: 10
 });</code></pre>
     </div>
@@ -63,7 +63,7 @@ aero.add(target, 'particleCount', {
 
 
 <h2>Selector</h2>
-<p>If you want to choose a value from named values, pass an object that has number values as <code>values</code> option.</p>
+<p>If you want to choose a value from named values, pass an object that has number values as <code>values</code> option to <code>selector()</code>.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
