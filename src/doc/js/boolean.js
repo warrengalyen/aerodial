@@ -6,7 +6,7 @@
         foldable: false,
         container: document.getElementById('example')
     });
-    aero.add(params, 'debug');
+    aero.checkbox(params, 'debug');
 })();
 
 (function() {
@@ -16,10 +16,10 @@
     };
     var aero = new Aerodial({
         foldable: false,
-        container: document.getElementById('listExample')
+			container: document.getElementById('selectorExample')
     });
-    aero.add(params, 'debug', {
-        list: ['Enabled', 'Disabled']
+    aero.selector(params, 'debug', {
+        values: ['Enabled', 'Disabled']
     }).on('change', function(value) {
         params['(value)'] = String(value);
     });

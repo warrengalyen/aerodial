@@ -1,13 +1,14 @@
-const NumberPropertyViewFactory  = require('../factory/number_property_view_factory');
+const BooleanPropertyViewFactory = require('../factory/boolean_property_view_factory');
+const NumberPropertyViewFactory = require('../factory/number_property_view_factory');
 const PropertyViewFactoryComplex = require('../factory/property_view_factory_complex');
-const StringPropertyViewFactory  = require('../factory/string_property_view_factory');
-const ButtonViewInterface        = require('../interface/button_view_interface');
-const FolderViewInterface        = require('../interface/folder_view_interface');
-const PropertyViewInterface      = require('../interface/property_view_interface');
-const Errors                     = require('../misc/errors');
-const ButtonView                 = require('../view/button_view');
-const FolderView                 = require('../view/folder_view');
-const SeparatorView              = require('../view/separator_view');
+const StringPropertyViewFactory = require('../factory/string_property_view_factory');
+const ButtonViewInterface = require('../interface/button_view_interface');
+const FolderViewInterface = require('../interface/folder_view_interface');
+const PropertyViewInterface = require('../interface/property_view_interface');
+const Errors = require('../misc/errors');
+const ButtonView = require('../view/button_view');
+const FolderView = require('../view/folder_view');
+const SeparatorView = require('../view/separator_view');
 
 class ComponentUtil {
 	static addProperty(view, ref, opt_options) {
@@ -70,13 +71,28 @@ class ComponentUtil {
 		const type = typeof ref.getValue();
 		const factory = (type === 'number') ? NumberPropertyViewFactory :
 			(type === 'string') ? StringPropertyViewFactory :
-				null;
+				(type === 'boolean') ? BooleanPropertyViewFactory :
+					null;
 		if (factory === null) {
 			throw Errors.propertyTypeNotSupported(
 				ref.getPropertyName()
 			);
 		}
 		const propView = factory.createSelector(
+			ref, options
+		);
+
+		view.addSubview(propView);
+		return new PropertyViewInterface(propView);
+	}
+
+	static addCheckbox(view, ref, opt_options) {
+		const options = (opt_options !== undefined) ?
+			opt_options :
+			{};
+		options.forMonitor = false;
+
+		const propView = BooleanPropertyViewFactory.createCheckbox(
 			ref, options
 		);
 
