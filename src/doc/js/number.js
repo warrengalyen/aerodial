@@ -49,10 +49,10 @@
 	};
 	var aero = new Aerodial({
 		foldable: false,
-		container: document.getElementById('listExample')
+		container: document.getElementById('selectorExample')
 	});
-	aero.add(params, 'direction', {
-		list: {
+	aero.selector(params, 'direction', {
+		values: {
 			none: 0,
 			horizontal: 1,
 			vertical: 2,
