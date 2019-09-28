@@ -7,7 +7,7 @@
         foldable: false,
         container: document.getElementById('eventExample')
     });
-    aero.add(params, 'speed', {
+    aero.slider(params, 'speed', {
         min: 0,
         max: 100
     }).on('change', function(value) {
@@ -28,8 +28,8 @@
         foldable: false,
         container: document.getElementById('globalEventExample')
     });
-    aero.add(params, 'power', {min: 0, max: 100});
-    aero.add(params, 'size', {min: 0, max: 100});
+    aero.slider(params, 'power', {min: 0, max: 100});
+    aero.slider(params, 'size', {min: 0, max: 100});
     aero.on('change', function(value, prop) {
         if (prop.getId() === '(log)') {
             // Prevent infinite loop

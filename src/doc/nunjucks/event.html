@@ -10,7 +10,7 @@
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.add(target, 'speed', {min: 0, max: 100}).on(
+aero.slider(target, 'speed', {min: 0, max: 100}).on(
   'change',
   function(value) {
     console.log(value);
@@ -29,8 +29,8 @@ aero.add(target, 'speed', {min: 0, max: 100}).on(
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.add(target, 'power', {min: 0, max: 100});
-aero.add(target, 'size', {min: 0, max: 100});
+aero.slider(target, 'power', {min: 0, max: 100});
+aero.slider(target, 'size', {min: 0, max: 100});
 aero.on(
   'change',
   function(value, property) {

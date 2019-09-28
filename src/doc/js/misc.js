@@ -6,7 +6,7 @@
         foldable: false,
         container: document.getElementById('labelExample')
     });
-    aero.add(params, 'initSpeed', {
+    aero.slider(params, 'initSpeed', {
         label: 'Initial speed',
         min: 0.0,
         max: 1.0

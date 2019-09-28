@@ -9,7 +9,7 @@ describe('Aerodial', () => {
 		};
 		const aero = new Aerodial();
 
-		const prop = aero.add(params, 'prop');
+		const prop = aero.text(params, 'prop');
 		const p = new Promise((resolve) => {
 			prop.on('change', (value) => {
 				assert.strictEqual(
@@ -38,7 +38,7 @@ describe('Aerodial', () => {
 		};
 		const aero = new Aerodial();
 
-		aero.add(params, 'prop');
+		aero.text(params, 'prop');
 		const p = new Promise((resolve) => {
 			aero.on('change', (value) => {
 				assert.strictEqual(
@@ -68,7 +68,7 @@ describe('Aerodial', () => {
 		const aero = new Aerodial();
 
 		const f = aero.addFolder('folder');
-		f.add(params, 'prop');
+		f.text(params, 'prop');
 		const p = new Promise((resolve) => {
 			aero.on('change', (value) => {
 				assert.strictEqual(
