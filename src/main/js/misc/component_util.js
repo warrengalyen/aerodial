@@ -84,7 +84,6 @@ class ComponentUtil {
 		return new PropertyViewInterface(propView);
 	}
 
-
 	static addMonitor(view, ref, opt_options) {
 		const options = (opt_options !== undefined) ?
 			opt_options :
@@ -106,6 +105,20 @@ class ComponentUtil {
 		options.forMonitor = true;
 
 		const propView = NumberPropertyViewFactory.createGraph(
+			ref, options
+		);
+
+		view.addSubview(propView);
+		return new PropertyViewInterface(propView);
+	}
+
+	static addLogger(view, ref, opt_options) {
+		const options = (opt_options !== undefined) ?
+			opt_options :
+			{};
+		options.forMonitor = true;
+
+		const propView = StringPropertyViewFactory.createLogger(
 			ref, options
 		);
 

@@ -55,7 +55,7 @@ setInterval(function() {
         foldable: false,
         container: document.getElementById('logExample')
     });
-    aero.monitor(sharedParams, 'time', {
+    aero.logger(sharedParams, 'time', {
         count: 10
     });
 })();
