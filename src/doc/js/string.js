@@ -18,8 +18,8 @@
         foldable: false,
         container: document.getElementById('listExample')
     });
-    aero.add(params, 'direction', {
-        list: [
+    aero.selector(params, 'direction', {
+			values: [
             'left',
             'up',
             'right',
@@ -40,8 +40,8 @@
         foldable: false,
         container: document.getElementById('namedListExample')
     });
-    aero.add(params, 'vimKey', {
-        list: {
+    aero.selector(params, 'vimKey', {
+			values: {
             left:  'H',
             up:    'K',
             right: 'L',
