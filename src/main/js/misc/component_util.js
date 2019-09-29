@@ -14,11 +14,6 @@ const SeparatorView = require('../view/separator_view');
 class ComponentUtil {
 
 	static addText(view, ref, opt_options) {
-		const options = (opt_options !== undefined) ?
-			opt_options :
-			{};
-		options.forMonitor = false;
-
 		const type = typeof ref.getValue();
 		const factory = (type === 'number') ? NumberPropertyViewFactory :
 			(type === 'string') ? StringPropertyViewFactory :
@@ -29,7 +24,7 @@ class ComponentUtil {
 			);
 		}
 		const propView = factory.createText(
-			ref, options
+			ref, opt_options
 		);
 
 		view.addSubview(propView);
@@ -37,13 +32,8 @@ class ComponentUtil {
 	}
 
 	static addSlider(view, ref, opt_options) {
-		const options = (opt_options !== undefined) ?
-			opt_options :
-			{};
-		options.forMonitor = false;
-
 		const propView = NumberPropertyViewFactory.createSlider(
-			ref, options
+			ref, opt_options
 		);
 
 		view.addSubview(propView);
@@ -51,11 +41,6 @@ class ComponentUtil {
 	}
 
 	static addSelector(view, ref, opt_options) {
-		const options = (opt_options !== undefined) ?
-			opt_options :
-			{};
-		options.forMonitor = false;
-
 		const type = typeof ref.getValue();
 		const factory = (type === 'number') ? NumberPropertyViewFactory :
 			(type === 'string') ? StringPropertyViewFactory :
@@ -67,7 +52,7 @@ class ComponentUtil {
 			);
 		}
 		const propView = factory.createSelector(
-			ref, options
+			ref, opt_options
 		);
 
 		view.addSubview(propView);
@@ -75,13 +60,8 @@ class ComponentUtil {
 	}
 
 	static addCheckbox(view, ref, opt_options) {
-		const options = (opt_options !== undefined) ?
-			opt_options :
-			{};
-		options.forMonitor = false;
-
 		const propView = BooleanPropertyViewFactory.createCheckbox(
-			ref, options
+			ref, opt_options
 		);
 
 		view.addSubview(propView);
@@ -89,13 +69,8 @@ class ComponentUtil {
 	}
 
 	static addPalette(view, ref, opt_options) {
-		const options = (opt_options !== undefined) ?
-			opt_options :
-			{};
-		options.forMonitor = false;
-
 		const propView = ColorPropertyViewFactory.createPalette(
-			ref, options
+			ref, opt_options
 		);
 
 		view.addSubview(propView);
@@ -103,11 +78,6 @@ class ComponentUtil {
 	}
 
 	static addMonitor(view, ref, opt_options) {
-		const options = (opt_options !== undefined) ?
-			opt_options :
-			{};
-		options.forMonitor = true;
-
 		// TODO: Refactor
 		const type = typeof ref.getValue();
 		const factory = (type === 'number') ? NumberPropertyViewFactory :
@@ -121,7 +91,7 @@ class ComponentUtil {
 			);
 		}
 		const propView = factory.createMonitor(
-			ref, options
+			ref, opt_options
 		);
 
 		view.addSubview(propView);
@@ -129,13 +99,8 @@ class ComponentUtil {
 	}
 
 	static addGraph(view, ref, opt_options) {
-		const options = (opt_options !== undefined) ?
-			opt_options :
-			{};
-		options.forMonitor = true;
-
 		const propView = NumberPropertyViewFactory.createGraph(
-			ref, options
+			ref, opt_options
 		);
 
 		view.addSubview(propView);
@@ -143,13 +108,8 @@ class ComponentUtil {
 	}
 
 	static addLogger(view, ref, opt_options) {
-		const options = (opt_options !== undefined) ?
-			opt_options :
-			{};
-		options.forMonitor = true;
-
 		const propView = StringPropertyViewFactory.createLogger(
-			ref, options
+			ref, opt_options
 		);
 
 		view.addSubview(propView);
