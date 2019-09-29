@@ -33,7 +33,7 @@ setInterval(function() {
     aero.addMonitor(sharedParams, 'time', {interval: 1000});
     aero.addMonitor(sharedParams, 'active');
     aero.addMonitor(sharedParams, 'wave');
-		aero.addColorMonitor(sharedParams, 'color');
+    aero.addColorMonitor(sharedParams, 'color');
 })();
 
 (function() {
@@ -41,8 +41,7 @@ setInterval(function() {
         foldable: false,
         container: document.getElementById('graphExample')
     });
-    aero.addMonitor(sharedParams, 'wave', {
-        graph: true,
+    aero.addGraph(sharedParams, 'wave', {
         min: -5.0,
         max: +5.0,
         count: 200,

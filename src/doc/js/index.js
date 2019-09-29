@@ -8,7 +8,7 @@ var aero = new Aerodial({
 });
 
 var folder1 = aero.addFolder('Appearance');
-folder1.selector(sketchParams, 'neta', {
+folder1.addSelector(sketchParams, 'neta', {
 	values: [
 		'hotate',
 		'maguro',
@@ -19,23 +19,22 @@ folder1.selector(sketchParams, 'neta', {
 });
 
 var folder2 = aero.addFolder('Physics');
-folder2.slider(sketchParams, 'gravity', {
+folder2.addSlider(sketchParams, 'gravity', {
 	min: 0.1,
 	max: 1.0
 });
-folder2.slider(sketchParams, 'airResistance', {
+folder2.addSlider(sketchParams, 'airResistance', {
 	min: 0.01,
 	max: 0.1
 });
-folder2.slider(sketchParams, 'restitution', {
+folder2.addSlider(sketchParams, 'restitution', {
 
 	min: 0.0,
 	max: 0.9
 });
 folder2.addSeparator();
-folder2.graph(sketchParams, 'netaAlt', {
+folder2.addGraph(sketchParams, 'netaAlt', {
 	count: 140,
-	graph: true,
 	min: 0,
 	max: 100
 });

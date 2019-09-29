@@ -63,12 +63,12 @@ function showJson(json) {
         foldable: false,
         container: document.getElementById('idExample')
     });
-    aero.addPalette(params1, 'speed', {
+    aero.addSlider(params1, 'speed', {
         id: 'target1_speed',
         min: 0.0,
         max: 1.0
     });
-    aero.addPalette(params2, 'speed', {
+    aero.addSlider(params2, 'speed', {
         id: 'target2_speed',
         min: 0.0,
         max: 1.0

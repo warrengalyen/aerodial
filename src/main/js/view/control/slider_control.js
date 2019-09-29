@@ -24,7 +24,8 @@ class SliderControl extends Control {
 				'touchmove',
 				this.onElementTouchMove_.bind(this)
 			);
-		} else {
+		}
+		else {
 			sliderElem.addEventListener(
 				'mousedown',
 				this.onElementMouseDown_.bind(this)

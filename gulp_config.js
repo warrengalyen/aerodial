@@ -13,7 +13,7 @@ class GulpConfig {
                 dstFile: forProduction ?
                     `aerodial-${this.version}.min.js` :
                     `aerodial-${this.version}.js`,
-                dstDir: './doc'
+                dstDir: './dst'
             },
             sass: {
                 srcPattern: './src/main/sass/**/*.scss',
@@ -33,7 +33,6 @@ class GulpConfig {
             nunjucks: {
                 pattern: './src/doc/nunjucks/**/*.html',
                 srcPattern: './src/doc/nunjucks/**/!(_)*.html',
-                extname: '.html',
                 dstDir: './doc'
             },
             sass: {
