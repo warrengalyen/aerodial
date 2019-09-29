@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+	<title>Events | Aerodial</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+</head>
+<body>
+<div class="hero">
+	<canvas id="heroSketch" class="hero_sketch"></canvas>
+	<div class="hero_body">
+		<div class="hero_title">Aerodial</div>
+		<div class="hero_aeroContainer"></div>
+	</div>
+</div>
+
+<div class="content">
+    <h1>Events</h1>
+    
+<p>Use <code>on()</code> of specific property to listen its changes.</p>
+<p><code>'change'</code> event will be called continuously when the user controls a slider.</p>
+
+<div class="codeBlock">
+    <div class="codeBlock_section">
+		<pre><code class="js">var aero = new Aerodial();
+aero.addSlider(target, 'speed', {min: 0, max: 100}).on(
+  'change',
+  function(value) {
+    console.log(value);
+  }
+);</code></pre>
+    </div>
+    <div class="codeBlock_section codeBlock_section-example">
+        <div id="eventExample" class="codeBlock_aeroContainer"></div>
+    </div>
+</div>
+
+
+<h2>Global event</h2>
+<p>If you want to listen changes of all properties, use <code>on()</code> of the root object.</p>
+
+<div class="codeBlock">
+    <div class="codeBlock_section">
+		<pre><code class="js">var aero = new Aerodial();
+aero.addSlider(target, 'power', {min: 0, max: 100});
+aero.addSlider(target, 'size', {min: 0, max: 100});
+aero.on(
+  'change',
+  function(value, property) {
+    console.log(property.getLabel());
+    console.log(value);
+  }
+);</code></pre>
+    </div>
+    <div class="codeBlock_section codeBlock_section-example">
+        <div id="globalEventExample" class="codeBlock_aeroContainer"></div>
+    </div>
+</div>
+
+</div>
+
+<div class="menu">
+	<div class="menu_body">
+		<ul>
+			<li><a href="./"><span class="menu_title">Overview</span></a></li>
+			<li><a href="./getting_started.html"><span class="menu_title">Getting Started</span></a></li>
+			<li>
+				<span class="menu_title">Property</span>
+				<div class="menu_submenu">
+					<ul>
+						<li><a href="number.html"><span class="menu_title">Number</span></a></li>
+						<li><a href="string.html"><span class="menu_title">String</span></a></li>
+						<li><a href="boolean.html"><span class="menu_title">Boolean</span></a></li>
+						<li><a href="color.html"><span class="menu_title">Color</span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="monitor.html"><span class="menu_title">Monitor</span></a></li>
+			<li><a href="component.html"><span class="menu_title">UI Components</span></a></li>
+			<li><a href="event.html"><span class="menu_title">Events</span></a></li>
+			<li><a href="io.html"><span class="menu_title">Import/Export</span></a></li>
+			<li><a href="misc.html"><span class="menu_title">Misc</span></a></li>
+		</ul>
+	</div>
+	<button class="menu_button"><span class="fa fa-bars" aria-hidden="true"></span></button>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.11/pixi.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script src="assets/js/aerodial-0.1.0.js"></script>
+<script src="assets/js/physics_sketch.js"></script>
+<script src="assets/js/common.js"></script>
+
+<script src="assets/js/event.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

@@ -8,7 +8,7 @@ Aerodial is a Javascript library that provides a compact user interface for fine
 
 Demo/Usage
 ----------
-See [official page](https://warrengalyen.github.io/aerodial/) for more information.
+See [official page](https://www.mechanikadesign.com/aerodial/) for more information.
 
 
 Build
