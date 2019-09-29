@@ -21,9 +21,9 @@ function showJson(json) {
         foldable: false,
         container: document.getElementById('exportExample')
     });
-    aero.palette(params, 'color');
-    aero.slider(params, 'size', {min: 1, max: 100});
-    aero.slider(params, 'speed', {min: 0.0, max: 1.0});
+    aero.addPalette(params, 'color');
+    aero.addSlider(params, 'size', {min: 1, max: 100});
+    aero.addSlider(params, 'speed', {min: 0.0, max: 1.0});
 
     aero.on('change', function() {
         showJson(aero.getJson());
@@ -47,9 +47,9 @@ function showJson(json) {
         aero.setJson(json);
     });
     aero.addSeparator();
-    aero.palette(params, 'color');
-    aero.slider(params, 'size', {min: 1, max: 100});
-    aero.slider(params, 'speed', {min: 0.0, max: 1.0});
+    aero.addPalette(params, 'color');
+    aero.addSlider(params, 'size', {min: 1, max: 100});
+    aero.addSlider(params, 'speed', {min: 0.0, max: 1.0});
 })();
 
 (function() {
@@ -63,12 +63,12 @@ function showJson(json) {
         foldable: false,
         container: document.getElementById('idExample')
     });
-    aero.palette(params1, 'speed', {
+    aero.addPalette(params1, 'speed', {
         id: 'target1_speed',
         min: 0.0,
         max: 1.0
     });
-    aero.palette(params2, 'speed', {
+    aero.addPalette(params2, 'speed', {
         id: 'target2_speed',
         min: 0.0,
         max: 1.0

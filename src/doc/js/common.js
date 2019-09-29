@@ -7,7 +7,7 @@
 		foldable: false,
 		container: document.getElementsByClassName('hero_aeroContainer').item(0)
 	});
-	aero.slider({slider: 0}, 'slider', {
+	aero.addSlider({slider: 0}, 'slider', {
 		min: 0.0,
 		max: 1.0,
 	}).on('change', (value) => {

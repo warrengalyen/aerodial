@@ -30,10 +30,10 @@ setInterval(function() {
         foldable: false,
         container: document.getElementById('textExample')
     });
-    aero.monitor(sharedParams, 'time', {interval: 1000});
-    aero.monitor(sharedParams, 'active');
-    aero.monitor(sharedParams, 'color');
-    aero.monitor(sharedParams, 'wave');
+    aero.addMonitor(sharedParams, 'time', {interval: 1000});
+    aero.addMonitor(sharedParams, 'active');
+    aero.addMonitor(sharedParams, 'color');
+    aero.addMonitor(sharedParams, 'wave');
 })();
 
 (function() {
@@ -41,7 +41,7 @@ setInterval(function() {
         foldable: false,
         container: document.getElementById('graphExample')
     });
-    aero.monitor(sharedParams, 'wave', {
+    aero.addMonitor(sharedParams, 'wave', {
         graph: true,
         min: -5.0,
         max: +5.0,
@@ -55,7 +55,7 @@ setInterval(function() {
         foldable: false,
         container: document.getElementById('logExample')
     });
-    aero.logger(sharedParams, 'time', {
+    aero.addLogger(sharedParams, 'time', {
         count: 10
     });
 })();
@@ -75,7 +75,7 @@ setInterval(function() {
         foldable: false,
         container: document.getElementById('multilineExample')
     });
-    aero.monitor(params, 'json', {
+    aero.addMonitor(params, 'json', {
         interval: 1e6,
         multiline: true
     });
@@ -86,11 +86,11 @@ setInterval(function() {
         container: document.getElementById('intervalExample'),
         foldable: false
     });
-    aero.monitor(sharedParams, 'wave', {
+    aero.addMonitor(sharedParams, 'wave', {
         interval: 500,
         label: 'wave (0.5s)'
     });
-    aero.monitor(sharedParams, 'wave', {
+    aero.addMonitor(sharedParams, 'wave', {
         interval: 1000,
         label: 'wave (1.0s)'
     });

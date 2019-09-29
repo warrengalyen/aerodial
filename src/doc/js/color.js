@@ -7,5 +7,5 @@
         foldable: false,
         container: document.getElementById('colorExample')
     });
-    aero.palette(params, 'keyColor');
+    aero.addPalette(params, 'keyColor');
 })();

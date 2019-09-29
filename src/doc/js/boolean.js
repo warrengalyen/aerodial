@@ -6,7 +6,7 @@
         foldable: false,
         container: document.getElementById('example')
     });
-    aero.checkbox(params, 'debug');
+    aero.addCheckbox(params, 'debug');
 })();
 
 (function() {
@@ -18,10 +18,10 @@
         foldable: false,
 			container: document.getElementById('selectorExample')
     });
-    aero.selector(params, 'debug', {
+    aero.addSelector(params, 'debug', {
         values: ['Enabled', 'Disabled']
     }).on('change', function(value) {
         params['(value)'] = String(value);
     });
-    aero.monitor(params, '(value)');
+    aero.addMonitor(params, '(value)');
 })();

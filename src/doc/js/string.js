@@ -6,7 +6,7 @@
         foldable: false,
         container: document.getElementById('stringExample')
     });
-    aero.text(params, 'name');
+    aero.addText(params, 'name');
 })();
 
 (function() {
@@ -18,7 +18,7 @@
         foldable: false,
         container: document.getElementById('listExample')
     });
-    aero.selector(params, 'direction', {
+    aero.addSelector(params, 'direction', {
 			values: [
             'left',
             'up',
@@ -28,7 +28,7 @@
     }).on('change', function(value) {
         params['(value)'] = value;
     });
-    aero.monitor(params, '(value)');
+    aero.addMonitor(params, '(value)');
 })();
 
 (function() {
@@ -40,7 +40,7 @@
         foldable: false,
         container: document.getElementById('namedListExample')
     });
-    aero.selector(params, 'vimKey', {
+    aero.addSelector(params, 'vimKey', {
 			values: {
             left:  'H',
             up:    'K',
@@ -50,5 +50,5 @@
     }).on('change', function(value) {
         params['(value)'] = value;
     });
-    aero.monitor(params, '(value)');
+    aero.addMonitor(params, '(value)');
 })();

@@ -7,13 +7,13 @@
         foldable: false,
         container: document.getElementById('eventExample')
     });
-    aero.slider(params, 'speed', {
+    aero.addSlider(params, 'speed', {
         min: 0,
         max: 100
     }).on('change', function(value) {
         params['(log)'] = String(value);
     });
-    aero.monitor(params, '(log)', {
+    aero.addMonitor(params, '(log)', {
         count: 10
     });
 })();
@@ -28,8 +28,8 @@
         foldable: false,
         container: document.getElementById('globalEventExample')
     });
-    aero.slider(params, 'power', {min: 0, max: 100});
-    aero.slider(params, 'size', {min: 0, max: 100});
+    aero.addSlider(params, 'power', {min: 0, max: 100});
+    aero.addSlider(params, 'size', {min: 0, max: 100});
     aero.on('change', function(value, prop) {
         if (prop.getId() === '(log)') {
             // Prevent infinite loop
@@ -37,7 +37,7 @@
         }
         params['(log)'] = prop.getLabel() + ': ' + String(value);
     });
-    aero.monitor(params, '(log)', {
+    aero.addMonitor(params, '(log)', {
         count: 10
     });
 })();

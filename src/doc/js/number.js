@@ -6,7 +6,7 @@
 		foldable: false,
 		container: document.getElementById('numberExample')
 	});
-	aero.text(params, 'speed');
+	aero.addText(params, 'speed');
 })();
 
 (function() {
@@ -17,7 +17,7 @@
 		foldable: false,
 		container: document.getElementById('minExample')
 	});
-	aero.text(params, 'speed', {min: 0});
+	aero.addText(params, 'speed', {min: 0});
 })();
 
 (function() {
@@ -28,7 +28,7 @@
 		foldable: false,
 		container: document.getElementById('sliderExample')
 	});
-	aero.slider(params, 'speed', {min: 0, max: 100});
+	aero.addSlider(params, 'speed', {min: 0, max: 100});
 })();
 
 (function() {
@@ -39,7 +39,7 @@
 		foldable: false,
 		container: document.getElementById('stepExample')
 	});
-	aero.slider(params, 'particleCount', {min: 0, max: 100, step: 10});
+	aero.addSlider(params, 'particleCount', {min: 0, max: 100, step: 10});
 })();
 
 (function() {
@@ -51,7 +51,7 @@
 		foldable: false,
 		container: document.getElementById('selectorExample')
 	});
-	aero.selector(params, 'direction', {
+	aero.addSelector(params, 'direction', {
 		values: {
 			none: 0,
 			horizontal: 1,
@@ -61,5 +61,5 @@
 	}).on('change', function(value) {
 		params['(value)'] = String(value);
 	});;
-	aero.monitor(params, '(value)');
+	aero.addMonitor(params, '(value)');
 })();

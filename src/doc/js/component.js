@@ -48,7 +48,7 @@ var params = {
     aero.addButton('Fire').on('click', function() {
         params['(log)'] = 'clicked: ' + String(++params.count);
     });
-    aero.monitor(params, '(log)', {
+    aero.addMonitor(params, '(log)', {
         count: 10
     });
 })();

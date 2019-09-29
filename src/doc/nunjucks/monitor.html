@@ -4,15 +4,15 @@
 {% set title = 'Monitor' %}
 
 {% block content %}
-<p>Aerodial has a feature for monitoring a property change. Use <code>monitor()</code> to monitor it.</p>
+<p>Aerodial has a feature for monitoring a property change. Use <code>addMonitor()</code> to monitor it.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.monitor(target, 'time');    // String
-aero.monitor(target, 'active');  // Boolean
-aero.monitor(target, 'color');   // Color
-aero.monitor(target, 'wave');    // Number
+aero.addMonitor(target, 'time');    // String
+aero.addMonitor(target, 'active');  // Boolean
+aero.addMonitor(target, 'color');   // Color
+aero.addMonitor(target, 'wave');    // Number
 </code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">
@@ -22,12 +22,12 @@ aero.monitor(target, 'wave');    // Number
 
 
 <h2>Graph</h2>
-<p>Aerodial can draw a graph for a number property. Pass <code>graph</code> option as follows:</p>
+<p>Aerodial provides a graph component to watch a number property. Use <code>addGraph()</code> option as follows:</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.monitor(target, 'wave', {
+aero.addGraph(target, 'wave', {
   graph: true,
   min: -5.0,
   max: +5.0,
@@ -48,7 +48,7 @@ aero.monitor(target, 'wave', {
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.logger(target, 'time', {
+aero.addLogger(target, 'time', {
   count: 10
 });</code></pre>
     </div>
@@ -64,7 +64,7 @@ aero.logger(target, 'time', {
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.monitor(target, 'message', {
+aero.addMonitor(target, 'message', {
   multiline: true
 });</code></pre>
     </div>
@@ -80,11 +80,11 @@ aero.monitor(target, 'message', {
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.monitor(target, 'wave', {
+aero.addMonitor(target, 'wave', {
   interval: 500,
   label: 'wave (0.5s)'
 });
-aero.monitor(target, 'wave', {
+aero.addMonitor(target, 'wave', {
   interval: 1000,
   label: 'wave (1.0s)'
 });</code></pre>
