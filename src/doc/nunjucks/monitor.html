@@ -4,15 +4,16 @@
 {% set title = 'Monitor' %}
 
 {% block content %}
-<p>Aerodial has a feature for monitoring a property change. Use <code>addMonitor()</code> to monitor it.</p>
+<p>Aerodial has a feature for monitoring a property change. Use <code>addMonitor()</code> or <code>addColorMonitor()</code> (for color value) to monitor it.</p>
 
 <div class="codeBlock">
     <div class="codeBlock_section">
 		<pre><code class="js">var aero = new Aerodial();
-aero.addMonitor(target, 'time');    // String
-aero.addMonitor(target, 'active');  // Boolean
-aero.addMonitor(target, 'color');   // Color
-aero.addMonitor(target, 'wave');    // Number
+aero.addMonitor(target, 'time');        // String
+aero.addMonitor(target, 'active');      // Boolean
+aero.addMonitor(target, 'wave');        // Number
+
+aero.addColorMonitor(target, 'color');  // Color
 </code></pre>
     </div>
     <div class="codeBlock_section codeBlock_section-example">

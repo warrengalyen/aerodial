@@ -32,8 +32,8 @@ setInterval(function() {
     });
     aero.addMonitor(sharedParams, 'time', {interval: 1000});
     aero.addMonitor(sharedParams, 'active');
-    aero.addMonitor(sharedParams, 'color');
     aero.addMonitor(sharedParams, 'wave');
+		aero.addColorMonitor(sharedParams, 'color');
 })();
 
 (function() {
