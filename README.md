@@ -22,3 +22,8 @@ I use [gulp](http://gulpjs.com/) for development. Here are the available tasks:
 | dev        | Build all source files and watch for changes |
 
 Running a task with `--production` generates compiled code for production.
+
+
+License
+-------
+MIT License. See `LICENSE.txt` for more information.
