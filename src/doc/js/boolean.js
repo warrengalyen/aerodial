@@ -6,7 +6,7 @@
         foldable: false,
         container: document.getElementById('example')
     });
-    aero.addCheckbox(params, 'debug');
+    aero.addControl(params, 'debug');
 })();
 
 (function() {

@@ -6,7 +6,7 @@
 		foldable: false,
 		container: document.getElementById('numberExample')
 	});
-	aero.addText(params, 'speed');
+	aero.addControl(params, 'speed');
 })();
 
 (function() {
@@ -17,7 +17,7 @@
 		foldable: false,
 		container: document.getElementById('minExample')
 	});
-	aero.addText(params, 'speed', {min: 0});
+	aero.addControl(params, 'speed', {min: 0});
 })();
 
 (function() {

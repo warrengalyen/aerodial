@@ -12,12 +12,12 @@ var params = {
     });
 
     var folder1 = aero.addFolder('Interaction');
-    folder1.text(params, 'power');
-    folder1.text(params, 'range');
+    folder1.addControl(params, 'power');
+    folder1.addControl(params, 'range');
 
     var folder2 = aero.addFolder('Appearance');
-    folder2.text(params, 'color')
-    folder2.text(params, 'size');
+    folder2.addControl(params, 'color')
+    folder2.addControl(params, 'size');
 })();
 
 (function() {
@@ -27,13 +27,13 @@ var params = {
     });
 
     var folder1 = aero.addFolder('Interaction');
-    folder1.text(params, 'power');
-    folder1.text(params, 'range');
+    folder1.addControl(params, 'power');
+    folder1.addControl(params, 'range');
     folder1.close();
 
     var folder2 = aero.addFolder('Appearance');
-    folder2.text(params, 'color')
-    folder2.text(params, 'size');
+    folder2.addControl(params, 'color')
+    folder2.addControl(params, 'size');
 })();
 
 (function() {
