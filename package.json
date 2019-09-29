@@ -1,14 +1,16 @@
 {
   "name": "aerodial",
   "version": "0.1.0",
-  "description": "",
+  "description": "A compact6 pane for fine-tuning/monitoring values",
+  "author": "Warren Galyen",
+  "license": "MIT",
+  "homepage": "https://www.mechanikadesign.com/aerodial",
   "main": "",
   "scripts": {
     "test": "node_modules/karma/bin/karma start",
     "lint": "node node_modules/eslint/bin/eslint.js src/main/js"
   },
-  "author": "Warren Galyen",
-  "license": "MIT",
+
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",
