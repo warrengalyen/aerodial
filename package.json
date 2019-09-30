@@ -1,7 +1,7 @@
 {
   "name": "aerodial",
   "version": "0.1.0",
-  "description": "A compact6 pane for fine-tuning/monitoring values",
+  "description": "A compact pane for fine-tuning/monitoring values",
   "author": "Warren Galyen",
   "license": "MIT",
   "homepage": "https://www.mechanikadesign.com/aerodial",
