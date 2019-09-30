@@ -5,7 +5,7 @@
   "author": "Warren Galyen",
   "license": "MIT",
   "homepage": "https://www.mechanikadesign.com/aerodial",
-  "main": "",
+  "main": "src/main/js/aerodial.js",
   "scripts": {
     "test": "node_modules/karma/bin/karma start",
     "lint": "node node_modules/eslint/bin/eslint.js src/main/js"

@@ -1,0 +1,1 @@
+window.Aerodial = require('./aerodial');

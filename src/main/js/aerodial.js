@@ -6,6 +6,4 @@ const Aerodial = (opt_options) => {
 	return new RootViewInterface(rootView, opt_options);
 };
 
-window.Aerodial = Aerodial;
-
 module.exports = Aerodial;
