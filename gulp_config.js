@@ -9,18 +9,23 @@ class GulpConfig {
             js: {
                 srcPattern: './src/main/js/**/*.js',
                 entryFile: './src/main/js/aerodial.js',
-                tmpDir: './tmp/js',
+								dstDir: './dst',
                 dstFile: forProduction ?
                     `aerodial-${this.version}.min.js` :
-                    `aerodial-${this.version}.js`,
-                dstDir: './dst'
+										`aerodial-${this.version}.js`
             },
             sass: {
                 srcPattern: './src/main/sass/**/*.scss',
-                tmpDir: './tmp/css',
-                dstFile: 'aerodial.css'
-            },
-            cssMarker: '.css_replace_me{}'
+								dstDir: './dst',
+								dstFile: forProduction ?
+									`aerodial-${this.version}.min.css` :
+									`aerodial-${this.version}.css`,
+								options: forProduction ? {
+								outputStyle: 'compressed'
+							} : {
+								outputStyle: 'expanded'
+							}
+						}
         };
 
         this.doc = {
