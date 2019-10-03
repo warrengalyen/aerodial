@@ -145,4 +145,4 @@ class FolderViewInterface extends ViewInterface {
 	}
 }
 
-module.exports = FolderViewInterface;
+export default FolderViewInterface;

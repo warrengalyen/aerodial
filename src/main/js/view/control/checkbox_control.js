@@ -60,4 +60,4 @@ class CheckboxControl extends Control {
 
 CheckboxControl.BLOCK_CLASS = 'cbc';
 
-module.exports = CheckboxControl;
+export default CheckboxControl;
