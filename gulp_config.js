@@ -7,10 +7,10 @@ class GulpConfig {
 
         this.main = {
             js: {
-                srcPattern: './src/main/js/**/*.js',
-								entryFile: './src/main/js/browser.js',
-								dstDir: './dst',
-                dstFile: forProduction ?
+            	srcPattern: './src/main/js/**/*.js',
+							indexFile: './dst/cjs/index.js',
+							cjsDir: './dst/cjs',
+							dstFile: forProduction ?
                     `aerodial-${this.version}.min.js` :
 										`aerodial-${this.version}.js`
             },
@@ -31,7 +31,6 @@ class GulpConfig {
         this.doc = {
             js: {
                 srcPattern: './src/doc/js/**/*.js',
-                entryFile: './src/doc/js/main.js',
                 dstFile: 'doc.js',
 								dstDir: './doc/assets/js'
             },
