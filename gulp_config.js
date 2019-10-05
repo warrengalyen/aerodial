@@ -5,6 +5,13 @@ class GulpConfig {
         this.forProduction = forProduction;
         this.version = packageJson.version;
 
+				this.clean = {
+					patterns: [
+						'./doc',
+						'./dst'
+					]
+				};
+
         this.main = {
             js: {
             	srcPattern: './src/main/js/**/*.js',
