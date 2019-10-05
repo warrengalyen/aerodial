@@ -1,4 +1,4 @@
-require('babel/register');
+require('babel-core/register');
 
 const $ = require('gulp-load-plugins')();
 const browserify = require('browserify');
@@ -127,6 +127,14 @@ gulp.task('pack:css', ['main:sass'], () => {
 gulp.task('release', (callback) => {
 	runSequence(
 		['release:js', 'release:css'],
+		callback
+	);
+});
+
+gulp.task('prepublish', (callback) => {
+	runSequence(
+		['clean'],
+		['main:build'],
 		callback
 	);
 });
