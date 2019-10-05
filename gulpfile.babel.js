@@ -8,7 +8,8 @@ const runSequence = require('run-sequence');
 const source = require('vinyl-source-stream');
 
 const GulpConfig = require('./gulp_config');
-const config = new GulpConfig(!!$.util.env.production);
+const util = require('gulp-util');
+const config = new GulpConfig(!!util.env.production);
 
 gulp.task('main:cjs', () => {
 	return gulp.src(config.main.js.srcPattern)

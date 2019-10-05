@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.1.2
+-----
+* Change package structure for `npm install`
+
 0.1.0
 -----
 * First official release

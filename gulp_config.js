@@ -9,7 +9,7 @@ class GulpConfig {
             js: {
             	srcPattern: './src/main/js/**/*.js',
 							indexFile: './dst/cjs/index.js',
-				dstDir: './dst',
+							dstDir: './dst',
 							cjsDir: './dst/cjs',
 							dstFile: forProduction ?
                     `aerodial-${this.version}.min.js` :
