@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test for AMD import</title>
+	<link rel="stylesheet" href="/dst/aerodial.css" media="all">
+</head>
+<body>
+<script src="/node_modules/requirejs/require.js"></script>
+<script>
+    requirejs.config({
+        paths: { aerodial: '/dst/aerodial' }
+    });
+    requirejs(['./import_via_amd.js']);
+</script>
+</body>
+</html>

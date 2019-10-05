@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test for CommonJS import</title>
+	<link rel="stylesheet" href="/dst/aerodial.css" media="all">
+</head>
+<body>
+<script src="node_modules/systemjs/dist/system-polyfills.src.js"></script>
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script>
+    System.config({
+        map: {
+            aerodial: '/dst/cjs'
+        },
+        packages: {
+            aerodial: {
+                main: 'aerodial',
+                format: 'cjs',
+                defaultExtensions: 'js',
+            }
+        }
+    });
+    System.import('./import_via_commonjs.js');
+</script>
+</body>
+</html>
