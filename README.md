@@ -15,11 +15,11 @@ Build
 -----
 I use [gulp](http://gulpjs.com/) for development. Here are the available tasks:
 
-| Task       | Description |
-| ---------- | ----------- |
-| main:build | Build source files of Aerodial library |
-| doc:build  | Build source files for documentation |
-| dev        | Build all source files and watch for changes |
+| Task         | Description |
+| ------------ | ----------- |
+| `main:build` | Build source files of Aerodial library |
+| `doc:build`  | Build source files of the document |
+| `dev`        | Build all source files and watch for changes |
 
 Running a task with `--production` generates compiled code for production.
 
