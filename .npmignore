@@ -7,3 +7,4 @@ test/
 .eslintrc
 circle.yml
 karma.conf.js
+dst/*.zip
