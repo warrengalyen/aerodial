@@ -18,14 +18,14 @@ class GulpConfig {
 							indexFile: './dst/cjs/index.js',
 							dstDir: './dst',
 							cjsDir: './dst/cjs',
-							dstFile: forProduction ?
+							dstName: forProduction ?
                     `aerodial.min.js` :
 										`aerodial.js`
             },
             sass: {
                 srcPattern: './src/main/sass/**/*.scss',
 								dstDir: './dst',
-								dstFile: forProduction ?
+								dstName: forProduction ?
 									`aerodial.min.css` :
 									`aerodial.css`,
 								options: forProduction ? {
@@ -39,7 +39,7 @@ class GulpConfig {
         this.doc = {
             js: {
                 srcPattern: './src/doc/js/**/*.js',
-                dstFile: 'doc.js',
+								dstName: 'doc.js',
 								dstDir: './doc/assets/js'
             },
             nunjucks: {
@@ -55,14 +55,14 @@ class GulpConfig {
 
 			this.pack = {
 				js: {
-					srcFile: `${this.main.js.dstDir}/${this.main.js.dstFile}`,
+					srcFile: `${this.main.js.dstDir}/${this.main.js.dstName}`,
 					dstName: forProduction ?
 						`aerodial-${this.version}.min.js` :
 						`aerodial-${this.version}.js`,
 					dstDir: './dst/package'
 				},
 				css: {
-					srcFile: `${this.main.sass.dstDir}/${this.main.sass.dstFile}`,
+					srcFile: `${this.main.sass.dstDir}/${this.main.sass.dstName}`,
 					dstName: forProduction ?
 						`aerodial-${this.version}.min.css` :
 						`aerodial-${this.version}.css`,
