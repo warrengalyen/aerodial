@@ -53,20 +53,20 @@ class GulpConfig {
             }
         };
 
-			this.pack = {
+			this.release = {
 				js: {
 					srcFile: `${this.main.js.dstDir}/${this.main.js.dstName}`,
 					dstName: forProduction ?
 						`aerodial-${this.version}.min.js` :
 						`aerodial-${this.version}.js`,
-					dstDir: './dst/package'
+					dstDir: './dst/release'
 				},
 				css: {
 					srcFile: `${this.main.sass.dstDir}/${this.main.sass.dstName}`,
 					dstName: forProduction ?
 						`aerodial-${this.version}.min.css` :
 						`aerodial-${this.version}.css`,
-					dstDir: './dst/package'
+					dstDir: './dst/release'
 				}
 			};
 
