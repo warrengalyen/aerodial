@@ -12,15 +12,15 @@ class GulpConfig {
 							dstDir: './dst',
 							cjsDir: './dst/cjs',
 							dstFile: forProduction ?
-                    `aerodial-${this.version}.min.js` :
-										`aerodial-${this.version}.js`
+                    `aerodial.min.js` :
+										`aerodial.js`
             },
             sass: {
                 srcPattern: './src/main/sass/**/*.scss',
 								dstDir: './dst',
 								dstFile: forProduction ?
-									`aerodial-${this.version}.min.css` :
-									`aerodial-${this.version}.css`,
+									`aerodial.min.css` :
+									`aerodial.css`,
 								options: forProduction ? {
 								outputStyle: 'compressed'
 							} : {
@@ -45,6 +45,23 @@ class GulpConfig {
 								dstDir: './doc/assets/css'
             }
         };
+
+			this.pack = {
+				js: {
+					srcFile: `${this.main.js.dstDir}/${this.main.js.dstFile}`,
+					dstName: forProduction ?
+						`aerodial-${this.version}.min.js` :
+						`aerodial-${this.version}.js`,
+					dstDir: './dst/package'
+				},
+				css: {
+					srcFile: `${this.main.sass.dstDir}/${this.main.sass.dstFile}`,
+					dstName: forProduction ?
+						`aerodial-${this.version}.min.css` :
+						`aerodial-${this.version}.css`,
+					dstDir: './dst/package'
+				}
+			};
 
         this.uglify = {
             compressor: this.UGLIFY_COMPRESSOR

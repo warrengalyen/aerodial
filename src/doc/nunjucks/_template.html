@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 {%
-set aeroJsPath = 'assets/js/aerodial-' +
-config.version +
+set aeroJsPath = 'assets/js/aerodial' +
 ('.min' if config.production else '') +
 '.js'
 %}
 {%
-set aeroCssPath = 'assets/css/aerodial-' +
-config.version +
+set aerodialCssPath = 'assets/css/aerodial' +
 ('.min' if config.production else '') +
 '.css'
 %}
