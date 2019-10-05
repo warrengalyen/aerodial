@@ -5,6 +5,10 @@
   "author": "Warren Galyen",
   "license": "MIT",
   "homepage": "https://www.mechanikadesign.com/aerodial",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warrengalyen/aerodial"
+  },
   "main": "dst/cjs/aerodial.js",
   "scripts": {
     "prepublish": "gulp prepublish",
