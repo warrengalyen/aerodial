@@ -5,13 +5,13 @@ set aeroJsPath = 'assets/js/aerodial' +
 '.js'
 %}
 {%
-set aerodialCssPath = 'assets/css/aerodial' +
+set aeroCssPath = 'assets/css/aerodial' +
 ('.min' if config.production else '') +
 '.css'
 %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
 	<title>{{ 'Aerodial' if (title == 'Aerodial') else (title + ' | Aerodial') }}</title>
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -29,14 +29,14 @@ set aerodialCssPath = 'assets/css/aerodial' +
 </div>
 
 <div class="content">
-    <h1>{{ title }}</h1>
-    {% block content %}{% endblock %}
+	<h1>{{ title }}</h1>
+	{% block content %}{% endblock %}
 </div>
 
 <div class="menu">
 	<div class="menu_body">
 		<ul>
-			<li><a href="./"><span class="menu_title">Overview</span></a></li>
+			<li><a href="./index.html"><span class="menu_title">Overview</span></a></li>
 			<li><a href="./getting_started.html"><span class="menu_title">Getting Started</span></a></li>
 			<li>
 				<span class="menu_title">Property</span>

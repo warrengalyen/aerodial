@@ -1,10 +1,13 @@
 Aerodial
-========
-
-Overview
+[![npm version](https://badge.fury.io/js/aerodial.svg)](https://badge.fury.io/js/aerodial)
 --------
 Aerodial is a Javascript library that provides a compact user interface for fine-tuning/monitoring values. It's originally inspired by the popular library [dat.GUI](http://workshop.chromeexperiments.com/examples/gui/).
 
+
+## Features
+- Easy to use, [user-friendly documents][documents]
+- Clean and simple interface
+- Mobile support
 
 Demo/Usage
 ----------
@@ -27,3 +30,6 @@ Running a task with `--production` generates compiled code for production.
 License
 -------
 MIT License. See `LICENSE.txt` for more information.
+
+[dat.GUI]: https://workshop.chromeexperiments.com/examples/gui/
+[documents]: https://www.mechanikadesign.com/aerodial/

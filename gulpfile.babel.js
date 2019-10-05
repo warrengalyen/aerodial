@@ -9,8 +9,7 @@ const runSequence = require('run-sequence');
 const source = require('vinyl-source-stream');
 
 const GulpConfig = require('./gulp_config');
-const util = require('gulp-util');
-const config = new GulpConfig(!!util.env.production);
+const config = new GulpConfig(!!$.util.env.production);
 
 gulp.task('clean', () => {
 	return del(config.clean.patterns);
