@@ -1,27 +1,59 @@
 
 .idea/
-/doc/**/*.css
-/doc/**/*.html
-/doc/**/*.js
-/dst/*
+/docs/
+/dist/
+/pages/
+/test/
+
+*.tgz
+*.zip
 
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directory
-# Commenting this out is preferred by some people, see
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional npm cache directory
+.npm
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
 
 # Thumbnails
 ._*
 
 ### https://raw.github.com/github/gitignore/298588469ac0cb08a00eebf7b00efb5ab726daca/sass.gitignore
 
-.sass-cache
-*.css.map
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# next.route build output
+.next
 

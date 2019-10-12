@@ -1,0 +1,202 @@
+{% set pageId = 'input' %}
+{% extends "_template.html" %}
+
+
+{% block pageHeader %}
+<div class="common-pageHeader">
+	<div class="common-pageHeader_innerLayout">
+		<div class="common-pageHeader_titleLayout">
+			<h1 class="common-pageHeader_title">Input</h1>
+			<p>For fine-tuning parameters, use <code>addInput()</code> to add components. Aerodial checks specified parameter types and provides suitable components.</p>
+		</div>
+		<div class="common-pageHeader_aeroLayout">
+			<div class="common-aeroContainer common-aeroContainer-input"></div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<h2 id="number">Number</h2>
+<p>By default, Aerodial provides a text field component for number parameters.</p>
+
+<div class="common-main_mediaLayout">
+	<div class="common-demo">
+		<div class="common-demo_codeLayout">
+			<div class="common-codeBlock"><pre><code class="js">var PARAMS = {
+  speed: 0.5
+};
+
+var aero = new Aerodial();
+aero.addInput(PARAMS, 'speed');</code></pre></div>
+		</div>
+		<div class="common-demo_resultLayout">
+			<div class="common-aeroContainer common-aeroContainer-numberText"></div>
+		</div>
+	</div>
+</div>
+
+
+<h3 id="number_range">Range</h3>
+<p>You can specify a range of parameters by using <code>min</code> and <code>max</code> options. If you specify at least one of them, a slider component will be created.</p>
+
+<div class="common-main_mediaLayout">
+	<div class="common-demo">
+		<div class="common-demo_codeLayout">
+			<div class="common-codeBlock"><pre><code class="js">var PARAMS = {
+  speed: 0.5
+};
+
+var aero = new Aerodial();
+aero.addInput(PARAMS, 'speed', {
+  <strong>min</strong>: 0,
+  <strong>max</strong>: 100,
+});</code></pre></div>
+		</div>
+		<div class="common-demo_resultLayout">
+			<div class="common-aeroContainer common-aeroContainer-slider"></div>
+		</div>
+	</div>
+</div>
+
+
+<h3 id="number_step">Step</h3>
+<p><code>step</code> option constrains the value to a step of changes. You can also use this option with <code>min</code> and <code>max</code> option.</p>
+
+<div class="common-main_mediaLayout">
+	<div class="common-demo">
+		<div class="common-demo_codeLayout">
+			<div class="common-codeBlock"><pre><code class="js">var PARAMS = {
+  speed: 0.5,
+  count: 10,
+};
+
+var aero = new Aerodial();
+aero.addInput(PARAMS, 'speed', {
+  <strong>step</strong>: 0.1,
+});
+aero.addInput(PARAMS, 'count', {
+  <strong>step</strong>: 10,
+  min: 0,
+  max: 100,
+});</code></pre></div>
+		</div>
+		<div class="common-demo_resultLayout">
+			<div class="common-aeroContainer common-aeroContainer-step"></div>
+		</div>
+	</div>
+</div>
+
+
+<h3 id="number_list">Number list</h3>
+<p>If you want to choose a value from presets, use the <code>options</code> option.</p>
+
+<div class="common-main_mediaLayout">
+	<div class="common-demo">
+		<div class="common-demo_codeLayout">
+			<div class="common-codeBlock"><pre><code class="js">var PARAMS = {
+  quality: 0,
+};
+
+var aero = new Aerodial();
+aero.addInput(PARAMS, 'quality', {
+  <strong>options</strong>: {
+    low: 0,
+    medium: 50,
+    high: 100,
+  },
+});</code></pre></div>
+		</div>
+		<div class="common-demo_resultLayout">
+			<div class="common-aeroContainer common-aeroContainer-numberList"></div>
+		</div>
+	</div>
+</div>
+
+
+<h2 id="string">String</h2>
+<p>For string parameters, a text field component will be provided by default.</p>
+
+<div class="common-main_mediaLayout">
+	<div class="common-demo">
+		<div class="common-demo_codeLayout">
+			<div class="common-codeBlock"><pre><code class="js">var PARAMS = {
+  message: 'hello, world',
+};
+
+var aero = new Aerodial();
+aero.addInput(PARAMS, 'message');</code></pre></div>
+		</div>
+		<div class="common-demo_resultLayout">
+			<div class="common-aeroContainer common-aeroContainer-stringText"></div>
+		</div>
+	</div>
+</div>
+
+
+<h3>String list</h3>
+<p>Same as for number properties, <code>options</code> option provides a list component.</p>
+
+<div class="common-main_mediaLayout">
+	<div class="common-demo">
+		<div class="common-demo_codeLayout">
+			<div class="common-codeBlock"><pre><code class="js">var PARAMS = {
+  theme: '',
+};
+
+var aero = new Aerodial();
+aero.addInput(PARAMS, 'theme', {
+  <strong>options</strong>: {
+    none: '',
+    dark: 'path/to/dark.json',
+    light: 'path/to/Light.json',
+  },
+});</code></pre></div>
+		</div>
+		<div class="common-demo_resultLayout">
+			<div class="common-aeroContainer common-aeroContainer-stringList"></div>
+		</div>
+	</div>
+</div>
+
+
+<h2 id="boolean">Boolean</h2>
+<p>For boolean parameters, a checkbox field component will be provided.</p>
+
+<div class="common-main_mediaLayout">
+	<div class="common-demo">
+		<div class="common-demo_codeLayout">
+			<div class="common-codeBlock"><pre><code class="js">var PARAMS = {
+  hidden: true,
+};
+
+var aero = new Aerodial();
+aero.addInput(PARAMS, 'hidden');</code></pre></div>
+		</div>
+		<div class="common-demo_resultLayout">
+			<div class="common-aeroContainer common-aeroContainer-checkbox"></div>
+		</div>
+	</div>
+</div>
+
+
+<h2 id="color">Color</h2>
+<p>For string parameters that can be parsed as a color, a text field with a color swatch will be provided.</p>
+
+<div class="common-main_mediaLayout">
+	<div class="common-demo">
+		<div class="common-demo_codeLayout">
+			<div class="common-codeBlock"><pre><code class="js">var PARAMS = {
+  color: '#ff8800',
+};
+
+var aero = new Aerodial();
+aero.addInput(PARAMS, 'color');</code></pre></div>
+		</div>
+		<div class="common-demo_resultLayout">
+			<div class="common-aeroContainer common-aeroContainer-color"></div>
+		</div>
+	</div>
+</div>
+{% endblock %}
